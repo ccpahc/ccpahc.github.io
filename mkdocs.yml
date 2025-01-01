@@ -1,0 +1,28 @@
+site_name: Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)
+site_url: https://ccpahc.github.io
+theme:
+    name: material
+    palette:
+        scheme: default
+        primary: blue grey
+    features:
+        - navigation.tracking
+        - navigation.indexes
+        - navigation.tabs
+        - navigation.sections
+        - search.suggest
+
+markdown_extensions:
+    - attr_list
+    - toc:
+        permalink: "¶"
+plugins:
+    - blog
+    - search
+    - rss:
+        match_path: blog/posts/.* 
+        date_from_meta:
+            as_creation: date
+        categories:
+            - categories
+            - tags

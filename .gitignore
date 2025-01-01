@@ -1,0 +1,8 @@
+# mkdocs output
+site*/
+
+# mkdocs plugin cache
+.cache/
+
+# vscode workspace specific configurations
+.vscode/
