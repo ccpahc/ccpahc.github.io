@@ -15,8 +15,18 @@ There is a special emphasis on ensuring that research software developed by this
 
 ## Project Info
 
+### Contact
+
+During the set-up phase, please [email the Project Lead](mailto:eamonn.bell@durham.ac.uk) 
+
 ### Delivery Team
 
-- Dr Eamonn Bell (Durham University)
-- Dr Karina Rodriguez-Echavarria (University of Brighton)
-- Prof Jeyan Thiyagalingam (STFC)
+- [Dr Eamonn Bell](https://www.durham.ac.uk/staff/eamonn-bell/) (Durham University)
+- [Dr Karina Rodriguez-Echavarria](https://research.brighton.ac.uk/en/persons/karina-rodriguez-echavarria) (University of Brighton)
+- [Prof Jeyan Thiyagalingam](https://www.scd.stfc.ac.uk/Pages/sciml-profile-jeyan.aspx) (STFC)
+
+### Funding
+
+This work is supported by the Science and Technology Facilities Council (STFC) on behalf of UK Research and Innovation (UKRI), under the ["Collaborative Computational Communities: towards new CCPs" opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/).
+
+![Logo of Science and Technology Facilities Council (STFC)](assets/stfc-logo.svg)
