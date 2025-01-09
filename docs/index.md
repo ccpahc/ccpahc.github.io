@@ -17,7 +17,6 @@ There is a special emphasis on ensuring that research software developed by this
 - [GitHub community (CCP-AHC)](https://github.com/ccpahc)
 - [Zenodo organisation (CCP-AHC)](https://zenodo.org/communities/ccpahc/)
 
-
 ## Project Info
 
 ### Contact
@@ -30,8 +29,17 @@ During the set-up phase, please [email the Project Lead](mailto:eamonn.bell@durh
 - [Dr Karina Rodriguez-Echavarria](https://research.brighton.ac.uk/en/persons/karina-rodriguez-echavarria) (University of Brighton)
 - [Prof Jeyan Thiyagalingam](https://www.scd.stfc.ac.uk/Pages/sciml-profile-jeyan.aspx) (STFC)
 
+### Adivsory Group
+
+- Dr Alastair Basden (Durham University)
+- Dr Ryan Heuser (University of Cambridge)
+- Prof Leif Isaksen (University of Exeter)
+- Dr Lisa Otty (University of Edinburgh)
+- Dr Zoetanya Sujon (University of the Arts London)
+- Prof Melissa Terras (University of Edinburgh)
+
 ### Funding
 
-This work is supported by the Science and Technology Facilities Council (STFC) on behalf of UK Research and Innovation (UKRI), under the ["Collaborative Computational Communities: towards new CCPs" opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/).
+This work is supported by the Science and Technology Facilities Council (STFC) on behalf of UK Research and Innovation (UKRI), under the ["Collaborative Computational Communities: towards new CCPs” opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/).
 
 ![Logo of Science and Technology Facilities Council (STFC)](assets/stfc-logo.svg)
