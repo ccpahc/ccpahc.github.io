@@ -12,6 +12,11 @@ There is a special emphasis on ensuring that research software developed by this
 
 [Subscribe to the CCP-AHC-DISCUSS mailing list (JISC)](https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=CCP-AHC-DISCUSS&A=1){ .md-button .md-button--primary }
 
+## Links
+
+- [GitHub community (CCP-AHC)](https://github.com/ccpahc)
+- [Zenodo organisation (CCP-AHC)](https://zenodo.org/communities/ccpahc/)
+
 
 ## Project Info
 
