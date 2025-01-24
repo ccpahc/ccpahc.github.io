@@ -1,4 +1,4 @@
-Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Computational Collaborative Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
+Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
 
 ## Details
 
@@ -25,9 +25,10 @@ During the set-up phase, please [email the Project Lead](mailto:eamonn.bell@durh
 
 ### Delivery Team
 
-- [Dr Eamonn Bell](https://www.durham.ac.uk/staff/eamonn-bell/) (Durham University)
-- [Dr Karina Rodriguez-Echavarria](https://research.brighton.ac.uk/en/persons/karina-rodriguez-echavarria) (University of Brighton)
-- [Prof Jeyan Thiyagalingam](https://www.scd.stfc.ac.uk/Pages/sciml-profile-jeyan.aspx) (STFC)
+- [Dr Eamonn Bell](https://www.durham.ac.uk/staff/eamonn-bell/) (Durham University), Project Lead and CCP-AHC Chair
+- [Dr Karina Rodriguez-Echavarria](https://research.brighton.ac.uk/en/persons/karina-rodriguez-echavarria) (University of Brighton), Project co-Lead
+- [Prof Jeyan Thiyagalingam](https://www.scd.stfc.ac.uk/Pages/sciml-profile-jeyan.aspx) (STFC), Project co-Lead
+- Clare Collyer (Durham University), Research Project Manager
 
 ### Adivsory Group
 
