@@ -6,12 +6,9 @@ Thursday, 22 May 2025, 9:00 a.m. to 5:00 p.m., followed by a drinks and light sn
 
 ## Location
 
-Department of Computer Science  
-Mathematical Sciences and Computer Science Building  
-Durham University  
-Stockton Road  
 Durham  
-DH1 3LE
+Co. Durham  
+United Kingdom 
 
 Hybrid participation for at least part of the event will be facilitated.
 

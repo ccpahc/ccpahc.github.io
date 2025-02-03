@@ -2,7 +2,7 @@ Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture res
 
 !!! note
 
-    CCP-AHC will hold a Town Hall meeting on Thursday, 22 May 2025 at Durham University. More information about this event will be available on this site soon.
+    CCP-AHC will hold a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). More information about this event will be available on this site soon.
 
 ## Details
 
