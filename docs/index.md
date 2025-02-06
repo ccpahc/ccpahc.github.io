@@ -1,8 +1,8 @@
 Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
 
-!!! note
+## Upcoming events
 
-    CCP-AHC will hold a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). More information about this event will be available on this site soon.
+CCP-AHC will hold a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025.md) 
 
 ## Details
 
