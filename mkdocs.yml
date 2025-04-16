@@ -13,8 +13,8 @@ theme:
     features:
         - navigation.tracking
         - navigation.indexes
-        - navigation.tabs
         - navigation.sections
+        - navigation.tabs
         - search.suggest
         - content.action.edit
         - content.action.view
@@ -37,7 +37,19 @@ plugins:
             - tags
     - git-revision-date-localized:
         enable_creation_date: true
+
 extra:
   analytics:
     provider: google
     property: G-42ND01ZW5N
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Activities:
+      - activities/index.md
+      - CCP-AHC Expression of Interest for Research Software: activities/codes-eoi.md
+      - CCP-AHC Town Hall 2025:
+            - activities/town-hall-2025/index.md
+            - Agenda: activities/town-hall-2025/agenda.md
+  - Blog: blog/index.md
