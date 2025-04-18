@@ -42,5 +42,5 @@ These are HPC sites that have some affiliation to more than one HEI, which inclu
 - [JADE](https://www.jade.ac.uk/)
 - [JASMIN](https://help.jasmin.ac.uk/)
 - [MMM Hub - Young](https://www.rc.ucl.ac.uk/docs/Clusters/Young/)
-- [NI-HPC - Kelvn2](https://ni-hpc.github.io/nihpc-documentation/)
+- [NI-HPC - Kelvin2](https://ni-hpc.github.io/nihpc-documentation/)
 - [Sulis](https://sulis-hpc.github.io/)
