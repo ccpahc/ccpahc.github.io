@@ -53,3 +53,5 @@ nav:
             - activities/town-hall-2025/index.md
             - Agenda: activities/town-hall-2025/agenda.md
   - Blog: blog/index.md
+  - Resources:
+      - UK HPC User Documentation Sites: resources/sites.md
