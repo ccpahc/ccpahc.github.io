@@ -8,6 +8,7 @@ The motivations behind making this information available in one place are as fol
 
 ## HEIs
 
+- [Durham University - Hamilton](https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/)
 - [Imperial College London - RCS](https://icl-rcs-user-guide.readthedocs.io/en/latest/)
 - [King's College London - CREATE](https://docs.er.kcl.ac.uk/CREATE/)
 - [Liverpool John Moores University - Prospero](https://prospero-docs.readthedocs.io/en/latest/)
@@ -24,6 +25,7 @@ The motivations behind making this information available in one place are as fol
 - [University of Liverpool](https://hpc.liverpool.ac.uk/)
 - [University of Sheffield](https://docs.hpc.shef.ac.uk/en/latest/index.html)
 - [University of Strathclyde](https://docs.hpc.strath.ac.uk/)
+- [University of Surrey](https://docs.pages.surrey.ac.uk/research_computing/)
 
 ## Consortia
 
