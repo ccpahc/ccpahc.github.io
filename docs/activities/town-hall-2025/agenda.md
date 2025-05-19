@@ -47,23 +47,23 @@ Five-minute lightning talks from:
 
 ### 11:15 a.m. Working Session 2 [in-person only] – Discovering HPC & AI codes, pipelines, workflows, and infrastructures 
 
-One of the main deliverables of "Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)" is a roadmap for the community, which outlines the future of the project over the next 5-7 years. The first draft of this roadmap is due by the end of 2025. This document will be used by funders, community members, and other stakeholders to understand the needs of computationally-intensive AHC research and innovation as they relate to large-scale compute.
+One of the main deliverables of "Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)" is a roadmap for the community, which outlines the future of the project over the next 5-7 years. The first draft of this roadmap is due by the end of 2025. This document will be used by funders, community members, and other stakeholders to understand the needs of computationally-intensive AH&C research and innovation as they relate to large-scale compute.
 
 Following a short briefing, in-person participants will discuss a set of questions around a common theme, facilitated by CCP-AHC Delivery Team members.
 
-- What codes, pipelines, and workflows are being used today with HPC & AI infrastructures (and other DRI supporting large-scale compute) to produce computationally intensive arts, humanities, and culture (AHC) research?
+- What codes, pipelines, and workflows are being used today with HPC & AI infrastructures (and other DRI supporting large-scale compute) to produce computationally intensive arts, humanities, and culture (AH&C) research?
 - How should these projects be identified, evaluated, and prioritised to promote best research software practice while covering a diversity of research domains and application types? 
-- What are the principal critical dependencies that AHC codes, pipelines, and workflows require (incl. data, software, libraries, hardware, and people)? 
-- Which infrastructures are the most successful at overcoming the bottlenecks and common challenges faced by AHC researchers and innovators when accessing large-scale compute?
+- What are the principal critical dependencies that AH&C codes, pipelines, and workflows require (incl. data, software, libraries, hardware, and people)? 
+- Which infrastructures are the most successful at overcoming the bottlenecks and common challenges faced by AH&C researchers and innovators when accessing large-scale compute?
 
 
 ### 1:00 p.m. Lunch [catered] 
 
 ### 2:00 p.m. Working Session 3 [in-person only] – Emerging and future users of large-scale compute infrastructure and their use cases 
 
-- What is the typical profile of the current and future AHC users of large-scale compute, including HPC, AI research resource, and other advanced computing infrastructures? 
-- How can community members be supported in the development and preparation of use cases/case studies that are useful to evidence impact and the value of large-scale compute infrastructures to AHC researchers and innovators?
-- Do existing benchmarks (e.g. MLCommons benchmarks) capture typical AHC uses, or do new benchmarks need to be defined and designed for AHC users?
+- What is the typical profile of the current and future AH&C users of large-scale compute, including HPC, AI research resource, and other advanced computing infrastructures? 
+- How can community members be supported in the development and preparation of use cases/case studies that are useful to evidence impact and the value of large-scale compute infrastructures to AH&C researchers and innovators?
+- Do existing benchmarks (e.g. MLCommons benchmarks) capture typical AH&C uses, or do new benchmarks need to be defined and designed for AH&C users?
 - What lessons can be learned from other communities (including the other CCPs) about who have tackled similar challenges about growing the adoption of large-scale compute in the past?
 
 

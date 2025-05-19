@@ -12,8 +12,11 @@ We are particularly interested in projects that have the potential for developme
 
 We are also interested in software that is running or has the potential to run on UK-funded HPC and advanced computing resource, including accelerated computing supported by e.g. GPUs and other novel accelerators. 
 
+Software developed primarily outside of the UK may be in scope if there are UK-based AH&C users and/or contributors.
+
 ## Notes
 
 Submission of an expression of interest at this stage does not constitute a bid for support from CCP-AHC and does not preclude codes from receiving or seeking support at a future stage. Our aim is to discover codes and their stakeholders, and to iteratively refine the codes discovery process, which will also be supported by desk research over the next 12 months.
+
 
 The expression of interest process itself, including its scope and priorities, is also subject to change in response to community needs, so please share feedback with [the project team](../index.md#delivery-team).
