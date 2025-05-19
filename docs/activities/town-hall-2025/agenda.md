@@ -47,21 +47,34 @@ Five-minute lightning talks from:
 
 ### 11:15 a.m. Working Session 2 [in-person only] – Discovering HPC & AI codes, pipelines, workflows, and infrastructures 
 
-Following a short briefing, in-person participants will discuss a set of questions relating to the following theme(s), facilitated by CCP-AHC Delivery Team members:
+One of the main deliverables of "Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)" is a roadmap for the community, which outlines the future of the project over the next 5-7 years. The first draft of this roadmap is due by the end of 2025. This document will be used by funders, community members, and other stakeholders to understand the needs of computationally-intensive AHC research and innovation as they relate to large-scale compute.
 
-What codes, pipelines, and workflows are being used today with HPC & AI infrastructures (and other DRI supporting large-scale compute) to produce computationally intensive arts, humanities, and culture (AHC) research? How should these projects be identified, evaluated, and prioritised to promote best research software practice while covering a diversity of research domains and application types? 
+Following a short briefing, in-person participants will discuss a set of questions around a common theme, facilitated by CCP-AHC Delivery Team members.
+
+- What codes, pipelines, and workflows are being used today with HPC & AI infrastructures (and other DRI supporting large-scale compute) to produce computationally intensive arts, humanities, and culture (AHC) research?
+- How should these projects be identified, evaluated, and prioritised to promote best research software practice while covering a diversity of research domains and application types? 
+- What are the principal critical dependencies that AHC codes, pipelines, and workflows require (incl. data, software, libraries, hardware, and people)? 
+- Which infrastructures are the most successful at overcoming the bottlenecks and common challenges faced by AHC researchers and innovators when accessing large-scale compute?
+
 
 ### 1:00 p.m. Lunch [catered] 
 
 ### 2:00 p.m. Working Session 3 [in-person only] – Emerging and future users of large-scale compute infrastructure and their use cases 
 
-What is the profile of current and expected AHC users of large-scale HPC & AI infrastructures, what workloads are they expected to demand, and how can they be supported in developing and disseminating use cases which demonstrate their successes? 
+- What is the typical profile of the current and future AHC users of large-scale compute, including HPC, AI research resource, and other advanced computing infrastructures? 
+- How can community members be supported in the development and preparation of use cases/case studies that are useful to evidence impact and the value of large-scale compute infrastructures to AHC researchers and innovators?
+- Do existing benchmarks (e.g. MLCommons benchmarks) capture typical AHC uses, or do new benchmarks need to be defined and designed for AHC users?
+- What lessons can be learned from other communities (including the other CCPs) about who have tackled similar challenges about growing the adoption of large-scale compute in the past?
+
 
 ### 3:30 p.m. Coffee break 
 
 ### 3:45 p.m. Working Session 4 [in-person only] – Driving and measuring positive change within the community 
 
-What should be the key elements of the CCP-AHC workplan through to the end of the scoping period (end 2026) and beyond (2027-)?
+- What should be the key elements of the CCP-AHC roadmap through to the end of the scoping period (end 2026) and beyond (2027-)?
+- How should computational and scientific resource within CCP-AHC - including the workplan for computational scientist (1.0 FTE) and RSE resource (0.6 FTE) - be prioritised during the life of the scoping project?
+- Where are the key points of influence that the community can advocate for HPC, AI resource, and other DRI (e.g. in procurement, design of benchmarks, in cross-council DRI activities)? 
+- How should CCP-AHC ensure that community members are engaged in its decision-making and planning, with a particular emphasis on representing HEIs and RPOs of various sizes, research culture, and the project's relation to UKRI priorities (e.g. Net Zero)? 
 
 ### 4:45 p.m. Wrap-up/Next steps 
 
