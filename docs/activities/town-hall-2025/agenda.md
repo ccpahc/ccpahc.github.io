@@ -40,7 +40,6 @@ Five-minute lightning talks from:
 - Prof Karina Rodriguez Echavarria (University of Brighton), The Digital Skills in Arts and Humanities (DISKAH) Network
 - Prof Jeyan Thiyagalingam (STFC), CCPs, CoSeC, and the STFC Scientific Computing Department 
 - Dr Martin Wynne (University of Oxford), The Oxford Text Archive (OTA)
-- Dr Tim Evans (University of York), The Heritage Science Data Service (HSDS)
 - Dr Phil Hasnip (University of York), UKRI Living Benchmarks
 
 ### 11:00 a.m. Coffee break 
