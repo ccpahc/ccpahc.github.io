@@ -2,7 +2,9 @@
 
 <a title="Roberto Strauss from Frankfurt am Main, Deutschland, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:City_of_Durham_(13270321503).jpg"><img width="512" alt="City of Durham (13270321503)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/City_of_Durham_%2813270321503%29.jpg/512px-City_of_Durham_%2813270321503%29.jpg?20140813084236"></a>
 
-This is the latest draft of the agenda; the details of individual sessions may be subject to change.
+The most recent version of this agenda can be found online at [https://www.ccpahc.ac.uk/activities/town-hall-2025/agenda/](https://www.ccpahc.ac.uk/activities/town-hall-2025/agenda/) or at the QR code below:
+
+![QR code link to agenda](../../assets/town-hall-2025-agenda-qr.png)
 
 ## Location and Date
 
@@ -50,34 +52,35 @@ One of the main deliverables of "Toward a new CCP for Arts, Humanities, and Cult
 
 Following a short briefing, in-person participants will discuss a set of questions around a common theme, facilitated by CCP-AHC Delivery Team members.
 
-- What codes, pipelines, and workflows are being used today with HPC & AI infrastructures (and other DRI supporting large-scale compute) to produce computationally intensive arts, humanities, and culture (AH&C) research?
-- How should these projects be identified, evaluated, and prioritised to promote best research software practice while covering a diversity of research domains and application types? 
-- What are the principal critical dependencies that AH&C codes, pipelines, and workflows require (incl. data, software, libraries, hardware, and people)? 
-- Which infrastructures are the most successful at overcoming the bottlenecks and common challenges faced by AH&C researchers and innovators when accessing large-scale compute?
+The number below relates to the table at which the topic is first discussed:
 
+1. What codes, pipelines, and workflows are being used today with HPC & AI infrastructures (and other DRI supporting large-scale compute) to produce computationally intensive arts, humanities, and culture (AH&C) research?
+2. How should these projects be identified, evaluated, and prioritised to promote best research software practice while covering a diversity of research domains and application types? 
+3. What are the principal critical dependencies that AH&C codes, pipelines, and workflows require (incl. data, software, libraries, hardware, and people)? 
+4. Which infrastructures are the most successful at overcoming the bottlenecks and common challenges faced by AH&C researchers and innovators when accessing large-scale compute?
 
 ### 1:00 p.m. Lunch [catered] 
 
 ### 2:00 p.m. Working Session 3 [in-person only] – Emerging and future users of large-scale compute infrastructure and their use cases 
 
-- What is the typical profile of the current and future AH&C users of large-scale compute, including HPC, AI research resource, and other advanced computing infrastructures? 
-- How can community members be supported in the development and preparation of use cases/case studies that are useful to evidence impact and the value of large-scale compute infrastructures to AH&C researchers and innovators?
-- Do existing benchmarks (e.g. MLCommons benchmarks) capture typical AH&C uses, or do new benchmarks need to be defined and designed for AH&C users?
-- What lessons can be learned from other communities (including the other CCPs) about who have tackled similar challenges about growing the adoption of large-scale compute in the past?
+1.  What is the typical profile of the current and future AH&C users of large-scale compute, including HPC, AI research resource, and other advanced computing infrastructures? 
+2. How can community members be supported in the development and preparation of use cases/case studies that are useful to evidence impact and the value of large-scale compute infrastructures to AH&C researchers and innovators?
+3.  Do existing benchmarks (e.g. MLCommons benchmarks) capture typical AH&C uses, or do new benchmarks need to be defined and designed for AH&C users?
+4. What lessons can be learned from other communities (including the other CCPs) about who have tackled similar challenges about growing the adoption of large-scale compute in the past?
 
 
 ### 3:30 p.m. Coffee break 
 
 ### 3:45 p.m. Working Session 4 [in-person only] – Driving and measuring positive change within the community 
 
-- What should be the key elements of the CCP-AHC roadmap through to the end of the scoping period (end 2026) and beyond (2027-)?
-- How should computational and scientific resource within CCP-AHC - including the workplan for computational scientist (1.0 FTE) and RSE resource (0.6 FTE) - be prioritised during the life of the scoping project?
-- Where are the key points of influence that the community can advocate for HPC, AI resource, and other DRI (e.g. in procurement, design of benchmarks, in cross-council DRI activities)? 
-- How should CCP-AHC ensure that community members are engaged in its decision-making and planning, with a particular emphasis on representing HEIs and RPOs of various sizes, research culture, and the project's relation to UKRI priorities (e.g. Net Zero)? 
+1. What should be the key elements of the CCP-AHC roadmap through to the end of the scoping period (end 2026) and beyond (2027-)?
+2. How should computational and scientific resource within CCP-AHC - including the workplan for computational scientist (1.0 FTE) and RSE resource (0.6 FTE) - be prioritised during the life of the scoping project?
+3. Where are the key points of influence that the community can advocate for HPC, AI resource, and other DRI (e.g. in procurement, design of benchmarks, in cross-council DRI activities)? 
+4. How should CCP-AHC ensure that community members are engaged in its decision-making and planning, with a particular emphasis on representing HEIs and RPOs of various sizes, research culture, and the project's relation to UKRI priorities (e.g. Net Zero)? 
 
 ### 4:45 p.m. Wrap-up/Next steps 
 
-Details of next engagement activities to be announced, along with timeline for workplan, draft roadmap, and further discovery of projects and stakeholders. 
+Details of next engagement activities to be announced, along with timeline for workplan, draft roadmap, and further discovery of projects and stakeholders. 
 
 ### 5:00 p.m. Reception 
 
