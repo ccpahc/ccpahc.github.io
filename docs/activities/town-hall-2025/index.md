@@ -4,7 +4,7 @@
 
 Thursday, 22 May 2025, 9:00 a.m. to 5:00 p.m., followed by a drinks and light snacks reception
 
-[Draft Agenda](./agenda.md){ .md-button .md-button--primary } 
+[Agenda](./agenda.md){ .md-button .md-button--primary } 
 
 ## Location
 
@@ -50,6 +50,6 @@ There is no cost to attending the CCP-AHC Town Hall 2025. Travel and accommodati
 
 ## Agenda
 
-Agenda to be confirmed. You can consult the [draft agenda](./agenda.md).
+You can consult the confirmed [agenda](./agenda.md) now.
 
-[Draft Agenda](./agenda.md){ .md-button .md-button--primary } 
+[Agenda](./agenda.md){ .md-button .md-button--primary } 
