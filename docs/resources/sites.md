@@ -15,6 +15,8 @@ The motivations behind making this information available in one place are as fol
 - [Oxford University - ARC](https://arc-user-guide.readthedocs.io/en/latest/index.html)
 - [Queen Mary University of London - Apocrita](https://docs.hpc.qmul.ac.uk/)
 - [University College London](https://www.rc.ucl.ac.uk/)
+- [University of Aberdeen](https://uoa.freshservice.com/support/solutions/50000009580)
+- [University of Bath](https://www.bath.ac.uk/professional-services/high-performance-computing/)
 - [University of Birmingham - BEAR](https://docs.bear.bham.ac.uk/)
 - [University of Bristol - Zoo](https://uob-hpc.github.io/zoo/#)
 - [University of Cambridge - Accelerate Programme for Scientific Discovery](https://docs.science.ai.cam.ac.uk/)
