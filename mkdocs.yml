@@ -8,7 +8,7 @@ theme:
     name: material
     palette:
         scheme: default
-        primary: blue grey
+        primary: ccpahc
     custom_dir: overrides
     features:
         - navigation.tracking
