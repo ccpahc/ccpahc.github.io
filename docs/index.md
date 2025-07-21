@@ -8,9 +8,17 @@ We invite owners, maintainers, users, and other stakeholders in research codes, 
 
 The expression of interest is a short case for the relevance of that code to CCP-AHC.
 
-## Upcoming events
+## Events
 
-CCP-AHC will hold a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025/index.md). 
+### Upcoming
+
+CCP-AHC will hold four regional engagement events in the coming months. The following events are confirmed:
+
+- CCP-AHC Engagement Event on Thursday, 6 November (afternoon) at University of Edinburgh, Edinburgh.
+
+### Past
+
+CCP-AHC held a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025/index.md). 
 
 ## Details
 
