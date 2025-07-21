@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.md-header, .md-header__title, .md-header__topic, .md-nav__link, .md-nav__title, .md-tabs__link {
+.md-header, .md-header__title, .md-header__topic, .md-nav__link, .md-nav__title, .md-tabs__link, .md-button {
   font-family: "Lexend", sans-serif;
 }
 

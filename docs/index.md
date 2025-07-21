@@ -10,7 +10,7 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 
 ## Open calls
 
-[Tell us about your your software!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
+[Tell us about your software!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
 
 We invite owners, maintainers, users, and other stakeholders in research codes, workflows, and pipelines that support computationally-intensive arts, humanities, and culture (AH&C) research and innovation [to submit a short expression of interest form](https://forms.office.com/e/EAyaK8cajv). 
 

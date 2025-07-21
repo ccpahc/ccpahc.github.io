@@ -41,6 +41,7 @@ plugins:
 
 extra_css:
   - stylesheets/font.css
+  - stylesheets/header.css
 
 extra:
   analytics:
