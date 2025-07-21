@@ -1,4 +1,12 @@
+![The CCP-AHC logotype showing the letters CCP-AHC in a serif font surrounded in a circular fashion by abstract representations of individuals filled in a gradient from blue to purple](assets/CCP_AHA_Master_Logo_RGB.png "CCP-AHC logo")
+
 Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
+
+## Community meetings
+
+The CCP-AHC Community Forum takes place online on the second Tuesday of each month, 12:30 p.m. to 1:30 p.m. (UK time) starting from Tuesday, 12 August 2025.  
+
+These are informal, drop-in sessions open to all. Join these meetings to learn more about the project, to hear updates from the team, and to share your experiences accessing large-scale compute for arts, humanities, and culture research. [Sign up to recieve the meeting details](https://forms.office.com/e/BnW8PZwJA9).
 
 ## Open calls
 
@@ -41,12 +49,12 @@ There is a special emphasis on ensuring that research software developed by this
 
 ### Contact
 
-During the set-up phase, please [email the Project Lead](mailto:eamonn.bell@durham.ac.uk) 
+[Email ccpahc@durham.ac.uk](mailto:ccpahc@durham.ac.uk) to contact the team.
 
 ### Delivery Team
 
 - [Dr Eamonn Bell](https://www.durham.ac.uk/staff/eamonn-bell/) (Durham University), Project Lead and CCP-AHC Chair
-- [Dr Karina Rodriguez-Echavarria](https://research.brighton.ac.uk/en/persons/karina-rodriguez-echavarria) (University of Brighton), Project co-Lead
+- [Prof Karina Rodriguez-Echavarria](https://research.brighton.ac.uk/en/persons/karina-rodriguez-echavarria) (University of Brighton), Project co-Lead
 - [Prof Jeyan Thiyagalingam](https://www.scd.stfc.ac.uk/Pages/sciml-profile-jeyan.aspx) (STFC), Project co-Lead
 - Clare Collyer (Durham University), Research Project Manager
 
