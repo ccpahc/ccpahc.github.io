@@ -38,6 +38,10 @@ plugins:
     - git-revision-date-localized:
         enable_creation_date: true
 
+
+extra_css:
+  - stylesheets/font.css
+
 extra:
   analytics:
     provider: google

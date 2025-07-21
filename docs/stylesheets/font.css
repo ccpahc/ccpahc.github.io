@@ -1,0 +1,13 @@
+/* Import the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* Apply the font only to headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lexend", sans-serif;
+}
+
+
+.md-header, .md-header__title, .md-header__topic, .md-nav__link, .md-nav__title, .md-tabs__link {
+  font-family: "Lexend", sans-serif;
+}
+
