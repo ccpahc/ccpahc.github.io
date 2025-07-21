@@ -54,4 +54,5 @@ nav:
             - Agenda: activities/town-hall-2025/agenda.md
   - Blog: blog/index.md
   - Resources:
+      - Routes to Access Compute: resources/routes-to-access-compute.md
       - UK HPC User Documentation Sites: resources/sites.md
