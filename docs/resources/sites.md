@@ -6,7 +6,7 @@ The motivations behind making this information available in one place are as fol
 - Often, the user documentation implicitly or explicitly describes software that is commonly used at that site, alongside useful insights gained from supporting that software;
 - To facilitate detecting trends in the provision of user-facing documentation, such as the prevalence (at the time of writing) of MkDocs as a static site generator.
 
-## HEIs
+## HEIs (Tier 3)
 
 - [Durham University - Hamilton](https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/)
 - [Imperial College London - RCS](https://icl-rcs-user-guide.readthedocs.io/en/latest/)
@@ -29,7 +29,7 @@ The motivations behind making this information available in one place are as fol
 - [University of Strathclyde](https://docs.hpc.strath.ac.uk/)
 - [University of Surrey](https://docs.pages.surrey.ac.uk/research_computing/)
 
-## Consortia
+## Consortia (Tiers 2 and 1)
 
 These are HPC sites that have some affiliation to more than one HEI, which include some of the Tier 2 sites.
 
