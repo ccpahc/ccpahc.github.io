@@ -1,0 +1,12 @@
+
+.md-header {
+    background: linear-gradient(
+        90deg,
+        #CC5AF5 0%,
+        #CC5AF5 5%,
+        #0075BE 15%,
+        #0075BE 85%,
+        #1E9D87 95%,
+        #1E9D87 100%
+    );
+}
