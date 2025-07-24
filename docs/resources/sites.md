@@ -6,6 +6,10 @@ The motivations behind making this information available in one place are as fol
 - Often, the user documentation implicitly or explicitly describes software that is commonly used at that site, alongside useful insights gained from supporting that software;
 - To facilitate detecting trends in the provision of user-facing documentation, such as the prevalence (at the time of writing) of MkDocs as a static site generator.
 
+### Implementation note
+
+Every day, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created]([https://github.com/ccpahc/ccpahc.github.io/issues](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20Link%20Checker%20Report)) on the repository containing the website sources. 
+
 ## HEIs (Tier 3)
 
 - [Durham University - Hamilton](https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/)
