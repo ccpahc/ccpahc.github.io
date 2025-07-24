@@ -23,8 +23,11 @@ jobs:
 
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
+        run: |
+          echo "title=Link Checker Report - $(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Create Issue
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: Link Checker Report
+          title: ${{ env.title }}
           content-filepath: ./lychee/out.md
           labels: report, automated issue
