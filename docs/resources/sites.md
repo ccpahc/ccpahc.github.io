@@ -10,7 +10,7 @@ The motivations behind making this information available in one place are as fol
 
 - [Durham University - Hamilton](https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/)
 - [Imperial College London - RCS](https://icl-rcs-user-guide.readthedocs.io/en/latest/)
-- [King's College London - CREATE](https://docs.er.kcl.ac.uk/CREATE/)
+- [King's College London - CREATE](https://docs.er.kcl.ac.uk/CREATE/access/)
 - [Liverpool John Moores University - Prospero](https://prospero-docs.readthedocs.io/en/latest/)
 - [Oxford University - ARC](https://arc-user-guide.readthedocs.io/en/latest/index.html)
 - [Queen Mary University of London - Apocrita](https://docs.hpc.qmul.ac.uk/)
@@ -24,7 +24,7 @@ The motivations behind making this information available in one place are as fol
 - [University of Kent](https://www.cs.kent.ac.uk/systems/index.html)
 - [University of Leeds - AIRE](https://arcdocs.leeds.ac.uk/aire/welcome.html)
 - [University of Leicester - ALICE](https://alice-docs.le.ac.uk/)
-- [University of Liverpool](https://hpc.liverpool.ac.uk/)
+- ~[University of Liverpool](https://hpc.liverpool.ac.uk/)~ (unavailable 2025-07-24)
 - [University of Sheffield](https://docs.hpc.shef.ac.uk/en/latest/index.html)
 - [University of Strathclyde](https://docs.hpc.strath.ac.uk/)
 - [University of Surrey](https://docs.pages.surrey.ac.uk/research_computing/)
