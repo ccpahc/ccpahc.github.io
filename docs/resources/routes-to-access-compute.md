@@ -1,6 +1,6 @@
 There are a number of routes to access national compute infrastructures relevant to CCP-AHC members. 
 
-Please contact <ccpahc@durham.ac.uk> if you are interested in receiving support when preparing a submission to one of these calls.
+Please [contact the CCP-AHC team](../index.md#contact) if you are interested in receiving support when preparing a submission to one of these calls.
 
 In some cases, it will benefit your case to recieve access if you have already explored whether your application can make use of [regional or institutional compute](./sites.md).
 
