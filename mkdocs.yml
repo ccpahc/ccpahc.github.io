@@ -23,8 +23,12 @@ theme:
 markdown_extensions:
     - admonition
     - attr_list
+    - md_in_html
     - toc:
         permalink: "¶"
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
 plugins:
     - blog
     - search
@@ -59,5 +63,6 @@ nav:
             - Agenda: activities/town-hall-2025/agenda.md
   - Blog: blog/index.md
   - Resources:
+      - Tools: resources/tools.md
       - Routes to Access Compute: resources/routes-to-access-compute.md
       - UK HPC User Documentation Sites: resources/sites.md
