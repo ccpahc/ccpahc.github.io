@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: "00 18 * * *"
+    - cron: "0 13 * * 2"
 
 jobs:
   linkChecker:
@@ -18,7 +18,7 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: ./docs/**/*.md
+          args: ./docs/resources/**/*.md
           fail: false
 
       - name: Create Issue From File

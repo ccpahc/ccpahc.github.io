@@ -18,7 +18,7 @@ Try searching for “PyTorch” to find user guidance for running machine learni
 
 ### Implementation note
 
-Every day, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created]([https://github.com/ccpahc/ccpahc.github.io/issues](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20Link%20Checker%20Report)) on the repository containing the website sources. 
+Every week, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20%22Link%20Checker%22) on the repository containing the website sources. 
 
 ## HEIs (Tier 3)
 
@@ -38,7 +38,6 @@ Every day, the links in this page are [checked by a software called Lychee](http
 - [University of Kent](https://www.cs.kent.ac.uk/systems/index.html)
 - [University of Leeds - AIRE](https://arcdocs.leeds.ac.uk/aire/welcome.html)
 - [University of Leicester - ALICE](https://alice-docs.le.ac.uk/)
-- ~[University of Liverpool](https://hpc.liverpool.ac.uk/)~ (unavailable 2025-07-24)
 - [University of Sheffield](https://docs.hpc.shef.ac.uk/en/latest/index.html)
 - [University of Strathclyde](https://docs.hpc.strath.ac.uk/)
 - [University of Surrey](https://docs.pages.surrey.ac.uk/research_computing/)
