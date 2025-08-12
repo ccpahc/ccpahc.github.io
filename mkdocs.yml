@@ -46,6 +46,7 @@ plugins:
 extra_css:
   - stylesheets/font.css
   - stylesheets/header.css
+  - stylesheets/gcse.css
 
 extra:
   analytics:

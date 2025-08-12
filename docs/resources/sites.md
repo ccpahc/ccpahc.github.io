@@ -2,9 +2,19 @@ This is an incomplete list of links to public user documentation pages for a num
 
 The motivations behind making this information available in one place are as follows:
 
-- Access to HPC by "non-traditional" users, such as those in the arts, humanities, and culture (AH&C) area starts with interactions with local sites, which are getting harder to discover thanks to the growth of university intranets;
+- Access to HPC by “non-traditional” users, such as those in the arts, humanities, and culture (AH&C) area starts with interactions with local sites, which are getting harder to discover thanks to the growth of university intranets;
 - Often, the user documentation implicitly or explicitly describes software that is commonly used at that site, alongside useful insights gained from supporting that software;
 - To facilitate detecting trends in the provision of user-facing documentation, such as the prevalence (at the time of writing) of MkDocs as a static site generator.
+
+## Search
+
+This is custom search engine powered by Google. It is a full-text web search using Google's web index that is restricted to only show results from URLs with prefixes derived from the documentation sites listed below (with some inclusions and exclusions).
+
+Try searching for “PyTorch” to find user guidance for running machine learning models on HPC sites in the UK, or search “A100” to see which sites currently advertise this GPU accelerator.
+
+<script async src="https://cse.google.com/cse.js?cx=24dbd0233935742a7">
+</script>
+<div class="gcse-search"></div>
 
 ### Implementation note
 
