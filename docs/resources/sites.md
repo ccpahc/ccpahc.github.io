@@ -18,7 +18,9 @@ Try searching for “PyTorch” to find user guidance for running machine learni
 
 ### Implementation note
 
-Every week, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20%22Link%20Checker%22) on the repository containing the website sources. 
+Every week, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20%22Link%20Checker%22) on the repository containing the website sources.
+
+Unfortunately, it is not possible to programmatically update the scope of the custom search engine as new sites are added.
 
 ## HEIs (Tier 3)
 
