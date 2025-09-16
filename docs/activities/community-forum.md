@@ -6,11 +6,11 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 
 ### Upcoming
 
-- Tuesday, 9 September 2025
 - Tuesday, 14 October 2025 
 - Tuesday, 14 November 2025 
 - Tuesday, 9 December 2025 
 
 ### Past
 
-- Tuesday, 12 August 2025 
+- Tuesday, 9 September 2025
+- Tuesday, 12 August 2025

@@ -2,9 +2,23 @@
 
 Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
 
+## Events
+
+### Upcoming
+
+CCP-AHC will hold four [regional engagement events](./activities/regional-engagement.md) in the coming months. The following events are confirmed and **registration is open**:
+
+- [CCP-AHC Engagement Event (Cardiff)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-cardiff---wednesday-29th-october-2025) on Wednesday, 29th October 2025, 12.30pm to 3.30pm at Wales Millenium Centre, Cardiff
+- [CCP-AHC Engagement Event (Edinburgh)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh---thursday-6th-november-2025) on Thursday, 6th November 2025, 1pm to 5 pm at University of Edinburgh, Edinburgh
+- [CCP-AHC Engagement Event (London)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london---friday-14th-november-2025) on Friday, 14th November 2025, 12.30pm to 4pm, Central London
+
+### Past
+
+CCP-AHC held a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025/index.md). 
+
 ## Community meetings
 
-The CCP-AHC Community Forum takes place online on the second Tuesday of each month, 12:30 p.m. to 1:30 p.m. (UK time) starting from Tuesday, 12 August 2025.  
+The [CCP-AHC Community Forum](./activities/community-forum.md) takes place online on the second Tuesday of each month, 12:30 p.m. to 1:30 p.m. (UK time) starting from Tuesday, 12 August 2025.  
 
 These are informal, drop-in sessions open to all. Join these meetings to learn more about the project, to hear updates from the team, and to share your experiences accessing large-scale compute for arts, humanities, and culture research. [Sign up to recieve the meeting details](https://forms.office.com/e/BnW8PZwJA9).
 
@@ -15,21 +29,6 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 We invite owners, maintainers, users, and other stakeholders in research codes, workflows, and pipelines that support computationally-intensive arts, humanities, and culture (AH&C) research and innovation [to submit a short expression of interest form](https://forms.office.com/e/EAyaK8cajv). 
 
 The expression of interest is a short case for the relevance of that code to CCP-AHC.
-
-## Events
-
-### Upcoming
-
-CCP-AHC will hold four regional engagement events in the coming months. The following events are confirmed, please save the date:
-
-- CCP-AHC Engagement Event (Wales) on Wednesday, 29 October 2025 (afternoon), Cardiff
-- CCP-AHC Engagement Event (Scotland) on Thursday, 6 November 2025 (afternoon) at University of Edinburgh, Edinburgh
-- CCP-AHC Engagement Event (England) on Friday, 14 November 2025 (afternoon), Central London
-
-
-### Past
-
-CCP-AHC held a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025/index.md). 
 
 ## Details
 
