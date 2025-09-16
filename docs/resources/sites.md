@@ -18,7 +18,9 @@ Try searching for “PyTorch” to find user guidance for running machine learni
 
 ### Implementation note
 
-Every week, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20%22Link%20Checker%22) on the repository containing the website sources. 
+Every week, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20%22Link%20Checker%22) on the repository containing the website sources.
+
+Unfortunately, it is not possible to programmatically update the scope of the custom search engine as new sites are added.
 
 ## HEIs (Tier 3)
 
@@ -52,10 +54,10 @@ These are HPC sites that have some affiliation to more than one HEI, which inclu
 - [Cirrus](https://docs.cirrus.ac.uk/)
 - [Crop Diversity](https://help.cropdiversity.ac.uk/index.html)
 - [DiRAC](https://dirac.ac.uk/user-guides/)
-  -   [Data Intensive (CSD3, Cambridge)](https://docs.hpc.cam.ac.uk/hpc/index.html)
-  -   [Memory Intensive (COSMA, Durham)](https://cosma.readthedocs.io/en/latest/)
-  -   [Extreme Scaling (Tursa, Edinburgh)](https://epcced.github.io/dirac-docs/tursa-user-guide/)
-  -   [Data Intensive (DiaL3, Leicester)](https://dial3-docs.dirac.ac.uk/)
+    -   [Data Intensive (CSD3, Cambridge)](https://docs.hpc.cam.ac.uk/hpc/index.html)
+    -   [Memory Intensive (COSMA, Durham)](https://cosma.readthedocs.io/en/latest/)
+    -   [Extreme Scaling (Tursa, Edinburgh)](https://epcced.github.io/dirac-docs/tursa-user-guide/)
+    -   [Data Intensive (DiaL3, Leicester)](https://dial3-docs.dirac.ac.uk/)
 - [Edinburgh International Data Facility](https://docs.eidf.ac.uk/)
 - [Isambard](https://docs.isambard.ac.uk/)
 - [JADE](https://www.jade.ac.uk/)
