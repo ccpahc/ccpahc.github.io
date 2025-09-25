@@ -41,7 +41,7 @@ Please note that the [UK DARIAH Day 2025](https://www.eventbrite.co.uk/e/dariah-
 
 - (15m) Introduction to the community and updates from CCP-AHC Delivery Team
 - (45m) Short presentations from allied DRI initiatives
-    - Include speakers from the [Edinburgh International Data Facility (EIDF)](https://edinburgh-international-data-facility.ed.ac.uk/)
+    - Including speakers from the [Edinburgh International Data Facility (EIDF)](https://edinburgh-international-data-facility.ed.ac.uk/) and [UK contributors to European Cloud for Heritage OpEn Science (ECHOES)](https://archaeologydataservice.ac.uk/about/projects/echoes/)
 - (30m) Identifying codes, pipelines, and workflows
 - (60m) Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
 
