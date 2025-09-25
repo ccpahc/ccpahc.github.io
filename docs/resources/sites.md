@@ -43,6 +43,7 @@ Unfortunately, it is not possible to programmatically update the scope of the cu
 - [University of Sheffield](https://docs.hpc.shef.ac.uk/en/latest/index.html)
 - [University of Strathclyde](https://docs.hpc.strath.ac.uk/)
 - [University of Surrey](https://docs.pages.surrey.ac.uk/research_computing/)
+- [University of York - Viking](https://vikingdocs.york.ac.uk/)
 
 ## Consortia (Tiers 2 and 1)
 
