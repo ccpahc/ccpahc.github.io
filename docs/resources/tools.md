@@ -6,11 +6,11 @@ In the end, their outputs are based on assumptions which may or may not hold in 
 
 <div class="grid cards" markdown>
 
--   :material-memory:{ .lg .middle } __AI model GPU VRAM calculator__
+-   :material-memory:{ .lg .middle } __LLM GPU VRAM calculator__
 
     ---
 
-    Understand how much VRAM a given AI model will use during training and inference. Developed by [ApX Machine Learning](https://apxml.com/about) (commercial).
+    Understand how much VRAM a given large language model (LLM) will use during training and inference. Developed by [ApX Machine Learning](https://apxml.com/about) (commercial).
 
     [:octicons-arrow-right-24: To the tool (external)](https://apxml.com/tools/vram-calculator)
 
