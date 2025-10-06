@@ -1,3 +1,24 @@
+# hpc-sites.yaml
+#
+# This data structure is parsed into the table at 
+#   https://www.ccpahc.ac.uk/resources/sites/
+#
+# A `sites` entry should follow the structure:
+# 
+#  - name: "Institution - System"
+#    url: "https://example.com/path/to/documentation/"
+#    tier: 3                    # e.g. 1-3
+#    link_check_exclude: false  # `domain`; `base_url`; `path` (same as true); or `false` 
+#
+# `link_check_exclude` determines whether and how `scripts/make_exclusions.py` will write the URL
+# into `.lycheeignore` as part of the GitHub workflow:
+#
+#   * `domain`:   exclude on the base domain, e.g. : `dur.ac.uk`
+#   * `base_url`: exclude on e.g. `https://www.dur.ac.uk/`
+#   * `path`:     exclude based on the full path e.g. `https://www.example.ac.uk/research/hpc/`
+#   * `true`:     synonym for `path`
+#   * `false`:    (default) don't exclude
+#
 sites:
   # Tier 3 sites
   - name: "Durham University - Hamilton"
