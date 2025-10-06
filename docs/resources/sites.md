@@ -20,50 +20,23 @@ Unfortunately, it is not possible to programmatically update the scope of the cu
 
 ## HPC Documentation Sites
 
-### HEIs (Tier 3)
+{% macro hpc_site_table(sites) %}
+| Institution | Documentation URL |
+|------------|------------------|
+{%- for site in sites %}
+| {{ site.name }} | [{{ (( 
+            site.url | replace("https://", "") | replace("http://", "") 
+        ).split("/")[0]
+    ).replace("www.", "", 1) 
+}}]({{ site.url }}) |
+{%- endfor %}
+{% endmacro %}
 
-- [Durham University - Hamilton](https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/)
-- [Imperial College London - RCS](https://icl-rcs-user-guide.readthedocs.io/en/latest/)
-- [King's College London - CREATE](https://docs.er.kcl.ac.uk/CREATE/access/)
-- [Liverpool John Moores University - Prospero](https://prospero-docs.readthedocs.io/en/latest/)
-- [Oxford University - ARC](https://arc-user-guide.readthedocs.io/en/latest/index.html)
-- [Queen Mary University of London - Apocrita](https://docs.hpc.qmul.ac.uk/)
-- [University College London](https://www.rc.ucl.ac.uk/)
-- [University of Aberdeen](https://uoa.freshservice.com/support/solutions/50000009580)
-- [University of Bath](https://www.bath.ac.uk/professional-services/high-performance-computing/)
-- [University of Birmingham - BEAR](https://docs.bear.bham.ac.uk/)
-- [University of Bristol - Zoo](https://uob-hpc.github.io/zoo/#)
-- [University of Cambridge - Accelerate Programme for Scientific Discovery](https://docs.science.ai.cam.ac.uk/)
-- [University of Cambridge - HPC (includes CSD3, DAWN)](https://docs.hpc.cam.ac.uk/hpc/index.html)
-- [University of Kent](https://www.cs.kent.ac.uk/systems/index.html)
-- [University of Leeds - AIRE](https://arcdocs.leeds.ac.uk/aire/welcome.html)
-- [University of Leicester - ALICE](https://alice-docs.le.ac.uk/)
-- [University of Sheffield](https://docs.hpc.shef.ac.uk/en/latest/index.html)
-- [University of Strathclyde](https://docs.hpc.strath.ac.uk/)
-- [University of Surrey](https://docs.pages.surrey.ac.uk/research_computing/)
-- [University of York - Viking](https://vikingdocs.york.ac.uk/)
+### HEIs (Tier 3)
+{{ hpc_site_table(sites | selectattr("tier", "eq", 3) | list) }}
 
 ### Consortia (Tiers 2 and 1)
-
-These are HPC sites that typically have some affiliation to more than one HEI (and/or a research council); this includes some of the Tier 2 sites.
-
-- [ARCHER2](https://docs.archer2.ac.uk/)
-- [Baskerville](https://docs.baskerville.ac.uk/)
-- [Bede](https://bede-documentation.readthedocs.io/en/latest/index.html)
-- [Cirrus](https://docs.cirrus.ac.uk/)
-- [Crop Diversity](https://help.cropdiversity.ac.uk/index.html)
-- [DiRAC](https://dirac.ac.uk/user-guides/)
-    -   [Data Intensive (CSD3, Cambridge)](https://docs.hpc.cam.ac.uk/hpc/index.html)
-    -   [Memory Intensive (COSMA, Durham)](https://cosma.readthedocs.io/en/latest/)
-    -   [Extreme Scaling (Tursa, Edinburgh)](https://epcced.github.io/dirac-docs/tursa-user-guide/)
-    -   [Data Intensive (DiaL3, Leicester)](https://dial3-docs.dirac.ac.uk/)
-- [Edinburgh International Data Facility](https://docs.eidf.ac.uk/)
-- [Isambard](https://docs.isambard.ac.uk/)
-- [JADE](https://www.jade.ac.uk/)
-- [JASMIN](https://help.jasmin.ac.uk/)
-- [MMM Hub - Young](https://www.rc.ucl.ac.uk/docs/Clusters/Young/)
-- [NI-HPC - Kelvin2](https://ni-hpc.github.io/nihpc-documentation/)
-- [Sulis](https://sulis-hpc.github.io/)
+{{ hpc_site_table(sites | selectattr("tier", "lt", 3) | list) }}
 
 ## About this prototype
 

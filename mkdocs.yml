@@ -32,6 +32,9 @@ markdown_extensions:
 plugins:
     - blog
     - search
+    - macros:
+        include_yaml:
+          - docs/data/hpc-sites.yaml
     - rss:
         match_path: blog/posts/.* 
         date_from_meta:
