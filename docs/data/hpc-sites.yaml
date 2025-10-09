@@ -9,6 +9,8 @@
 #    url: "https://example.com/path/to/documentation/"
 #    tier: 3                    # e.g. 1-3
 #    link_check_exclude: false  # `domain`; `base_url`; `path` (same as true); or `false` 
+#    search:
+#      include: true
 #
 # `link_check_exclude` determines whether and how `scripts/make_exclusions.py` will write the URL
 # into `.lycheeignore` as part of the GitHub workflow:
@@ -24,6 +26,8 @@ sites:
   - name: "Durham University - Hamilton"
     url: "https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/"
     tier: 3
+    search:
+      include: true
     link_check_exclude: false
   
   - name: "Imperial College London - RCS"
@@ -54,9 +58,6 @@ sites:
   - name: "University College London"
     url: "https://www.rc.ucl.ac.uk/"
     tier: 3
-    search:
-      include: "www.rc.ucl.ac.uk"
-      exclude: []
     link_check_exclude: false
 
   - name: "University of Aberdeen"
