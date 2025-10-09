@@ -113,7 +113,7 @@ sites:
   - name: "University of Strathclyde"
     url: "https://docs.hpc.strath.ac.uk/"
     tier: 3
-    link_check_exclude: false
+    link_check_exclude: true
 
   - name: "University of Surrey"
     url: "https://docs.pages.surrey.ac.uk/research_computing/"

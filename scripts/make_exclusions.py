@@ -213,6 +213,16 @@ def main():
     manual_exclusions = load_existing_exclusions(lycheeignore)
     auto_exclusions = generate_exclusions(sites_data)
 
+    remove = []
+    for index, entry in enumerate(auto_exclusions):
+        if entry in manual_exclusions:
+            # Collsion: already manually excluded
+            print(f"Already manually excluded: {entry}")
+            remove.append(index)
+
+    for index in reversed(remove):
+        auto_exclusions.pop(index)
+
     if check_only:
         # Generate temporary content to compare
         temp_content = []
