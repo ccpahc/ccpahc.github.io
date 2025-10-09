@@ -14,7 +14,7 @@ repos:
       - id: make_exclusions
         name: make_exclusions
         files: ^docs/data/hpc-sites.yaml
-        entry: .venv/bin/python scripts/make_exclusions.py --check
+        entry: .venv/bin/python scripts/make_exclusions.py
         language: python
         types: [yaml]
         pass_filenames: false
