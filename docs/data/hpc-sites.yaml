@@ -1,0 +1,211 @@
+# hpc-sites.yaml
+#
+# This data structure is parsed into the table at 
+#   https://www.ccpahc.ac.uk/resources/sites/
+#
+# A `sites` entry should follow the structure:
+# 
+#  - name: "Institution - System"
+#    url: "https://example.com/path/to/documentation/"
+#    tier: 3                    # e.g. 1-3
+#    link_check_exclude: false  # `domain`; `base_url`; `path` (same as true); or `false` 
+#
+# `link_check_exclude` determines whether and how `scripts/make_exclusions.py` will write the URL
+# into `.lycheeignore` as part of the GitHub workflow:
+#
+#   * `domain`:   exclude on the base domain, e.g. : `dur.ac.uk`
+#   * `base_url`: exclude on e.g. `https://www.dur.ac.uk/`
+#   * `path`:     exclude based on the full path e.g. `https://www.example.ac.uk/research/hpc/`
+#   * `true`:     synonym for `path`
+#   * `false`:    (default) don't exclude
+#
+sites:
+  # Tier 3 sites
+  - name: "Durham University - Hamilton"
+    url: "https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/"
+    tier: 3
+    link_check_exclude: false
+  
+  - name: "Imperial College London - RCS"
+    url: "https://icl-rcs-user-guide.readthedocs.io/en/latest/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "King's College London - CREATE"
+    url: "https://docs.er.kcl.ac.uk/CREATE/access/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "Liverpool John Moores University - Prospero"
+    url: "https://prospero-docs.readthedocs.io/en/latest/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "Oxford University - ARC"
+    url: "https://arc-user-guide.readthedocs.io/en/latest/index.html"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "Queen Mary University of London - Apocrita"
+    url: "https://docs.hpc.qmul.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University College London"
+    url: "https://www.rc.ucl.ac.uk/"
+    tier: 3
+    search:
+      include: "www.rc.ucl.ac.uk"
+      exclude: []
+    link_check_exclude: false
+
+  - name: "University of Aberdeen"
+    url: "https://uoa.freshservice.com/support/solutions/50000009580"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Bath"
+    url: "https://www.bath.ac.uk/professional-services/high-performance-computing/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Birmingham - BEAR"
+    url: "https://docs.bear.bham.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Bristol - Zoo"
+    url: "https://uob-hpc.github.io/zoo/#"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Cambridge - Accelerate Programme"
+    url: "https://docs.science.ai.cam.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Cambridge - HPC"
+    url: "https://docs.hpc.cam.ac.uk/hpc/index.html"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Kent"
+    url: "https://www.cs.kent.ac.uk/systems/index.html"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Leeds - AIRE"
+    url: "https://arcdocs.leeds.ac.uk/aire/welcome.html"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Leicester - ALICE"
+    url: "https://alice-docs.le.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Sheffield"
+    url: "https://docs.hpc.shef.ac.uk/en/latest/index.html"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Strathclyde"
+    url: "https://docs.hpc.strath.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of Surrey"
+    url: "https://docs.pages.surrey.ac.uk/research_computing/"
+    tier: 3
+    link_check_exclude: false
+
+  - name: "University of York - Viking"
+    url: "https://vikingdocs.york.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+
+  # Tier 2 and 1 sites
+  - name: "ARCHER2"
+    url: "https://docs.archer2.ac.uk/"
+    tier: 1
+    link_check_exclude: false
+
+  - name: "Baskerville"
+    url: "https://docs.baskerville.ac.uk/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "Bede"
+    url: "https://bede-documentation.readthedocs.io/en/latest/index.html"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "Cirrus"
+    url: "https://docs.cirrus.ac.uk/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "Crop Diversity"
+    url: "https://help.cropdiversity.ac.uk/index.html"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "DiRAC"
+    url: "https://dirac.ac.uk/user-guides/"
+    tier: 1
+    link_check_exclude: false
+
+  - name: "DiRAC - Data Intensive (CSD3)"
+    url: "https://docs.hpc.cam.ac.uk/hpc/index.html"
+    tier: 1
+    link_check_exclude: false
+
+  - name: "DiRAC - Memory Intensive (COSMA)"
+    url: "https://cosma.readthedocs.io/en/latest/"
+    tier: 1
+    link_check_exclude: false
+
+  - name: "DiRAC - Extreme Scaling (Tursa)"
+    url: "https://epcced.github.io/dirac-docs/tursa-user-guide/"
+    tier: 1
+    link_check_exclude: false
+
+  - name: "DiRAC - Data Intensive (DiaL3)"
+    url: "https://dial3-docs.dirac.ac.uk/"
+    tier: 1
+    link_check_exclude: false
+
+  - name: "Edinburgh International Data Facility"
+    url: "https://docs.eidf.ac.uk/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "Isambard"
+    url: "https://docs.isambard.ac.uk/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "JADE"
+    url: "https://www.jade.ac.uk/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "JASMIN"
+    url: "https://help.jasmin.ac.uk/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "MMM Hub - Young"
+    url: "https://www.rc.ucl.ac.uk/docs/Clusters/Young/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "NI-HPC - Kelvin2"
+    url: "https://ni-hpc.github.io/nihpc-documentation/"
+    tier: 2
+    link_check_exclude: false
+
+  - name: "Sulis"
+    url: "https://sulis-hpc.github.io/"
+    tier: 2
+    link_check_exclude: false
