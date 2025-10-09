@@ -7,16 +7,13 @@ This script reads the HPC Sites datafile and generates ignore patterns in
 """
 import re
 import sys
-import yaml
 from pathlib import Path
 from typing import Dict, List, Union, Literal
 
+from common import *
+
 # Define allowable type for exclusions
 ExcludeType = Union[Literal["domain"], Literal["base_url"], Literal["path"], bool]
-
-# Path constants
-DATA_PATH = "docs/data/hpc-sites.yaml"
-IGNORE_PATH = ".lycheeignore"
 
 
 def load_existing_exclusions(lycheeignore_path: Path) -> List[str]:
@@ -211,8 +208,7 @@ def main():
     lycheeignore = repo_root / IGNORE_PATH
 
     # Load and process exclusions
-    with open(sites_yaml) as f:
-        sites_data = yaml.safe_load(f)
+    sites_data = load_sites_config(sites_yaml)
 
     manual_exclusions = load_existing_exclusions(lycheeignore)
     auto_exclusions = generate_exclusions(sites_data)
