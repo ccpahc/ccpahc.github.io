@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Generate .lycheeignore file from data/hpc-sites.yaml
+
+This script reads the HPC Sites datafile and generates ignore patterns in
+.lycheeignore, as read by Lychee in checking links on the website
+"""
 import re
 import sys
 import yaml
@@ -7,6 +13,10 @@ from typing import Dict, List, Union, Literal
 
 # Define allowable type for exclusions
 ExcludeType = Union[Literal["domain"], Literal["base_url"], Literal["path"], bool]
+
+# Path constants
+DATA_PATH = "docs/data/hpc-sites.yaml"
+IGNORE_PATH = ".lycheeignore"
 
 
 def load_existing_exclusions(lycheeignore_path: Path) -> List[str]:
@@ -197,8 +207,8 @@ def main():
         sys.exit(0)
 
     repo_root = Path(__file__).parent.parent
-    sites_yaml = repo_root / "docs" / "data" / "hpc-sites.yaml"
-    lycheeignore = repo_root / ".lycheeignore"
+    sites_yaml = repo_root / DATA_PATH
+    lycheeignore = repo_root / IGNORE_PATH
 
     # Load and process exclusions
     with open(sites_yaml) as f:
