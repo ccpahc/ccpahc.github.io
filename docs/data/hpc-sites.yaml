@@ -210,3 +210,22 @@ sites:
     url: "https://sulis-hpc.github.io/"
     tier: 2
     link_check_exclude: false
+
+
+# Optional: Context configuration for Google Custom Search Engine
+# If omitted, sensible defaults will be used
+context:
+  title: "CCP AHC Documentation Sites Search"
+  description: "Search across academic HPC documentation sites"
+  
+  background_labels:
+    - "_include_"
+  
+  # Optional: Customize look and feel
+  look_and_feel:
+    logo: "https://www.ccpahc.ac.uk/assets/images/favicon.png"
+    colors:
+      url: "#0066CC"
+      background: "#FFFFFF"
+      border: "#E5E5E5"
+      title: "#1A0DAB"

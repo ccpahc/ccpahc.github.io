@@ -9,3 +9,7 @@ site*/
 
 # Python bytecache
 *.pyc
+
+# Generated Google Programmable Search files
+Annotations.xml
+Context.xml

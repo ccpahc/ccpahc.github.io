@@ -46,7 +46,22 @@ def validate_sites(sites_data) -> bool:
         },
     }
 
-    sites_schema = Schema({"sites": [site_schema]})
+    sites_schema = Schema(
+        {
+            "sites": [site_schema],
+            Optional("context"): {
+                Optional("title"): str,
+                Optional("description"): str,
+                Optional("background_labels"): [str],
+                Optional("look_and_feel"): {
+                    Optional("logo"): str,
+                    Optional("colors"): {
+                        Optional(str): str,  # Allow any colour keys
+                    },
+                },
+            },
+        }
+    )
     sites_schema.validate(sites_data)
     return sites_schema.is_valid(sites_data)
 
