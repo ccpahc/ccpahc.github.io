@@ -610,13 +610,15 @@ dependencies = [
     { name = "mkdocs-macros-plugin" },
     { name = "mkdocs-material" },
     { name = "mkdocs-rss-plugin" },
+    { name = "pyyaml" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "mkdocs", specifier = ">=1.6.1" },
     { name = "mkdocs-git-revision-date-localized-plugin", specifier = ">=1.4.7" },
-    { name = "mkdocs-macros-plugin" },
+    { name = "mkdocs-macros-plugin", specifier = ">=1.4.0" },
     { name = "mkdocs-material", specifier = ">=9.6.15" },
     { name = "mkdocs-rss-plugin", specifier = ">=1.17.3" },
+    { name = "pyyaml", specifier = ">=6.0.2" },
 ]
