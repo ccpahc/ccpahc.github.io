@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Union, Literal
 
-from common import *
+import config
 
 # Define allowable type for exclusions
 ExcludeType = Union[Literal["domain"], Literal["base_url"], Literal["path"], bool]
@@ -204,11 +204,11 @@ def main():
         sys.exit(0)
 
     repo_root = Path(__file__).parent.parent
-    sites_yaml = repo_root / DATA_PATH
-    lycheeignore = repo_root / IGNORE_PATH
+    sites_yaml = repo_root / config.DATA_PATH
+    lycheeignore = repo_root / config.IGNORE_PATH
 
     # Load and process exclusions
-    sites_data = load_sites_config(sites_yaml)
+    sites_data = config.load_sites_config(sites_yaml)
 
     manual_exclusions = load_existing_exclusions(lycheeignore)
     auto_exclusions = generate_exclusions(sites_data)
@@ -252,6 +252,8 @@ def run_tests():
     - true: Same as 'path' (for backward compatibility)
     - false: No exclusion generated
     """
+    import yaml
+
     example_yaml = """
 sites:
   # Example: Exclude entire domain and subdomains
@@ -259,6 +261,8 @@ sites:
     url: "https://docs.example.ac.uk/hpc/"
     tier: 3
     link_check_exclude: "domain"  # Will generate: ^https?://docs\\.example\\.ac\\.uk/
+    search:
+      include: false
     
   # Example: Exclude specific base URL and everything under it
   - name: "Base URL Exclusion Example"
@@ -287,6 +291,8 @@ sites:
 
     # Parse example YAML and demonstrate exclusion generation
     sites_data = yaml.safe_load(example_yaml)
+    config.validate_sites(sites_data)
+
     output = ["Generated exclusion patterns:"]
 
     for site in sites_data["sites"]:

@@ -18,13 +18,21 @@ def validate_sites(sites_data) -> bool:
     raises: SchemaError
     """
     site_schema = {
-        "name": And(str, len, error="'name' must be a non-empty string."),
+        "name": And(
+            str,
+            len,
+            error="'name' must be a non-empty string.",
+        ),
         "url": And(
             str,
             lambda s: s.startswith("http"),
             error="'url' must start with http or https.",
         ),
-        "tier": And(int, lambda n: n > 0, error="'tier' must be a positive integer."),
+        "tier": And(
+            int,
+            lambda n: n > 0,
+            error="'tier' must be a positive integer.",
+        ),
         "link_check_exclude": Or(
             bool,
             And(
@@ -33,26 +41,28 @@ def validate_sites(sites_data) -> bool:
             ),  # type: ignore
             error="'link_check_exclude' must be [True, False, or one of 'path', 'domain', 'base_url'].",
         ),
-        Optional("search"): {"include": bool},
+        Optional("search"): {
+            "include": bool,
+        },
     }
 
     sites_schema = Schema({"sites": [site_schema]})
-    sites_schema.validate(config)
+    sites_schema.validate(sites_data)
     return sites_schema.is_valid(sites_data)
 
 
-def load_sites_config(config_path):
+def load_sites_config(config_path) -> dict:  # pyright: ignore[reportReturnType]
     """Load the structured sites configuration from YAML."""
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
-    return config
-
-
-if __name__ == "__main__":
-    config = load_sites_config(DATA_PATH)
 
     try:
         if validate_sites(config):
-            print(f"Validated: {DATA_PATH}")
+            print(f"Data valid: {config_path}")
+            return config
     except SchemaError as e:
-        print(e)
+        raise e
+
+
+if __name__ == "__main__":
+    load_sites_config(DATA_PATH)
