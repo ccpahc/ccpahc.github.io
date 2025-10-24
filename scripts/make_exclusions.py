@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
+"""
+Generate .lycheeignore file from data/hpc-sites.yaml
+
+This script reads the HPC Sites datafile and generates ignore patterns in
+.lycheeignore, as read by Lychee in checking links on the website
+"""
 import re
 import sys
-import yaml
 from pathlib import Path
 from typing import Dict, List, Union, Literal
+
+import config
 
 # Define allowable type for exclusions
 ExcludeType = Union[Literal["domain"], Literal["base_url"], Literal["path"], bool]
@@ -197,15 +204,24 @@ def main():
         sys.exit(0)
 
     repo_root = Path(__file__).parent.parent
-    sites_yaml = repo_root / "docs" / "data" / "hpc-sites.yaml"
-    lycheeignore = repo_root / ".lycheeignore"
+    sites_yaml = repo_root / config.DATA_PATH
+    lycheeignore = repo_root / config.IGNORE_PATH
 
     # Load and process exclusions
-    with open(sites_yaml) as f:
-        sites_data = yaml.safe_load(f)
+    sites_data = config.load_sites_config(sites_yaml)
 
     manual_exclusions = load_existing_exclusions(lycheeignore)
     auto_exclusions = generate_exclusions(sites_data)
+
+    remove = []
+    for index, entry in enumerate(auto_exclusions):
+        if entry in manual_exclusions:
+            # Collsion: already manually excluded
+            print(f"Already manually excluded: {entry}")
+            remove.append(index)
+
+    for index in reversed(remove):
+        auto_exclusions.pop(index)
 
     if check_only:
         # Generate temporary content to compare
@@ -246,6 +262,8 @@ def run_tests():
     - true: Same as 'path' (for backward compatibility)
     - false: No exclusion generated
     """
+    import yaml
+
     example_yaml = """
 sites:
   # Example: Exclude entire domain and subdomains
@@ -253,6 +271,8 @@ sites:
     url: "https://docs.example.ac.uk/hpc/"
     tier: 3
     link_check_exclude: "domain"  # Will generate: ^https?://docs\\.example\\.ac\\.uk/
+    search:
+      include: false
     
   # Example: Exclude specific base URL and everything under it
   - name: "Base URL Exclusion Example"
@@ -281,6 +301,8 @@ sites:
 
     # Parse example YAML and demonstrate exclusion generation
     sites_data = yaml.safe_load(example_yaml)
+    config.validate_sites(sites_data)
+
     output = ["Generated exclusion patterns:"]
 
     for site in sites_data["sites"]:
