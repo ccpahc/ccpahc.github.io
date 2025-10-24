@@ -2,6 +2,20 @@
 
 Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
 
+## Open calls
+
+### Call for codes, workflows and pipelines
+
+[Tell us about your software!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
+
+We invite owners, maintainers, users, and other stakeholders in research codes, workflows, and pipelines that support computationally-intensive arts, humanities, and culture (AH&C) research and innovation [to submit a short expression of interest form](https://forms.office.com/e/EAyaK8cajv). 
+
+### Call for comments on CCP-AHC Roadmap Open Draft
+
+[Read the CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176){ .md-button .md-button--primary } 
+
+We invite the community involved in computationally-intensive arts, humanities, and culture (AH&C) research and innovation to submit their comments by email to [ccpahc@durham.ac.uk](mailto:ccpahc@durham.ac.uk) or to attend our upcoming [regional engagement events](./activities/regional-engagement.md).
+
 ## Events
 
 ### Upcoming
@@ -21,14 +35,6 @@ CCP-AHC held a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn
 The [CCP-AHC Community Forum](./activities/community-forum.md) takes place online on the second Tuesday of each month, 12:30 p.m. to 1:30 p.m. (UK time) starting from Tuesday, 12 August 2025.  
 
 These are informal, drop-in sessions open to all. Join these meetings to learn more about the project, to hear updates from the team, and to share your experiences accessing large-scale compute for arts, humanities, and culture research. [Sign up to recieve the meeting details](https://forms.office.com/e/BnW8PZwJA9).
-
-## Open calls
-
-[Tell us about your software!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
-
-We invite owners, maintainers, users, and other stakeholders in research codes, workflows, and pipelines that support computationally-intensive arts, humanities, and culture (AH&C) research and innovation [to submit a short expression of interest form](https://forms.office.com/e/EAyaK8cajv). 
-
-The expression of interest is a short case for the relevance of that code to CCP-AHC.
 
 ## Details
 
