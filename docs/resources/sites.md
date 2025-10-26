@@ -1,4 +1,4 @@
-This is an index of public user documentation pages for a number of HPC sites, including many UK-based [Tier 3](https://docs.hpc.qmul.ac.uk/intro/#hpc-tiers) systems. If you would like to propose changes to this list, please [open a pull request](https://github.com/ccpahc/ccpahc.github.io/edit/main/docs/resources/sites.md) or [contact the project team](../index.md#contact).
+This is an index of public user documentation pages for a number of HPC sites, including many UK-based [Tier 3](https://docs.hpc.qmul.ac.uk/intro/#hpc-tiers) systems. If you would like to propose changes to this list, please [open a pull request](https://github.com/ccpahc/ccpahc.github.io/edit/main/docs/data/hpc-sites.yaml) or [contact the project team](../index.md#contact).
 
 It also includes a minimum viable product (MVP) for a cross-site full-text search over the documentation pages it knows about.
 
@@ -11,6 +11,8 @@ Try searching for “PyTorch” to find user guidance for running machine learni
 <div class="gcse-search"></div>
 
 ### Implementation note
+
+Details about each HPC site and its related public documentation pages are stored [as structured data in a YAML file](https://github.com/ccpahc/ccpahc.github.io/edit/main/docs/data/hpc-sites.yaml) and are used to programmatically generate the table below.
 
 Every week, the links in this page are [checked by a software called Lychee](https://github.com/lycheeverse/lychee). If a broken link is found, [an issue is automatically created](https://github.com/ccpahc/ccpahc.github.io/issues?q=is%3Aissue%20state%3Aopen%20%22Link%20Checker%22) on the repository containing the website sources.
 
