@@ -18,10 +18,15 @@ This in-person event starts at 12.30pm (arrival/lunch) with the main session run
 
 ### Agenda
 
-- (15m) Introduction to the community and updates from CCP-AHC Delivery Team
-- (45m) Short presentations from allied DRI initiatives
-- (30m) Identifying codes, pipelines, and workflows
-- (60m) Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+- 12.30 p.m. Delegates arrive, with lunch served from 12:30 p.m.
+- 1.00 p.m. Welcome
+- 1.15 p.m. Introduction to the community and updates from CCP-AHC Delivery Team
+- 1.30 p.m. Short presentations from allied DRI initiatives
+- 1.45 p.m. Identifying codes, pipelines, and workflows
+- 2.00 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+- 2.30 p.m. Tea/coffee break
+- 2.45 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+- 3.30 p.m. Ends
 
 ## CCP-AHC Regional Workshop (Edinburgh) - Thursday, 6th November 2025 
 
