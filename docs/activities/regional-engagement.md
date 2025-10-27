@@ -26,6 +26,7 @@ This in-person event starts at 12.30pm (arrival/lunch) with the main session run
 - 2.00 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
     - In this session, we look to build on the outputs of the CCP-AHC Town Hall 2025. Please review the open draft, which is available on [Zenodo](https://zenodo.org/records/17099176).
     - The discussion will be built around the prompts in Appendix 2 (p. 12-13).
+    - If you have not already done so, you are invited to [create a Hypothes.is social annotation account](https://hypothes.is/signup) and to install [the Hypothes.is browser plugin](https://web.hypothes.is/web-app-start/). This is optional.
 - 2.30 p.m. Tea/coffee break
 - 2.45 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
 - 3.30 p.m. Ends
