@@ -24,6 +24,8 @@ This in-person event starts at 12.30pm (arrival/lunch) with the main session run
 - 1.30 p.m. Short presentations from allied DRI initiatives
 - 1.45 p.m. Collectively identifying [codes, pipelines, and workflows](https://www.ccpahc.ac.uk/activities/codes-eoi/)
 - 2.00 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+    - In this session, we look to build on the outputs of the CCP-AHC Town Hall 2025. Please review the open draft, which is available on [Zenodo](https://zenodo.org/records/17099176).
+    - The discussion will be built around the prompts in Appendix 2 (p. 12-13).
 - 2.30 p.m. Tea/coffee break
 - 2.45 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
 - 3.30 p.m. Ends
