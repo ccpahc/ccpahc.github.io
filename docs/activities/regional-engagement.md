@@ -18,7 +18,7 @@ This in-person event starts at 12.30pm (arrival/lunch) with the main session run
 
 ### Agenda
 
-- 12.30 p.m. Delegates arrive, with lunch served from 12:30 p.m.
+- 12.30 p.m. Delegates arrive, with lunch served from 12.30 p.m.
 - 1.00 p.m. Welcome
 - 1.15 p.m. Introduction to the community and updates from CCP-AHC Delivery Team
 - 1.30 p.m. Short presentations from allied DRI initiatives
