@@ -22,7 +22,7 @@ This in-person event starts at 12.30pm (arrival/lunch) with the main session run
 - 1.00 p.m. Welcome
 - 1.15 p.m. Introduction to the community and updates from CCP-AHC Delivery Team
 - 1.30 p.m. Short presentations from allied DRI initiatives
-- 1.45 p.m. Identifying codes, pipelines, and workflows
+- 1.45 p.m. Collectively identifying [codes, pipelines, and workflows](https://www.ccpahc.ac.uk/activities/codes-eoi/)
 - 2.00 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
 - 2.30 p.m. Tea/coffee break
 - 2.45 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
