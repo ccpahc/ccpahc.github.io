@@ -14,6 +14,8 @@ We invite owners, maintainers, users, and other stakeholders in research codes, 
 
 [Read the CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176){ .md-button .md-button--primary } 
 
+[Comment on the CCP-AHC Roadmap Open Draft (via Hypothes.is)](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf){ .md-button .md-button--secondary } 
+
 We invite the community involved in computationally-intensive arts, humanities, and culture (AH&C) research and innovation to submit their comments by email to [ccpahc@durham.ac.uk](mailto:ccpahc@durham.ac.uk) or to attend our upcoming [regional engagement events](./activities/regional-engagement.md).
 
 ## Events
