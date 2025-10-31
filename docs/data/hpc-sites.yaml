@@ -9,6 +9,8 @@
 #    url: "https://example.com/path/to/documentation/"
 #    tier: 3                    # e.g. 1-3
 #    link_check_exclude: false  # `domain`; `base_url`; `path` (same as true); or `false` 
+#    search:
+#      include: true
 #
 # `link_check_exclude` determines whether and how `scripts/make_exclusions.py` will write the URL
 # into `.lycheeignore` as part of the GitHub workflow:
@@ -24,6 +26,8 @@ sites:
   - name: "Durham University - Hamilton"
     url: "https://www.dur.ac.uk/research/institutes-and-centres/advanced-research-computing/hamilton-supercomputer/"
     tier: 3
+    search:
+      include: true
     link_check_exclude: false
   
   - name: "Imperial College London - RCS"
@@ -54,9 +58,6 @@ sites:
   - name: "University College London"
     url: "https://www.rc.ucl.ac.uk/"
     tier: 3
-    search:
-      include: "www.rc.ucl.ac.uk"
-      exclude: []
     link_check_exclude: false
 
   - name: "University of Aberdeen"
@@ -112,7 +113,7 @@ sites:
   - name: "University of Strathclyde"
     url: "https://docs.hpc.strath.ac.uk/"
     tier: 3
-    link_check_exclude: false
+    link_check_exclude: true
 
   - name: "University of Surrey"
     url: "https://docs.pages.surrey.ac.uk/research_computing/"
@@ -209,3 +210,22 @@ sites:
     url: "https://sulis-hpc.github.io/"
     tier: 2
     link_check_exclude: false
+
+
+# Optional: Context configuration for Google Custom Search Engine
+# If omitted, sensible defaults will be used
+context:
+  title: "CCP AHC Documentation Sites Search"
+  description: "Search across academic HPC documentation sites"
+  
+  background_labels:
+    - "_include_"
+  
+  # Optional: Customize look and feel
+  look_and_feel:
+    logo: "https://www.ccpahc.ac.uk/assets/images/favicon.png"
+    colors:
+      url: "#0066CC"
+      background: "#FFFFFF"
+      border: "#E5E5E5"
+      title: "#1A0DAB"

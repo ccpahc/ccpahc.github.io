@@ -6,3 +6,10 @@ site*/
 
 # vscode workspace specific configurations
 .vscode/
+
+# Python bytecache
+*.pyc
+
+# Generated Google Programmable Search files
+Annotations.xml
+Context.xml
