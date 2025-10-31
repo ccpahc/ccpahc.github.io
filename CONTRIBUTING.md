@@ -155,22 +155,6 @@ Write clear, informative commit messages following conventional commit format wh
 
 ## Testing Standards
 
-### Running Tests
-
-Test commands vary by repository. Common patterns include:
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage reporting
-pytest --cov=package_name
-
-# Run specific test categories
-pytest tests/unit
-pytest tests/integration
-```
-
 ### Writing Tests
 
 When contributing tests:
