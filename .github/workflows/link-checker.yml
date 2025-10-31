@@ -34,7 +34,7 @@ jobs:
           args: ./docs/resources/**/*.md
           fail: false
 
-      - name: Export Link Checker Report
+      - name: Set Link Checker Report Title in Environment
         if: steps.lychee.outputs.exit_code != 0
         run: |
           echo "title=Link Checker Report - $(date +'%Y-%m-%d')" >> $GITHUB_ENV
