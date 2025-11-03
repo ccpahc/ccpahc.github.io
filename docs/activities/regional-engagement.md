@@ -47,11 +47,20 @@ Please note that the [UK DARIAH Day 2025](https://www.eventbrite.co.uk/e/dariah-
 
 ### Agenda
 
-- (15m) Introduction to the community and updates from CCP-AHC Delivery Team
-- (45m) Short presentations from allied DRI initiatives
+- 1.00 p.m. Delegates arrive, with lunch served from 1.00 p.m.
+- 1.30 p.m. Introduction to the community and updates from CCP-AHC Delivery Team
+- 1.50 p.m. Short presentations from allied DRI initiatives
     - Including speakers from the [Edinburgh International Data Facility (EIDF)](https://edinburgh-international-data-facility.ed.ac.uk/) and [UK contributors to European Cloud for Heritage OpEn Science (ECHOES)](https://archaeologydataservice.ac.uk/about/projects/echoes/)
-- (30m) Identifying codes, pipelines, and workflows
-- (60m) Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+- 2.30 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+    - In this session, we look to build on the outputs of the CCP-AHC Town Hall 2025. Please review the open draft, which is available on [Zenodo](https://zenodo.org/records/17099176).
+    - The discussion will be built around the prompts in Appendix 2 (p. 12-13).
+    - You are invited to [create a Hypothes.is social annotation account](https://hypothes.is/signup). This is optional.
+    - If you do so. you can add comments to the open draft by visiting [a directly annotatable copy of the open draft (using the Hypothes.is Via service)](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf). 
+
+- 3.15 p.m. Coffee break
+- 3.30 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+- 4.30 p.m. Collectively identifying [codes, pipelines, and workflows](https://www.ccpahc.ac.uk/activities/codes-eoi/)
+- 5.00 p.m. Ends
 
 ##  CCP-AHC Regional Workshop (London) - Friday, 14th November 2025
 
