@@ -57,7 +57,7 @@ Please note that the [UK DARIAH Day 2025](https://www.eventbrite.co.uk/e/dariah-
     - You are invited to [create a Hypothes.is social annotation account](https://hypothes.is/signup). This is optional.
     - If you do so, you can add comments to the open draft by visiting [a directly annotatable copy of the open draft (using the Hypothes.is Via service)](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf). 
 
-- 3.15 p.m. Coffee break
+- 3.15 p.m. Tea/coffee break
 - 3.30 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
 - 4.30 p.m. Collectively identifying [codes, pipelines, and workflows](https://www.ccpahc.ac.uk/activities/codes-eoi/)
 - 5.00 p.m. Ends
