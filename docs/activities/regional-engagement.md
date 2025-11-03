@@ -50,7 +50,7 @@ Please note that the [UK DARIAH Day 2025](https://www.eventbrite.co.uk/e/dariah-
 - 1.00 p.m. Delegates arrive, with lunch served from 1.00 p.m.
 - 1.30 p.m. Introduction to the community and updates from CCP-AHC Delivery Team
 - 1.50 p.m. Short presentations from allied DRI initiatives
-    - Including speakers from the [Edinburgh International Data Facility (EIDF)](https://edinburgh-international-data-facility.ed.ac.uk/) and [UK contributors to European Cloud for Heritage OpEn Science (ECHOES)](https://archaeologydataservice.ac.uk/about/projects/echoes/)
+    - Including speakers from the [Edinburgh International Data Facility (EIDF)](https://edinburgh-international-data-facility.ed.ac.uk/),  [UK contributors to European Cloud for Heritage OpEn Science (ECHOES)](https://archaeologydataservice.ac.uk/about/projects/echoes/), and [Towards a National Research Software Engineering Capability in Arts and Humanities Research: a Roadmap](https://zenodo.org/records/15083396).
 - 2.30 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
     - In this session, we look to build on the outputs of the CCP-AHC Town Hall 2025. Please review the open draft, which is available on [Zenodo](https://zenodo.org/records/17099176).
     - The discussion will be built around the prompts in Appendix 2 (p. 12-13).
