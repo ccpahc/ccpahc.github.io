@@ -6,7 +6,7 @@ Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture res
 
 ### Call for codes, workflows and pipelines
 
-[Tell us about your software!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
+[Tell us about the software you use!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
 
 We invite owners, maintainers, users, and other stakeholders in research codes, workflows, and pipelines that support computationally-intensive arts, humanities, and culture (AH&C) research and innovation [to submit a short expression of interest form](https://forms.office.com/e/EAyaK8cajv). 
 
