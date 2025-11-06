@@ -35,7 +35,7 @@ This in-person event starts at 12.30pm (arrival/lunch) with the main session run
 
 ### Details
 
-The event takes place on 6th November 2025 at the University of Edinburgh.
+The event takes place on 6th November 2025 in Room 2.55, Edinburgh Futures Institute (Lauriston Road), University of Edinburgh.
 
 This in-person event starts at 1pm and finishes at 5pm. Lunch will be provided. 
 
