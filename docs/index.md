@@ -24,15 +24,16 @@ We invite the community involved in computationally-intensive arts, humanities, 
 
 CCP-AHC will hold four [regional engagement events](./activities/regional-engagement.md) in the coming months. The following events are confirmed and **registration is open**:
 
-- [CCP-AHC Engagement Event (Cardiff)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-cardiff-wednesday-29th-october-2025) on Wednesday, 29th October 2025, 12.30pm to 3.30pm at Wales Millenium Centre, Cardiff
-- [CCP-AHC Engagement Event (Edinburgh)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh-thursday-6th-november-2025) on Thursday, 6th November 2025, 1pm to 5 pm at University of Edinburgh, Edinburgh
 - [CCP-AHC Engagement Event (London)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london-friday-14th-november-2025) on Friday, 14th November 2025, 12.30pm to 4pm, Central London
 
 ### Past
 
+- [CCP-AHC Engagement Event (Cardiff)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-cardiff-wednesday-29th-october-2025) on Wednesday, 29th October 2025, 12.30pm to 3.30pm at Wales Millenium Centre, Cardiff
+- [CCP-AHC Engagement Event (Edinburgh)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh-thursday-6th-november-2025) on Thursday, 6th November 2025, 1pm to 5 pm at University of Edinburgh, Edinburgh
+
 CCP-AHC held a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025/index.md). 
 
-## Community meetings
+## Community Forum meetings
 
 The [CCP-AHC Community Forum](./activities/community-forum.md) takes place online on the second Tuesday of each month, 12:30 p.m. to 1:30 p.m. (UK time) starting from Tuesday, 12 August 2025.  
 
