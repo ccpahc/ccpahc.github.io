@@ -76,6 +76,14 @@ This in-person event starts at 12.30pm with lunch and runs until 4pm.
 
 ### Agenda
 
-- (30m) Updates from CCP-AHC Delivery Team
-- (45m) Short presentations from allied DRI initiatives
-- (1h30m) Finalising interim CCP-AHC roadmap 
+- 12.30 p.m. Delegates arrive, with lunch served from 12.30 p.m.
+- 1.00 p.m. Introduction to the community and updates from CCP-AHC Delivery Team
+- 1.30 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+    - In this session, we look to build on the outputs of the CCP-AHC Town Hall 2025. Please review the open draft, which is available on [Zenodo](https://zenodo.org/records/17099176).
+    - The discussion will be built around the prompts in Appendix 2 (p. 12-13).
+    - You are invited to [create a Hypothes.is social annotation account](https://hypothes.is/signup). This is optional.
+    - If you do so, you can add comments to the open draft by visiting [a directly annotatable copy of the open draft (using the Hypothes.is Via service)](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf).
+- 2.15 p.m. Tea/coffee break
+- 2.30 p.m. Feedback on [CCP-AHC roadmap open draft](https://zenodo.org/records/17099176)
+- 3.15 p.m. Roadmap prioritisation exercise
+- 4.00 p.m. Ends
