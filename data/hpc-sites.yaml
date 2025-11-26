@@ -105,6 +105,11 @@ sites:
     tier: 3
     link_check_exclude: false
 
+  - name: "University of Plymouth - Lovelace"
+    url: "https://docs.lovelace.plymouth.ac.uk/"
+    tier: 3
+    link_check_exclude: false
+    
   - name: "University of Sheffield"
     url: "https://docs.hpc.shef.ac.uk/en/latest/index.html"
     tier: 3
