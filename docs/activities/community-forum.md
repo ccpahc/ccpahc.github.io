@@ -6,11 +6,14 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 
 ### Upcoming
 
-- Tuesday, 11 November 2025 
-- Tuesday, 9 December 2025 
-
+- Tuesday, 13 January 2026
+- Tuesday, 10 February 2026
+- Tuesday, 10 March 2026
+- 
 ### Past
 
+- Tuesday, 11 November 2025 
+- Tuesday, 9 December 2025 
 - Tuesday, 14 October 2025
     - Guest presentation on [Galaxy for Digital Humanities](https://training.galaxyproject.org/training-material/topics/digital-humanities/tutorials/introduction_to_dh/tutorial.html) (Daniela Schneider, Galaxy Europe/University of Freiburg) 
 - Tuesday, 9 September 2025
