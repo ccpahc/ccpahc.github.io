@@ -6,7 +6,7 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 
 ### Upcoming
 
-- ~~Tuesday, 13 January 2026~~
+- Tuesday, 13 January 2026
 - Tuesday, 10 February 2026
 - Tuesday, 10 March 2026
 
