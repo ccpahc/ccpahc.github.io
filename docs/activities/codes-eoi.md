@@ -14,6 +14,25 @@ We are also interested in software that is running or has the potential to run o
 
 Software developed primarily outside of the UK may be in scope if there are UK-based AH&C users and/or contributors.
 
+## Definitions
+
+The following definitions were presented at CCP-AHC events during 2025, and represent our working understanding of the terms codes, pipelines, and workflows.
+
+### Codes
+
+A **code** is a software that is available for reuse by others to produce research 
+findings.
+
+### Pipelines
+
+A **pipeline** is a collection of softwares used routinely and repeatedly to 
+produce research findings.
+
+### Workflows
+
+A **worfklow** is a sequence of steps that describe how to perform a task within the 
+research data lifecycle.
+
 ## Notes
 
 Submission at this stage does not constitute a bid for support from CCP-AHC and does not preclude codes from receiving or seeking support at a future stage. Our aim is to discover codes and their stakeholders, and to iteratively refine the codes discovery process, which will also be supported by desk research over the next 12 months.
