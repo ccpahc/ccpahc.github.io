@@ -80,6 +80,6 @@ There is a special emphasis on ensuring that research software developed by this
 
 ### Funding
 
-This work is supported by the the Science and Technology Facilities Council (STFC) [UKRI/ST/B000494/1]. Funding for 2025-2026 was awarded under the ["Collaborative Computational Communities: towards new CCPs” opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/) 
+This work is supported by the Science and Technology Facilities Council (STFC) [UKRI/ST/B000494/1]. Funding for 2025-2026 was awarded under the ["Collaborative Computational Communities: towards new CCPs” opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/) 
 
 ![Logo of Science and Technology Facilities Council (STFC)](assets/stfc-logo.svg)
