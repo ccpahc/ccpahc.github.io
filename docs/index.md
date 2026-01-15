@@ -1,6 +1,10 @@
 ![The CCP-AHC logotype showing the letters CCP-AHC in a serif font surrounded in a circular fashion by abstract representations of individuals filled in a gradient from blue to purple](assets/CCP_AHA_Master_Logo_RGB.png "CCP-AHC logo")
 
-Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
+Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. 
+
+The **goal of CCP-AHC** is to support the sustainable and efficient development of software, pipelines, and workflows used by arts, humanities, and culture researchers who make use of UK-based digital research infrastructure (DRI). 
+
+The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
 
 ## Open calls
 
