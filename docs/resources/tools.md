@@ -8,7 +8,7 @@
 
     We provide a brief guide to some of the most important routes to access compute that UK-based AHC researchers and innovators can use **today**.
 
-    [:octicons-arrow-right-24: To the tool](../routes-to-access-compute.md)
+    [:octicons-arrow-right-24: To the tool](../routes-to-access-compute)
 </div>
 
 ## Calculators
