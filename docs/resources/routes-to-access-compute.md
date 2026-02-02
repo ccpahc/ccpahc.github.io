@@ -30,6 +30,12 @@ For more details, please read [the guidance available online](https://www.ukri.o
 
 ## International
 
+### Galaxy 
+
+[Galaxy](https://galaxyproject.org) is an infrastructure that provides research computing globally, predominantly through free-to-use services that are motivated by a strong focus on usability and reproducibility. Galaxy is a large project, and there a number of ways to get access to compute via this initative. Perhaps the easiest is to use the free instance at [UseGalaxy.eu](https://usegalaxy.eu/). The Galaxy community is growing and now includes a [Digital Humanities and Social Sciences Special Interest Group](https://galaxyproject.org/community/sig/digital-humanities/) (SIG). 
+
+To get started with Galaxy for DH, you can check out [this tutorial by Daniela Schneider and Rand Zoabi](https://training.galaxyproject.org/training-material/topics/digital-humanities/tutorials/introduction_to_dh/tutorial.html), which is integrated with the compute resources offered by Galaxy. 
+
 ### European Open Science Cloud (EOSC) EU Node
 
 The European Commission funds a compute and data storage service called the [EOSC EU Node](https://open-science-cloud.ec.europa.eu/). 
