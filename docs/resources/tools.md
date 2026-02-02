@@ -1,3 +1,16 @@
+## Access
+
+<div class="grid cards" markdown>
+
+-   :material-cloud-key:{ .lg .middle } __Routes to accessing compute__
+
+    ---
+
+    We provide a brief guide to some of the most important routes to access compute that UK-based AHC researchers and innovators can use **today**.
+
+    [:octicons-arrow-right-24: To the tool](../routes-to-access-compute.md)
+</div>
+
 ## Calculators
 
 Calculators can help you estimate the compute and data resources you need before choosing a solution. 
