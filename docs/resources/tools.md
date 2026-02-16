@@ -23,7 +23,7 @@
 
 <div class="grid cards" markdown>
 
--   :octicons-checklist-16: { .lg .middle } __KDL Checklist for Digital Outputs Assessment, v. 3.1 (2025)__
+-   :octicons-checklist-16:{ .lg .middle } __KDL Checklist for Digital Outputs Assessment, v. 3.1 (2025)__
 
     ---
 
