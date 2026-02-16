@@ -10,13 +10,13 @@
 
     [:octicons-arrow-right-24: To the tool](../routes-to-access-compute)
 
--   :material-leaf:{ .lg .middle } __UK HPC User Documentation Sites__
+-   :material-home-search:{ .lg .middle } __UK HPC User Documentation Sites__
 
     ---
 
     Looking for a compute infrastructure in the UK but don't know where to start? CCP-AHC has developed a searchable index of the docs sites for many of the major institutional providers of HPC.
 
-    [:material-home-search: To the tool](../sites)
+    [:octicons-arrow-right-24: To the tool](../sites)
 </div>
 
 ## Calculators
