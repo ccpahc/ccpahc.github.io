@@ -14,9 +14,24 @@
 
     ---
 
-    Looking for a compute infrastructure in the UK but don't know where to start? CCP-AHC has developed a searchable index of the docs sites for many of the major institutional providers of HPC.
+    Looking for a compute infrastructure in the UK but don't know where to start? CCP-AHC has developed a searchable index of the docs sites for many of the major institutional providers of HPC. 
 
     [:octicons-arrow-right-24: To the tool](../sites)
+</div>
+
+## Software Quality
+
+<div class="grid cards" markdown>
+
+-   :octicons-checklist-16: { .lg .middle } __KDL Checklist for Digital Outputs Assessment, v. 3.1 (2025)__
+
+    ---
+
+    This checklist is designed by King's Digital Lab to help colleagues at King's College London prepare for the UK's Research Excellence Framework (REF) exercise with respect to the assessment of digital outputs.
+
+    Cite as: Ciula, A., Esposito, A., & Wijaya, F. (2025). _KDL Checklist for Digital Outputs Assessment_. Zenodo. [https://doi.org/10.5281/zenodo.17858849](https://doi.org/10.5281/zenodo.17858849).
+    
+    [:octicons-arrow-right-24: To the tool (external)](https://doi.org/10.5281/zenodo.17858849)
 </div>
 
 ## Calculators
