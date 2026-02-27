@@ -12,9 +12,11 @@ authors:
   - sjmf
 ---
 
-# Rendering 2,600 archaeological models overnight: HPC for digital heritage collections
+# Archaeological rendering at 2,600 models per hour: HPC for digital heritage collections
 
-When you have 2,637 three-dimensional scans of Stone Age handaxes and need a thumbnail image for each one, you have a few options. You could render them one by one on your workstation. You could leave your desktop running for 38 hours and hope for the best. Or — if you happen to have access to a Tier-3 supercomputer — you could have them all done in about twenty minutes.
+![Rendered 3D models of Stone Age handaxes](img/handaxe_header.png)
+
+When you have 2,637 three-dimensional high-resolution scans of Stone Age handaxes and need thumbnail images for each, you have a few options. You could render them one by one on your workstation, leaving your desktop running for 38+ hours and hoping for the best. Or — if you happen to have access to a supercomputer — you could have them all done in about twenty minutes.
 
 This post describes how we used Hamilton8, Durham University's HPC cluster, to batch-render thumbnail images for a collection of photogrammetric 3D models at the heart of an AHRC-funded research project. It's a small but concrete example of how HPC infrastructure can quietly transform what's practical in arts and humanities research.
 
@@ -24,7 +26,7 @@ This post describes how we used Hamilton8, Durham University's HPC cluster, to b
 
 To answer these questions, the project has produced a definitive digital database of ~3,800 handaxe assemblages using structured-light 3D scanning — capturing the morphology of each tool in far greater detail than any photograph or manual measurement could provide. These scans need to be published: accessible online, viewable in a browser, downloadable for research and 3D printing, and compliant with RCUK open data requirements.
 
-In a 3-way collaboration, Durham University's Department of Archaeology, Library and Collections service and Advanced Research Computing department are working to build that publication platform as a customised [Omeka](https://omeka.org/) installation — widely used in the cultural heritage sector — to be hosted at the university, and going live later in 2026. The 3D models are viewable interactively in the browser. Omeka needs a flat thumbnail image for each item to display in search results and collection grids, and has no built-in way to generate one from a 3D file. Even if it did, pre-rendering with pretty object lighting takes CPU resource which would delay page loads, so it's favourable to pre-render everything anyway. That's the problem we needed to solve.
+In a 3-way collaboration, Durham University's Department of Archaeology, Library and Collections service and Advanced Research Computing department are working to build that publication platform as a customised [Omeka](https://omeka.org/) installation — widely used in the cultural heritage sector — to be hosted at the university, and going live later in 2026. The 3D models are viewable interactively in the browser. For displaying the artefacts in our Omeka instance, we needed a flat thumbnail image for each item to display in search results and collection grids: but Omeka has no built-in way to generate one from a 3D file. Even if it did, pre-rendering with pretty object lighting takes CPU resource which would delay page loads, so it's favourable to pre-render everything anyway.
 
 ## The collection
 
@@ -47,7 +49,9 @@ positioning.py  →  <model>_positioned.glb
 render_thumbs.py  →  <model>_positioned_thumb.png
 ```
 
-On a quad-core desktop, each model takes around 52 seconds end-to-end — positioning (which involves eigendecomposition of the mesh inertia tensor) dominates over the sub-second render. At that rate, 2,637 models would take approximately **38 hours** of wall time, even running all cores in parallel.
+On a quad-core desktop, each model takes around 52 seconds end-to-end. This includes positioning (eigendecomposition of the mesh inertia tensor) and rendering of each model. At that rate, 2,637 models would take approximately **38 hours** of wall time, even running all cores in parallel.
+
+To position each model, we treat the 3D shape like a physical object and ask "_if this were spinning freely in space, what are its natural rotation axes?_" Every 3D shape has three perpendicular axes around which it would spin most stably — like how a rugby ball naturally spins end-over-end rather than tumbling sideways. These axes are called eigenvectors, and finding them is called eigendecomposition. For a handaxe: the longest axis (tip to base) becomes vertical, the flattest axis (the thin dimension) points front-to-back, and the width axis goes left-to-right. Every handaxe ends up oriented the same way regardless of how it was scanned.
 
 ## Enter Hamilton8
 
@@ -57,7 +61,7 @@ Because each GLB is completely independent of all others, this is a textbook *em
 
 ### Setup
 
-No administrator access is required. Blender is downloaded as a self-contained Linux tarball and can be run in userspace directly from `/nobackup`:
+No administrator access is required. Blender is downloaded as a self-contained Linux tarball and can be run in userspace directly from the `/nobackup` drive, where users get an initial quota of 600GB from the total 2PB of Lustre file storage:
 
 ```bash
 wget https://download.blender.org/release/Blender4.0/blender-4.0.2-linux-x64.tar.xz
@@ -79,7 +83,7 @@ The chunk size of 20 is a pragmatic balance: small enough that all tasks dispatc
 
 ### Results
 
-All 132 tasks were dispatched and running within seconds of submission. The full batch of 2,637 models — positioning and rendering — completed in approximately **20 minutes** of wall time, compared to an estimated **38 hours** on the desktop. Per-model time averaged **0.5 seconds** on Hamilton8, versus ~52 seconds locally — a roughly **100× speedup**.
+All 132 tasks were dispatched and running within seconds of submission. The full batch of 2,637 models — positioning and rendering — completed in approximately **20 minutes** of wall time, compared to an estimated **38 hours** on the desktop. Per-model time averaged **0.5 seconds** on Hamilton8, versus ~52 seconds locally — a roughly **100× speedup** resulting from the massive parallelism a supercomputer provides.
 
 ## What makes this an AH&C use case?
 
