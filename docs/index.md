@@ -24,14 +24,9 @@ We invite the community involved in computationally-intensive arts, humanities, 
 
 ## Events
 
-### Upcoming
-
-CCP-AHC will hold four [regional engagement events](./activities/regional-engagement.md) in the coming months. The following events are confirmed and **registration is open**:
-
-- [CCP-AHC Engagement Event (London)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london-friday-14th-november-2025) on Friday, 14th November 2025, 12.30pm to 4pm, Central London
-
 ### Past
 
+- [CCP-AHC Engagement Event (London)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london-friday-14th-november-2025) on Friday, 14th November 2025, 12.30pm to 4pm, Central London
 - [CCP-AHC Engagement Event (Cardiff)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-cardiff-wednesday-29th-october-2025) on Wednesday, 29th October 2025, 12.30pm to 3.30pm at Wales Millenium Centre, Cardiff
 - [CCP-AHC Engagement Event (Edinburgh)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh-thursday-6th-november-2025) on Thursday, 6th November 2025, 1pm to 5 pm at University of Edinburgh, Edinburgh
 
