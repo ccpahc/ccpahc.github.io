@@ -6,8 +6,12 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 
 ### Upcoming
 
+- Tuesday, 12 May 2026
+- Tuesday, 9 June 2026
+
 ### Past
 
+- Tuesday, 14 April 2026
 - Tuesday, 10 March 2026
     - Introduction to the [EOSC EU Node](https://open-science-cloud.ec.europa.eu/services/interactive-notebooks)
 - Tuesday, 13 January 2026
