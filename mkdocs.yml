@@ -70,5 +70,6 @@ nav:
   - Blog: blog/index.md
   - Resources:
       - Tools: resources/tools.md
+      - Funding: resources/funding.md
       - Routes to Access Compute: resources/routes-to-access-compute.md
       - UK HPC User Documentation Sites: resources/sites.md
