@@ -7,6 +7,7 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 ### Upcoming
 
 - Tuesday, 12 May 2026
+    - Guest presentation from [Data/Culture](https://gtr.ukri.org/projects?ref=AH%2FU000019%2F1) 
 - Tuesday, 9 June 2026
 
 ### Past
