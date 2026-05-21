@@ -13,3 +13,7 @@ site*/
 # Generated Google Programmable Search files
 Annotations.xml
 Context.xml
+
+# MacOSX
+.DS_Store
+._.DS_Store
