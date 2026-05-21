@@ -18,6 +18,10 @@ In this blog post, I explain what research workflows are, why they matter for so
 
 This blog post was supported by an [ATRIUM Transnational Access Scheme Grant](https://atrium-research.eu/travel-grants/), supporting a visit to the Austrian Centre for Digital Humanities (ACDH) in Vienna in February 2026. ATRIUM is funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. ATRIUM has received support from the EOSC EU Node.
 
+![Anita Witek, The Collector’s Room, 2025. Installation view, Museum moderner Kunst Stiftung Ludwig Wien (mumok), Vienna. Photograph by Eamonn Bell.](img/ssh_workflow_acdh_wien.jpg)
+
+*Anita Witek, The Collector’s Room, 2025. Installation view, Museum moderner Kunst Stiftung Ludwig Wien (mumok), Vienna. Photograph by Eamonn Bell.*
+
 ## Why workflows for the social sciences and humanities?
 
 Many research areas are increasingly curious about the potential for data-intensive methods like deep learning and generative AI models, alongside a growing need for datasets and digital infrastructures. The social sciences and humanities (SSH) disciplines are no exception and are likewise faced with the question of how to best develop, disseminate, and deposit the digital research artefacts that support such research. Sometimes, it's worth exploring models from other fields of research for inspiration for how to achieve this in line with open research principles.
@@ -66,6 +70,10 @@ We worked primarily with the useGalaxy.eu instance, which is largely maintained 
 Researchers can therefore usually use their institutional login details to get free access to the European instance. Alternatively, users of the [EOSC EU Node](https://open-science-cloud.ec.europa.eu/) can spin up their own instance of Galaxy for development and evaluation purposes. Either way, researchers can quickly start experimenting by building, sharing, or using existing workflows with their own data and questions.
 
 Galaxy workflows can be defined by first selecting from a catalogue of tools. Most tools define a transformation of input data from one form to another, and the output of one tool can be literally “wired” into the input of another. Through this, the researcher can define actionable workflows, which are composed of a series of tools arranged in this way as a sequence of enrichments, aggregations, and summaries of the input data set.
+
+![Illustration of the Galaxy graphical workflow editor.](img/ssh_workflow_galaxy.png)
+
+*Illustration of the Galaxy graphical workflow editor. Laila Los, Creating high resolution images of Galaxy Workflows (Galaxy Training Materials). https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-posters/tutorial.html. Online. Accessed April 21 2026.*
 
 Tools can be as simple as a single-purpose script that sorts the lines of an input file alphabetically by content or as complex as a long-running comparison tool that may take several files as input and draw on more specialised computing resources to produce a detailed output. Almost all tools are open source; some are even interactive, which allows for semi-automated human-in-the-loop workflows when the judgment of a researcher or other expert is demanded, as in the case of data labeling or quality control.
 
