@@ -148,7 +148,7 @@ With the floating IP associated and the security group attached, the first SSH c
 
 Having gone through the networking and launch steps manually once, I wrote a [Mistral](https://docs.openstack.org/mistral/latest/) workflow to automate them for future deployments. Mistral is OpenStack's native workflow service: it lets you describe a sequence of API calls as a YAML document and execute them as a single operation.
 
-The final workflow, `provision_vm.yaml`, covers the full sequence from network creation to floating IP association:
+The final workflow, [`provision_vm.yaml`](https://github.com/DurhamARC/jupyterhub-eosc/blob/main/provision_vm.yaml), covers the full sequence from network creation to floating IP association:
 
 1. **Resolve resource IDs** from human-readable names (image, flavour, external network)
 2. **Create the private network and subnet**, with DHCP enabled and DNS resolvers configured
@@ -164,7 +164,7 @@ The workflow outputs the instance ID, private IP, and floating IP, which can the
 
 Getting a VM running is the beginning, not the end. The next question is: what happens when the instance needs to be rebuilt, when a colleague needs to reproduce the environment, or when we want to apply the same setup to a different project? Clicking through Horizon is fine once; doing it repeatedly, reliably, and without forgetting steps is a different matter.
 
-For this reason I wrote an Ansible playbook to codify the entire server configuration. Ansible is an automation tool that describes the desired state of a system as YAML and applies that state idempotently: this means that running it twice leaves the server in the same condition as running it once, and importantly, it won't repeat time-consuming configuration steps if something fails and needs to be fixed further down the chain.
+For this reason I wrote an [Ansible playbook](https://github.com/DurhamARC/jupyterhub-eosc) to codify the entire server configuration. Ansible is an automation tool that describes the desired state of a system as YAML and applies that state idempotently: this means that running it twice leaves the server in the same condition as running it once, and importantly, it won't repeat time-consuming configuration steps if something fails and needs to be fixed further down the chain.
 
 ## Design considerations
 
@@ -212,8 +212,10 @@ JupyterHub is now running on our cloud server, served over HTTPS with a valid Le
 
 For teams of arts and humanities researchers, access to a shared, managed JupyterHub like this can change what is practically achievable in a project. Computational methods that require consistent software environments (training a machine learning model on a digitised text collection, running Named Entity Recognition across a large corpus, processing geospatial data from fieldwork, or simply sharing analysis code with a supervisor or external collaborator) become straightforwardly accessible. The EOSC EU Node provides the compute; Ansible ensures it can be reliably rebuilt; and JupyterHub puts it in front of researchers through nothing more than a web browser.
 
-From a CCP-AHC perspective, this is a practical demonstration of the kind of infrastructure we are working to make more accessible to the arts, humanities, and cultural heritage community: reproducibly configured, hosted on European open science resources available to any EU-affiliated researcher, designed to be adapted and reused rather than rebuilt from scratch for each new project.
+From a CCP-AHC perspective, this is a practical demonstration of the kind of infrastructure we are working to make more accessible to the arts, humanities, and cultural heritage community: reproducibly configured, hosted on European open science resources available to any EU-affiliated researcher, and designed to be adapted and reused rather than rebuilt from scratch for each new project.
 
 ---
+
+The full Ansible configuration and Mistral provisioning workflow are available on GitHub at [DurhamARC/jupyterhub-eosc](https://github.com/DurhamARC/jupyterhub-eosc). Give the repo a star if you find it useful.
 
 *The EOSC EU Node is operated by the European Commission. Virtual machine resources at PSNC were accessed via the EOSC EU Node Virtual Machines service. This research was supported by an EPSRC Impact Acceleration Account (IAA) award from Durham University to the **AI Workflows for Permeable Noise-cancelling Metamaterials** project.*
