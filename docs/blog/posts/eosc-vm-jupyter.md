@@ -44,7 +44,7 @@ No prior OpenStack experience is required, though familiarity with the command l
 
 ![The EOSC EU Node login page](img/eosc/01-login.png)
 
-Logging in via MyAccessID is seamless if your institution is connected to the GÉANT federation: the standard Shibboleth flow redirects you to the EOSC dashboard within seconds.
+Logging in via MyAccessID is seamless if your institution is connected to the GÉANT federation: which most are. The standard login flow redirects you to the EOSC dashboard within seconds.
 
 ![Logging in via MyAccessID with Durham University credentials](img/eosc/02-myaccessid.png)
 
