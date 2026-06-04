@@ -144,22 +144,6 @@ With the floating IP associated and the security group attached, the first SSH c
 
 ![Ubuntu 24.04 login banner after successful SSH connection](img/eosc/18-ssh-login.png)
 
-## Automating VM provisioning with Mistral
-
-Having gone through the networking and launch steps manually once, I wrote a [Mistral](https://docs.openstack.org/mistral/latest/) workflow to automate them for future deployments. Mistral is OpenStack's native workflow service: it lets you describe a sequence of API calls as a YAML document and execute them as a single operation.
-
-The final workflow, [`provision_vm.yaml`](https://github.com/DurhamARC/jupyterhub-eosc/blob/main/provision_vm.yaml), covers the full sequence from network creation to floating IP association:
-
-1. **Resolve resource IDs** from human-readable names (image, flavour, external network)
-2. **Create the private network and subnet**, with DHCP enabled and DNS resolvers configured
-3. **Create the router** with `PSNC-EXT-PUB1-EDU` as the external gateway, and attach the subnet as an internal interface
-4. **Launch the instance** on the private network, then poll until it reaches `ACTIVE` status
-5. **Allocate a floating IP** from the external pool and associate it with the instance's port
-
-All inputs (instance name, image, flavour, network CIDR, keypair name) are parameterised, so the same workflow can provision a different project's VM by changing a handful of values. The one thing it does not handle is the security group, which is a one-time configuration that persists across rebuilds and can be straightforwardly done through Horizon.
-
-The workflow outputs the instance ID, private IP, and floating IP, which can then be fed directly into the Ansible inventory.
-
 ## Automating the deployment with Ansible
 
 Getting a VM running is the beginning, not the end. The next question is: what happens when the instance needs to be rebuilt, when a colleague needs to reproduce the environment, or when we want to apply the same setup to a different project? Clicking through Horizon is fine once; doing it repeatedly, reliably, and without forgetting steps is a different matter.
@@ -216,6 +200,8 @@ From a CCP-AHC perspective, this is a practical demonstration of the kind of inf
 
 ---
 
-The full Ansible configuration and Mistral provisioning workflow are available on GitHub at [DurhamARC/jupyterhub-eosc](https://github.com/DurhamARC/jupyterhub-eosc). Give the repo a star if you find it useful.
+The full Ansible configuration is available on GitHub at [DurhamARC/jupyterhub-eosc](https://github.com/DurhamARC/jupyterhub-eosc). Give the repo a star if you find it useful.
 
-*The EOSC EU Node is operated by the European Commission. Virtual machine resources at PSNC were accessed via the EOSC EU Node Virtual Machines service. This research was supported by an EPSRC Impact Acceleration Account (IAA) award from Durham University to the **AI Workflows for Permeable Noise-cancelling Metamaterials** project.*
+**Credits:** *The EOSC EU Node is operated by the European Commission. Virtual machine resources at PSNC were accessed via the EOSC EU Node Virtual Machines service. This research was supported by an EPSRC Impact Acceleration Account (IAA) award from Durham University to the **AI Workflows for Permeable Noise-cancelling Metamaterials** project.*
+
+**AI use Statement:** *The authors of this work utilised a transformer language model in the development of the Ansible playbook, based on another of the author's prior playbooks, and in creating the initial outline for the blog post. The Ansible workflow has been tested thoroughly, and significant edits and alterations have been applied to this post for us to have confidence in the accuracy and usefulness of the result.*
