@@ -2,7 +2,7 @@ There are a number of ways to access compute that might be relevant to CCP-AHC m
 
 Please [contact the CCP-AHC team](../index.md#contact) if you are interested in receiving support in identifying the most suitable.
 
-## Institutional
+## Institutional and Regional
 
 Many UK institutions that support teaching and research have some compute provision. This is typically provided by a research IT or "research computing" division if it exists, or by partnerships or the central IT function if it does not. 
 
