@@ -12,13 +12,11 @@ authors:
   - eamonn
 ---
 
-This report was first prepared for the [ATRIUM TNA blog](https://www.atrium-research.eu/blog/), and also appears online at [https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/](https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/). 
-
 # Developing actionable workflows for the social sciences and humanities with Galaxy
 
 In this blog post, I explain what research workflows are, why they matter for social science and humanities research, and what I learned about turning them into something researchers can actually use—using the Galaxy Project’s workflow manager infrastructure as a concrete example.
 
-This blog post was supported by an [ATRIUM Transnational Access Scheme Grant](https://atrium-research.eu/travel-grants/), supporting a visit to the Austrian Centre for Digital Humanities (ACDH) in Vienna in February 2026. ATRIUM is funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. ATRIUM has received support from the EOSC EU Node.
+This blog post was supported by an [ATRIUM Transnational Access Scheme Grant](https://atrium-research.eu/travel-grants/), supporting a visit to the Austrian Centre for Digital Humanities (ACDH) in Vienna in February 2026. ATRIUM is funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. ATRIUM has received support from the EOSC EU Node. This report was first prepared for the [ATRIUM TNA blog](https://www.atrium-research.eu/blog/), and also appears online at [https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/](https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/). 
 
 ![Anita Witek, The Collector’s Room, 2025. Installation view, Museum moderner Kunst Stiftung Ludwig Wien (mumok), Vienna. Photograph by Eamonn Bell.](img/ssh_workflow_acdh_wien.jpg)
 
@@ -126,5 +124,3 @@ If you are curious about actionable workflows, Galaxy, or learning more and mayb
 During the final week of my ATRIUM TNA Fellowship, I was also fortunate to attend [the 2026 edition of the OEAW AI Winterschool](https://indico.global/event/15854/overview). At the winter school, trainees from various disciplines heard about new developments in generative AI, national and European digital research infrastructures, and the responsible development of AI models. Since CCP-AHC works alongside the other computationally intensive science communities within the UK's [CoSeC programme](https://www.cosec.ac.uk/) to explore the benefits of AI for research, this was an extremely timely insight into the opportunities and challenges of convening experts across the disciplines to understand this rapidly changing field of innovation.
 
 I would like to thank the following for their feedback and/or support during my TNA stay: Vera Maria Charvát, Matej Durco, Michael Kurzmeier, Daniela Schneider, Stefan Resch, Massimiliano Carloni, Nikos Kapralos, Megan Black, Barbara Piringer, Björn Grüning, and Laure Barbot.
-
-ATRIUM is funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. This work has received support from the EOSC EU Node.
