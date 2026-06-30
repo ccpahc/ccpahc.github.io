@@ -1045,143 +1045,13 @@
     <h2 id="deploying-a-shared-jupyterhub-on-the-eosc-eu-node"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/">Deploying a shared JupyterHub on the EOSC EU Node</a></h2>
 <p>Shared computational research infrastructure matters.</p>
 <p><a href="https://jupyter.org/hub">JupyterHub</a> has become a standard piece of infrastructure in data-intensive research across many disciplines. Although this work was initially developed for a STEM project, its value for arts and humanities work is no different, illustrating how DRI initiatives like CCP-AHC allow for cross-discipline knowledge sharing. When a research team needs a common environment (the same software, the same data access, the ability to hand work off between colleagues without a reinstall), a managed JupyterHub is one of the most effective answers available. Every user gets their own notebook server, isolated from their colleagues but pulling from a shared image; a PI can open a colleague's notebook and run it without ceremony.</p>
-<p>Whether a team is running natural language processing pipelines over a historical corpus, performing geospatial analysis on archaeological survey data, building interactive visualisations of archival collections, or collaborating on quantitative analysis of cultural datasets, a shared JupyterHub removes one of the most persistent friction points in collaborative computational work: the "it works on my machine" problem. A team member in a different city, on a different operating system, with a different version of Python, can open the same notebook and produce the same result. Given that many researchers are (or are becoming) well-versed in using Python notebooks as the foundation for our computational research, we hope that this blog will have wide applicability within the CCP-AHC community.</p>
-<p>This post describes how my colleague Emily and I set up a JupyterHub instance for a research project using the <a href="https://open-science-cloud.ec.europa.eu/">EOSC EU Node</a>, the European Open Science Cloud's centrally-managed computational platform. It includes a walkthrough of the steps involved in provisioning a virtual machine (VM) through the EOSC portal, the networking subtleties of the PSNC OpenStack environment where our resources were allocated, and the Ansible automation we wrote to make the deployment reproducible and maintainable: what we built today can be rebuilt tomorrow, or adapted for a different project, without starting from scratch.</p>
-<h3 id="eosc-eu-node"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#eosc-eu-node">EOSC EU Node</a></h3>
-<p>The EOSC EU Node is a cloud platform operated by the European Commission, providing virtual machines, storage, interactive notebooks, and other services to researchers affiliated with European institutions. Access is via <a href="https://myaccessid.eu/">MyAccessID</a>, a federated identity system that accepts institutional logins via eduGAIN.</p>
-<p>The EOSC EU Node provides <a href="https://docs.psnc.pl/spaces/EOSCUserGuides/pages/180097241/Interactive+Notebooks">Interactive Notebooks</a> as a managed service: individual Jupyter sessions, without any server to configure. For a single researcher exploring data, that is likely the right choice. For a team with more demanding computations to run, however, the economics shift quickly towards the use of a <em>dedicated virtual machine</em>.</p>
-<p>A Medium notebook session (4 vCPUs, 8 GB RAM) costs 0.5 credits per hour; a single user running it continuously for the 90-day credit window would spend 1,080 credits: half of the 2,000-credit <a href="https://open-science-cloud.ec.europa.eu/about/access-policy">individual investigator allocation</a>. A group project can receive up to 6,000 credits. A Medium VM costs 3,600 credits for the full 90 days, but provides 4x the CPU resources and 8x the memory: 16 vCPUs and 64 GB RAM shared across every member of the team simultaneously, with 100 GB persistent storage and a fully customisable software environment. For collaborative research, self-hosting delivers more compute per credit: resources are shared across the whole team rather than burned on a single session.</p>
-<h4 id="before-you-start"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#before-you-start">Before you start</a></h4>
-<p>To follow this walkthrough you will need:</p>
-<ul>
-<li>An <strong>EOSC EU Node account</strong>: log in at <a href="https://open-science-cloud.ec.europa.eu/">open-science-cloud.ec.europa.eu</a> using <a href="https://myaccessid.eu/">MyAccessID</a> with your institutional credentials. If your institution is connected to the GÉANT/eduGAIN federation, no separate registration is needed.</li>
-<li>A <strong>group project</strong> in the EOSC portal, with a VM credits allocation. Individual accounts receive 2,000 credits; group projects can receive up to 6,000, but investigator access is required to access this: if you think you are entitled to investigator access (for example, as an academic or an RSE) and don't see this in the portal, then your institutional IT team will be able to help.</li>
-<li>An <strong>SSH key pair</strong>. You will import your public key into OpenStack Horizon when launching your VM.</li>
-</ul>
-<p>No prior OpenStack experience is required, though familiarity with the command line is assumed for the Ansible sections later in the post.</p>
-<h4 id="logging-in"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#logging-in">Logging in</a></h4>
-<p><img alt="The EOSC EU Node login page" src="../../img/eosc/01-login.png" /></p>
-<p>Logging in via MyAccessID is seamless if your institution is connected to the GÉANT federation, which most are. The standard login flow redirects you to the EOSC dashboard within seconds.</p>
-<p><img alt="Logging in via MyAccessID with Durham University credentials" src="../../img/eosc/02-myaccessid.png" /></p>
-<p><img alt="The EOSC EU Node dashboard after login" src="../../img/eosc/03-dashboard.png" /></p>
-<p>Resources on the EOSC EU Node are managed through <em>group projects</em>. A default personal project exists for every user, but to share resources (and the credits that fund them) with colleagues, create a group project. This also allows collaborators to be invited to the shared environment.</p>
-<p><img alt="A group project created in the EOSC portal" src="../../img/eosc/04-group-created.png" /></p>
-<p>Resource allocation uses a <em>credits</em> system: different services and VM sizes draw credits at different rates per day. Group projects are allocated up to 6,000 credits, refreshed over a 90-day window.</p>
-<p><img alt="Credits remaining display: 6000 of 6000, 90 days until next refresh" src="../../img/eosc/05-credits.png" /></p>
-<h3 id="allocating-a-virtual-machine"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#allocating-a-virtual-machine">Allocating a virtual machine</a></h3>
-<p>With the group project in place, order a VM through the <strong>Virtual Machines</strong> service. The EOSC EU Node offers several flavours: for a shared JupyterHub, the <strong>Medium</strong> tier (16 vCPUs, 64 GB RAM) at 40 credits per day is a reasonable starting point. Over the 90-day maximum period that comes to 3,600 credits, well within a group allocation.</p>
-<p>At this stage, we are just reserving the resources that will be consumed by our deployment in OpenStack. This process doesn't spin up anything, it just says to the system: "we would like to reserve this amount of CPU and RAM, please". Setting up the environment is a separate configuration step.</p>
-<p><img alt="Ordering a Medium VM: 40 credits/day, 90-day maximum period" src="../../img/eosc/06-vm-order.png" /></p>
-<p>Once the order was submitted, resource allocation took less than a minute. The environment appeared as <strong>Active</strong> in the portal, and clicking <strong>View Externally</strong> opened the OpenStack Horizon dashboard for our project, managed by PSNC (the Poznań Supercomputing and Networking Center).</p>
-<p><img alt="The allocated Medium VM environment, 16 vCPUs and 64 GB RAM, showing Active status" src="../../img/eosc/07-vm-allocated.png" /></p>
-<p>Note the expiry here: if we are still using this resource, we will need to renew our limit allocation through the EU Node interface by 2026-08-19. If we forget to do so, our instance will be torn down, and my expectation is that all data will be lost. I therefore took the opportunity to communicate in writing to my collaborators on the project not to leave any data <em>only</em> in the VM, and to always download a local backup after concluding their work. I'll remind them again closer to expiry time, but a stretch-goal would be to set up some form of automated backup task, perhaps using the EOSC EU Node Files service! That's left as an exercise for the reader (and future work for us).</p>
-<p><img alt="OpenStack Horizon resource overview for the project" src="../../img/eosc/08-horizon-overview.png" /></p>
-<p>Now that we have access to the dashboard, we can begin to set up our VM resources within our allocated resource limit.</p>
-<h3 id="navigating-the-network"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#navigating-the-network">Navigating the network</a></h3>
-<p>This is where things got interesting. In OpenStack, the most natural expectation would be to attach a public network directly to an instance — but PSNC's external network, <code>PSNC-EXT-PUB1-EDU</code>, is a <em>gateway</em> network. Instances cannot be attached to it directly; instead, it must be used as the upstream gateway of a router, which connects to a private tenant network. Public access is then handled via <em>floating IPs</em>, which are drawn from the external pool and associated with specific instance ports.</p>
-<p>This is a common enough pattern in OpenStack deployments, but it adds several setup steps that aren't obvious from the Horizon interface alone: hence the write-up here!</p>
-<h4 id="step-1-private-network-and-subnet"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#step-1-private-network-and-subnet">Step 1: Private network and subnet</a></h4>
-<p>Create a private network with a subnet: we used <code>10.10.40.0/24</code>. Enable DHCP, and set DNS resolvers at the subnet level; Cloudflare's public resolvers (<code>1.1.1.1</code> / <code>1.0.0.1</code>) work well here.</p>
-<p><img alt="Creating the subnet with address range 10.10.40.0/24" src="../../img/eosc/12-subnet-create.png" /></p>
-<h4 id="step-2-router"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#step-2-router">Step 2: Router</a></h4>
-<p>Create a router with <code>PSNC-EXT-PUB1-EDU</code> as its external gateway, then attach the private subnet as an internal interface. This gives instances on the <code>10.10.40.0/24</code> network a route to the internet via the PSNC gateway.</p>
-<p><img alt="The router with its internal interface at 10.10.40.1" src="../../img/eosc/13-router-interface.png" /></p>
-<h3 id="launching-the-instance"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#launching-the-instance">Launching the instance</a></h3>
-<p>With the network in place, launch an instance with the following configuration (we named ours <strong>Metagenome-JH</strong>):</p>
-<ul>
-<li><strong>Image:</strong> <code>ubuntu-24.04</code> (the standard Ubuntu 24.04 LTS cloud image)</li>
-<li><strong>Flavour:</strong> <code>C1-NVME-16vCPU-64R-100D</code> (16 vCPUs, 64 GB RAM, 100 GB NVMe root disk)</li>
-<li><strong>Network:</strong> your private tenant network</li>
-<li><strong>Key pair:</strong> your SSH public key, imported via the Horizon interface</li>
-</ul>
-<p><img alt="Launch Instance dialog, Details tab: instance name and description" src="../../img/eosc/09-launch-details.png" /></p>
-<p><img alt="Launch Instance Source tab: ubuntu-24.04 selected, no new volume" src="../../img/eosc/10-launch-source.png" /></p>
-<p><img alt="Launch Instance Flavour tab: C1-NVME-16vCPU-64R-100D selected" src="../../img/eosc/11-launch-flavour.png" /></p>
-<p>Within a minute the instance appeared in the instances list with status <strong>Active</strong> and power state <strong>Running</strong>.</p>
-<p><img alt="Instances list showing the VM running on ubuntu-24.04, status Active" src="../../img/eosc/14-instance-running.png" /></p>
-<h3 id="floating-ip-and-security-groups"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#floating-ip-and-security-groups">Floating IP and security groups</a></h3>
-<p>The instance gets a private IP on your tenant network. To reach it from the internet, allocate a floating IP from the <code>PSNC-EXT-PUB1-EDU</code> pool (the project quota allows one) and associate it with the instance.</p>
-<p><img alt="Allocate Floating IP dialog, selecting from the PSNC-EXT-PUB1-EDU pool" src="../../img/eosc/15-floating-ip-allocate.png" /></p>
-<p><img alt="Associating a floating IP with the instance" src="../../img/eosc/16-floating-ip-associate.png" /></p>
-<p>PSNC automatically assigns reverse DNS entries for floating IPs in their pool. A quick <code>nslookup</code> confirmed that <code>62.x.x.x</code> resolved to <code>hostname-xxx.man.poznan.pl</code>, a hostname we could use directly for the Let's Encrypt certificate without needing to configure any external DNS ourselves.</p>
-<pre><code>$ nslookup 62.x.x.x
-Non-authoritative answer:
-x.x.x.62.in-addr.arpa  name = hostname-xxx.man.poznan.pl
-</code></pre>
-<p>Create a security group with ingress rules for the ports you need, for example:</p>
-<table>
-<thead>
-<tr>
-<th>Protocol</th>
-<th>Port</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TCP</td>
-<td>22</td>
-<td>SSH access</td>
-</tr>
-<tr>
-<td>TCP</td>
-<td>80</td>
-<td>HTTP (Let's Encrypt ACME challenge)</td>
-</tr>
-<tr>
-<td>TCP</td>
-<td>443</td>
-<td>HTTPS (JupyterHub via nginx)</td>
-</tr>
-<tr>
-<td>TCP</td>
-<td>8000</td>
-<td>Direct JupyterHub access during testing</td>
-</tr>
-<tr>
-<td>ICMP</td>
-<td>—</td>
-<td>Ping / diagnostics</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="The security group showing all ingress rules" src="../../img/eosc/17-security-groups.png" /></p>
-<p>With the floating IP associated and the security group attached, the first SSH connection confirmed the instance was reachable:</p>
-<p><img alt="Ubuntu 24.04 login banner after successful SSH connection" src="../../img/eosc/18-ssh-login.png" /></p>
-<h3 id="automating-the-deployment-with-ansible"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#automating-the-deployment-with-ansible">Automating the deployment with Ansible</a></h3>
-<p>Getting a VM running is the beginning, not the end. The next question is: what happens when the instance needs to be rebuilt, when a colleague needs to reproduce the environment, or when we want to apply the same setup to a different project? Clicking through Horizon is fine once; doing it repeatedly, reliably, and without forgetting steps is a different matter.</p>
-<p>For this reason I wrote an <a href="https://github.com/DurhamARC/jupyterhub-eosc">Ansible playbook</a> to codify the entire server configuration. Ansible is an automation tool that describes the desired state of a system as YAML and applies that state idempotently: this means that running it twice leaves the server in the same condition as running it once, and importantly, it won't repeat time-consuming configuration steps if something fails and needs to be fixed further down the chain.</p>
-<h3 id="design-considerations"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#design-considerations">Design considerations</a></h3>
-<p>There were a few design considerations for the service I want to run inside the VM. I wanted my Jupyter server to:</p>
-<ul>
-<li>Run in Docker for isolation</li>
-<li>Sit behind a reverse proxy, with nginx terminating connections from the web</li>
-<li>Use Let's Encrypt for automated provision of TLS certificates (http<strong>s</strong>)</li>
-</ul>
-<p>Running JupyterHub and its per-user notebook containers in Docker keeps each user's environment isolated from the host OS and each other, and makes the entire deployment declarative: a <code>docker-compose.yml</code> and a small <code>Dockerfile</code> describe exactly what runs, and rebuilding from scratch is a single command.</p>
-<p>Next, rather than exposing JupyterHub directly on a public port, nginx sits in front of it as a reverse proxy, handling TLS termination and keeping the hub bound to <code>localhost:8000</code>. This reduces attack surface and follows established practice for production web services. TLS itself is handled by Let's Encrypt via certbot: PSNC automatically assigns a reverse-DNS hostname to each floating IP in their pool, so we had a valid domain name without needing to own or configure one ourselves, and the certificate renews automatically via a systemd timer. Users get a green lock in their browser, and a secure connection: the <code>s</code> in <code>https</code>.</p>
-<h3 id="what-the-playbook-roles-do"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#what-the-playbook-roles-do">What the playbook roles do</a></h3>
-<p>The Ansible playbook is organised into <em>roles</em>, each responsible for one logical concern.</p>
-<p><strong><code>users</code></strong> ensures the default <code>ubuntu</code> cloud user is in the <code>docker</code> group. On Ubuntu 24.04 cloud images, this user already exists; this role adjusts its configuration rather than creating it from scratch.</p>
-<p><strong><code>system</code></strong> upgrades all packages on first run and installs Docker CE along with the Compose plugin, using Docker's official APT repository. I chose Docker rather than a system package because the Docker project's own packages track upstream more closely, and include the Compose v2 plugin that the JupyterHub role depends on.</p>
-<p><strong><code>security</code></strong> does some basic server hardening: it installs and configures fail2ban with an aggressive SSH jail (three failed attempts within a minute earns a 60-minute ban) and hardens the SSH daemon by disabling root login and password authentication. Only key-based SSH access is permitted. The role validates the SSH daemon configuration with <code>sshd -T</code> before triggering a restart, so a misconfiguration fails loudly rather than silently locking us out.</p>
-<p><strong><code>nginx</code></strong> installs nginx and certbot, then uses certbot's <code>--webroot</code> mode to obtain a Let's Encrypt TLS certificate for the server's domain name. I chose <code>certbot certonly --webroot</code> over <code>certbot --nginx</code> (which additionally edits the certificate into the nginx configuration) for separation of concerns: certbot handles certificate issuance only; Ansible templates handle the full nginx configuration including the SSL server block. This produced clean, fully idempotent behaviour.</p>
-<p><strong><code>jupyterhub</code></strong> is the heart of the deployment. JupyterHub runs in a Docker container built from a small <code>Dockerfile</code> that extends the official <code>quay.io/jupyterhub/jupyterhub</code> image with two key additions: <a href="https://github.com/jupyterhub/dockerspawner">DockerSpawner</a>, which lets the hub start and stop per-user containers, and <a href="https://github.com/jupyterhub/nativeauthenticator">NativeAuthenticator</a>, which manages user accounts and passwords locally without requiring an external identity provider.</p>
-<p>The hub container is managed by Docker Compose. It binds to <code>127.0.0.1:8000</code> only (nginx handles all public traffic) and has read-only access to the Docker socket so it can spawn user containers. Each user's container runs the <code>quay.io/jupyter/datascience-notebook</code> image, which provides Python, R, and Julia kernels with a broad scientific stack out of the box. User working directories persist in named Docker volumes, so notebooks survive container restarts.</p>
-<h4 id="challenges-along-the-way"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#challenges-along-the-way">Challenges along the way</a></h4>
-<p><strong>Docker network label conflict.</strong> My first attempt at writing the playbook pre-created the Docker network using Ansible's <code>docker_network</code> module, then had Docker Compose reference it. Docker Compose refused: it found an existing network with the right name, but without the labels it expects to manage. The fix was straightforward: remove the pre-creation task and let Compose own the network entirely. Running <code>docker network rm</code> to clear the orphaned network on the server unblocked things immediately.</p>
-<p><strong>The nginx/certbot config conflict.</strong> When working with Ansible, it's worth keeping in mind the principle of <em>idempotency</em> mentioned above. Subsequent runs must produce the same result without re-running completed steps. The first version of the playbook used <code>certbot --nginx</code> to issue and configure our TLS certificate for use in nginx, but this caused problems: <code>certbot --nginx</code> modifies the nginx configuration file in place, but Ansible's template task overwrote those modifications on subsequent runs. This created a fight between certbot's in-place edits and Ansible's template deployments: every subsequent time the playbook ran, Ansible would restore the HTTP-only template, and since the certificate already existed, certbot's task was skipped, leaving port 443 and HTTPS inactive. Switching to <code>certbot certonly --webroot</code> and managing the complete nginx configuration (both the HTTP redirect and the HTTPS proxy blocks) as a single Ansible template resolved this permanently.</p>
-<p><strong>The NativeAuthenticator bootstrap problem.</strong> JupyterHub's NativeAuthenticator plugin provides sign-in functionality. I'd configured this with <code>open_signup = False</code>, which requires an administrator to approve accounts before users can log in. But the first administrator account has nobody to approve it! Signing up as <code>admin</code> and immediately trying to log in produced only "Invalid username or password", a misleading error that obscures the real issue: the account exists but is not yet authorised. The resolution is to add the admin username to <code>allowed_users</code> in the JupyterHub configuration, which grants that specific account immediate login rights after signup without requiring external approval.</p>
-<h4 id="what-reproducibility-buys-you"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#what-reproducibility-buys-you">What reproducibility buys you</a></h4>
-<p>By the time all the above was working, re-running the full playbook against the server produced no changes. Idempotence is the point: the playbook is a specification, not a sequence of commands. If we need to rebuild the server (because the EOSC VM allocation expires, because we want to move to a larger or smaller flavour, or a different host service, or because something goes wrong) we can do so with a <strong>single command</strong> and have confidence the result will match what we have today. We also have a <code>redeploy-jupyterhub.yml</code> playbook for day-two operations: rebuilding the hub container after config changes, or wiping the user database entirely when needed (useful during initial setup, when I managed to lock myself out with a generated password).</p>
-<h3 id="the-result"><a class="toclink" href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/#the-result">The result</a></h3>
-<p>JupyterHub is now running on our cloud server, served over HTTPS with a valid Let's Encrypt certificate, on infrastructure funded by the EOSC EU Node. Researchers can log in, create accounts, and start notebook servers immediately, each getting a full data science environment without any local installation.</p>
-<p>For teams of arts and humanities researchers, access to a shared, managed JupyterHub like this can change what is practically achievable in a project. Computational methods that require consistent software environments (training a machine learning model on a digitised text collection, running Named Entity Recognition across a large corpus, processing geospatial data from fieldwork, or simply sharing analysis code with a supervisor or external collaborator) become straightforwardly accessible. The EOSC EU Node provides the compute; Ansible ensures it can be reliably rebuilt; and JupyterHub puts it in front of researchers through nothing more than a web browser.</p>
-<p>From a CCP-AHC perspective, this is a practical demonstration of the kind of infrastructure we are working to make more accessible to the arts, humanities, and cultural heritage community: reproducibly configured, hosted on European open science resources available to any EU-affiliated researcher, and designed to be adapted and reused rather than rebuilt from scratch for each new project.</p>
-<hr />
-<p>The full Ansible configuration is available on GitHub at <a href="https://github.com/DurhamARC/jupyterhub-eosc">DurhamARC/jupyterhub-eosc</a>. Give the repo a star if you find it useful.</p>
-<p><strong>Credits:</strong> <em>The EOSC EU Node is operated by the European Commission. Virtual machine resources at PSNC were accessed via the EOSC EU Node Virtual Machines service. This research was supported by an EPSRC Impact Acceleration Account (IAA) award from Durham University to the </em><em>AI Workflows for Permeable Noise-cancelling Metamaterials</em><em> project. The preparation of this blog post was supported by the Science and Technology Facilities Council (STFC) [UKRI/ST/B000494/1], as part of the </em><em>CCP-AHC</em><em> project.</em></p>
-<p><strong>AI use Statement:</strong> <em>The authors of this work utilised a transformer language model in the development of the Ansible playbook, based on another of the first author's prior playbooks, which have both been tested thoroughly. Models were further utilised in creating the initial outline for the blog post, with significant human edits and alterations applied for us to have confidence in the accuracy and usefulness of the result.</em></p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2026/05/22/deploying-a-shared-jupyterhub-on-the-eosc-eu-node/">
+          Continue reading
+        </a>
+      </nav>
     
     
   </div>
@@ -1226,54 +1096,13 @@ x.x.x.62.in-addr.arpa  name = hostname-xxx.man.poznan.pl
 <p><img alt="Rendered 3D models of Stone Age handaxes" src="../../img/handaxe_header.png" /></p>
 <p>When you have 2,637 three-dimensional high-resolution scans of Stone Age handaxes and need thumbnail images for each, you have a few options. You could render them one by one on your workstation, leaving your desktop running for 38+ hours and hoping for the best. Or, if you happen to have access to a supercomputer, you could have them all done in about twenty minutes.</p>
 <p>This post describes how we used Hamilton8, Durham University's HPC cluster, to batch-render thumbnail images for a collection of photogrammetric 3D models at the heart of an AHRC-funded research project. It's a small but concrete example of how HPC infrastructure can quietly transform what's practical in arts and humanities research.</p>
-<h3 id="the-research-project"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#the-research-project">The research project</a></h3>
-<p><a href="https://gtr.ukri.org/projects?ref=AH%2FW009951%2F1"><em>Digital Technologies, Acheulean Handaxes and the Social Landscapes of the Lower Palaeolithic</em></a> (AHRC grant AH/W009951/1, PI: Professor Mark White) is a £776,000 project running at Durham University from January 2023 to April 2026. Its ambition is to use the British handaxe record– the best-dated Lower Palaeolithic assemblage in the world– to ask two fundamental questions about our deep human past: do the different shapes of Acheulean handaxes reflect distinct early Neanderthal populations in Britain and Europe between ~600,000 and 250,000 years ago? And to what extent were those populations using material culture to signal their individual and group identities?</p>
-<p>To answer these questions, the project has produced a definitive digital database of ~3,800 handaxe assemblages using structured-light 3D scanning, capturing the morphology of each tool in far greater detail than any photograph or manual measurement could provide. These scans need to be published: accessible online, viewable in a browser, downloadable for research and 3D printing, and compliant with RCUK open data requirements.</p>
-<p>In a 3-way collaboration, Durham University's Department of Archaeology, Library and Collections service and Advanced Research Computing department are working to build that publication platform as a customised <a href="https://omeka.org/">Omeka</a> installation (widely used in the cultural heritage sector) to be hosted at the university, and going live later in 2026. The 3D models are viewable interactively in the browser. For displaying the artefacts in our Omeka instance, we needed a flat thumbnail image for each item to display in search results and collection grids: but Omeka has no built-in way to generate one from a 3D file. Even if it did, pre-rendering with pretty object lighting takes CPU resource which would delay page loads, so it's favourable to pre-render everything anyway.</p>
-<h3 id="the-collection"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#the-collection">The collection</a></h3>
-<p>The models are stored as GLB files (a compact binary format for 3D geometry) with colour captured from the original scan encoded as vertex colours directly on the mesh. There are no texture maps, just raw per-vertex colour data.</p>
-<h3 id="two-problems-to-solve"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#two-problems-to-solve">Two problems to solve</a></h3>
-<p>Generating a good thumbnail from a 3D scan isn't just a matter of pointing a virtual camera at a mesh and pressing render. We had two things to get right:</p>
-<p><strong>1. Consistent orientation.</strong> A photogrammetric scan captures an object however it happened to be positioned on the scanning turntable. To make the thumbnails comparable across thousands of artefacts, we first apply the <em>UZY positioning algorithm</em> (Grosman et al., 2008), which uses the inertia tensor of the mesh surface to orient each artefact objectively: longest axis vertical, primary face forward. We've provided a Python implementation in our open-source <a href="https://github.com/DurhamARC/MeshModelRotate"><code>MeshModelRotate</code></a> tool, based on a set of translated Matlab scripts originally authored by Dr Gadi Herzlinger at the University of Haifa.</p>
-<p><strong>2. Photorealistic lighting.</strong> We use <a href="https://www.blender.org/">Blender</a>'s Cycles path-tracing renderer, run entirely headlessly (no display required), to produce 512×512 PNG images with a transparent background and a soft drop shadow. Lighting is tuned to match the interactive 3D viewer used on the Omeka site: a warm amber key light from the upper left, a dim cool fill, and a faint rim light to separate the model from the background. Colour management uses Blender's AgX transform for natural vertex colour reproduction.</p>
-<h3 id="the-pipeline"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#the-pipeline">The pipeline</a></h3>
-<p>For each GLB file, the pipeline runs two steps:</p>
-<pre><code>positioning.py  →  &lt;model&gt;_positioned.glb
-render_thumbs.py  →  &lt;model&gt;_positioned_thumb.png
-</code></pre>
-<p>On a quad-core desktop, each model takes around 52 seconds end-to-end. This includes positioning (eigendecomposition of the mesh inertia tensor) and rendering of each model. At that rate, 2,637 models would take approximately <strong>38 hours</strong> of wall time, even running all cores in parallel.</p>
-<p>To position each model, we treat the 3D shape like a physical object and ask "<em>if this were spinning freely in space, what are its natural rotation axes?</em>" Every 3D shape has three perpendicular axes around which it would spin most stably: like how a rugby ball naturally spins end-over-end rather than tumbling sideways. These axes are called eigenvectors, and finding them is called eigendecomposition. For a handaxe: the longest axis (tip to base) becomes vertical, the flattest axis (the thin dimension) points front-to-back, and the width axis goes left-to-right. Every handaxe ends up oriented the same way regardless of how it was scanned.</p>
-<h3 id="enter-hamilton8"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#enter-hamilton8">Enter Hamilton8</a></h3>
-<p>Hamilton8 is Durham's Tier-3 HPC cluster, available to researchers across the university. It runs <a href="https://slurm.schedmd.com/">Slurm</a> for job scheduling and has over 15,000 CPU cores across its shared partition.</p>
-<p>Because each GLB is completely independent of all others, this is a textbook <em>embarrassingly parallel</em> workload: the kind of task that HPC infrastructure can speed up very, very easily.</p>
-<h4 id="setup"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#setup">Setup</a></h4>
-<p>No administrator access is required. Blender is downloaded as a self-contained Linux tarball and can be run in userspace directly from the <code>/nobackup</code> drive, where users get an initial quota of 600GB from the total 2PB of Lustre file storage:</p>
-<pre><code class="language-bash">wget https://download.blender.org/release/Blender4.0/blender-4.0.2-linux-x64.tar.xz
-tar -xf blender-4.0.2-linux-x64.tar.xz
-</code></pre>
-<p>Python dependencies (<code>trimesh</code>, <code>numpy</code>, <code>scipy</code>) are installed into a standard virtual environment. An additional <code>numpy</code> installation is needed for Blender's own bundled Python interpreter, using pip's <code>--target</code> flag rather than a system install.</p>
-<h4 id="the-slurm-batch-array-job"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#the-slurm-batch-array-job">The Slurm batch array job</a></h4>
-<p>We split the 2,637 files into 132 chunks of 20, submitting them as a Slurm array job. Each task runs its 20 models sequentially; all 132 tasks run simultaneously across the cluster.</p>
-<pre><code class="language-bash">#SBATCH --array=0-131
-#SBATCH --time=00:30:00
-</code></pre>
-<p>The chunk size of 20 is a pragmatic balance: small enough that all tasks dispatch quickly and Slurm can load-balance effectively; large enough that scheduling overhead doesn't dominate over actual computation.</p>
-<h4 id="results"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#results">Results</a></h4>
-<p>All 132 tasks were dispatched and running within seconds of submission. The full batch of 2,637 models– both positioning and rendering– completed in approximately <strong>20 minutes</strong> of wall time, compared to an estimated <strong>38 hours</strong> on the desktop workstation. Per-model time averaged <strong>0.5 seconds</strong> on Hamilton8, versus ~52 seconds locally: a roughly <strong>100× speedup</strong> resulting from the massive parallelism a supercomputer provides.</p>
-<h3 id="what-makes-this-an-ahc-use-case"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#what-makes-this-an-ahc-use-case">What makes this an AH&amp;C use case?</a></h3>
-<p>The pipeline described here sits squarely at the intersection of several themes the CCP-AHC is exploring:</p>
-<ul>
-<li><strong>Research software for cultural heritage</strong>: the positioning algorithm and renderer are purpose-built research tools, developed by ARC specifically for this project.</li>
-<li><strong>HPC for non-traditional workloads</strong>: Blender rendering is not a typical HPC job, but it maps cleanly onto the embarrassingly parallel model that HPC infrastructure is built to accelerate.</li>
-<li><strong>Open infrastructure</strong>: Blender is open source; the pipeline scripts are MIT-licensed on GitHub; the resulting thumbnails feed into an open Omeka installation.</li>
-<li><strong>Accessibility</strong>: the setup requires no sudo access, no specialist HPC expertise beyond basic Slurm, and no bespoke software environment: just wget, a python <code>venv</code>, and a job script.</li>
-<li><strong>FAIR and open data</strong>: the pipeline is a practical step toward fulfilling the project's RCUK open data obligations, making 3,800 high-resolution handaxe scans accessible and discoverable online.</li>
-</ul>
-<h3 id="code-and-further-reading"><a class="toclink" href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/#code-and-further-reading">Code and further reading</a></h3>
-<p>The full pipeline is available at <a href="https://github.com/DurhamARC/MeshModelRotate">github.com/DurhamARC/MeshModelRotate</a>, including setup instructions for Hamilton8 in the <code>render/README.md</code>.</p>
-<p>If you have a similar batch processing challenge in your arts or humanities project– image analysis, audio transcription, corpus processing, or 3D geometry– it's worth considering whether HPC could help. The barrier to entry is lower than it might appear.</p>
-<hr />
-<p><em>Grosman, L., Smikt, O., &amp; Smilansky, U. (2008). On the application of 3-D scanning technology for the documentation and typology of lithic artifacts. Journal of Archaeological Science, 35(12), 3101–3110.</em></p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2026/02/27/archaeological-rendering-at-2600-models-per-hour-hpc-for-digital-heritage-collections/">
+          Continue reading
+        </a>
+      </nav>
     
     
   </div>
