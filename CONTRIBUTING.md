@@ -128,7 +128,8 @@ Open a [new issue](../../issues/new) with:
 ### Before Creating a Pull Request
 
 1. **Discuss Significant Changes**: For substantial modifications, open an issue first to discuss the approach with maintainers
-2. **Create a Feature Branch**: Branch from `main` (or `develop`, depending on repository conventions)
+2. **Create a Feature Branch**: Branch from `main`.
+   * Use the convention `NN-issue-name` for branch names, e.g. `76-my-issue`. 
 3. **Keep Current**: Regularly sync with upstream:
    ```bash
    git fetch upstream
