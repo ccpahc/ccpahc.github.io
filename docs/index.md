@@ -26,7 +26,7 @@ We invite the community involved in computationally-intensive arts, humanities, 
 
 ### Future
 
-The CCP-AHC Town Hall 2026 will take place on Thursday, 17 September 2026 at UKRI STFC Rutherford Appleton Labs in Oxfordshire, with an optional training session on the afternoon of 16 September. Hybrid attendance at the part of the Town Hall will be facilitated.
+The [CCP-AHC Town Hall 2026](./activities/town-hall-2026/index.md) will take place on Thursday, 17 September 2026 at UKRI STFC Rutherford Appleton Labs in Oxfordshire, with an optional training session on the afternoon of 16 September. Hybrid attendance at the part of the Town Hall will be facilitated.
 
 ### Past
 
