@@ -20,6 +20,8 @@ When you have 2,637 three-dimensional high-resolution scans of Stone Age handaxe
 
 This post describes how we used Hamilton8, Durham University's HPC cluster, to batch-render thumbnail images for a collection of photogrammetric 3D models at the heart of an AHRC-funded research project. It's a small but concrete example of how HPC infrastructure can quietly transform what's practical in arts and humanities research.
 
+<!-- more -->
+
 ## The research project
 
 [*Digital Technologies, Acheulean Handaxes and the Social Landscapes of the Lower Palaeolithic*](https://gtr.ukri.org/projects?ref=AH%2FW009951%2F1) (AHRC grant AH/W009951/1, PI: Professor Mark White) is a £776,000 project running at Durham University from January 2023 to April 2026. Its ambition is to use the British handaxe record– the best-dated Lower Palaeolithic assemblage in the world– to ask two fundamental questions about our deep human past: do the different shapes of Acheulean handaxes reflect distinct early Neanderthal populations in Britain and Europe between ~600,000 and 250,000 years ago? And to what extent were those populations using material culture to signal their individual and group identities?
