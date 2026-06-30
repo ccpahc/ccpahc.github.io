@@ -77,13 +77,13 @@ We are collaboratively developing a **multi-year roadmap** for a new research so
 
     ---
 
-    We support the development of **research software, workflows, and pipelines** for AH&C researchers using UK-based compute infrastructure.
+    We support the development of **research software, workflows, and pipelines** for AHC researchers using UK-based compute infrastructure.
 
 -   :material-sitemap:{ .lg .middle } __Why a CCP?__
 
     ---
 
-    CCPs have successfully supported scientific software communities for decades. CCP-AHC explores how this model can be applied to AH&C research.
+    CCPs have successfully supported scientific software communities for decades. CCP-AHC explores how this model can be applied to AHC research.
 
     [:octicons-arrow-right-24: Learn about CCPs](https://www.cosec.ac.uk/communities/what-are-ccps/)
 
