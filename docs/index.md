@@ -1,65 +1,151 @@
 ![The CCP-AHC logotype showing the letters CCP-AHC in a serif font surrounded in a circular fashion by abstract representations of individuals filled in a gradient from blue to purple](assets/CCP_AHA_Master_Logo_RGB.png "CCP-AHC logo")
 
-Welcome to the home for **Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)**, a UKRI-funded scoping project. 
+# CCP-AHC
 
-The **goal of CCP-AHC** is to support the sustainable and efficient development of software, pipelines, and workflows used by arts, humanities, and culture researchers who make use of UK-based digital research infrastructure (DRI). 
+Welcome to **CCP-AHC (Toward a new Collaborative Computational Project for Arts, Humanities, and Culture)** — a UKRI-funded scoping initiative.
 
-The main objective of CCP-AHC is to collaboratively produce a multi-year roadmap for a new Collaborative Computational Project (CCP) serving Arts, Humanities, and Culture researchers. The draft roadmap will be published by the end of 2025, and the final roadmap will be published by the end of 2026.
+Our mission is to support the **sustainable development of research software, workflows, and pipelines** for computationally intensive AHC research, powered by UK Digital Research Infrastructure (DRI).
 
-## Open calls
+We are collaboratively developing a **multi-year roadmap** for a new research software community, to be delivered to STFC and UKRI by **end of 2026**.
 
-### Call for codes, workflows and pipelines
+---
 
-[Tell us about the software you use!](./activities/codes-eoi.md){ .md-button .md-button--primary } 
+## Get Involved
 
-We invite owners, maintainers, users, and other stakeholders in research codes, workflows, and pipelines that support computationally-intensive arts, humanities, and culture (AH&C) research and innovation [to submit a short expression of interest form](https://forms.office.com/e/EAyaK8cajv). 
+<div class="grid cards" markdown>
 
-### Call for comments on CCP-AHC Roadmap Open Draft
+-   :material-code-braces:{ .lg .middle } __Call for Codes, Workflows, and Pipelines__
 
-[Read the CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176){ .md-button .md-button--primary } 
+    ---
 
-[Comment on the CCP-AHC Roadmap Open Draft (via Hypothes.is)](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf){ .md-button .md-button--secondary } 
+    Help shape the future of computational arts, humanities, and culture (AHC) research by telling us about the tools you own and use. We welcome input from developers, maintainers, and users.
 
-We invite the community involved in computationally-intensive arts, humanities, and culture (AH&C) research and innovation to submit their comments by email to [ccpahc@durham.ac.uk](mailto:ccpahc@durham.ac.uk) or to attend our upcoming [regional engagement events](./activities/regional-engagement.md).
+    [:octicons-arrow-right-24: Submit a research software project](./activities/codes-eoi.md)
 
-## Events
+-   :material-file-document-edit:{ .lg .middle } __Roadmap Open Draft Feedback__
 
-### Future
+    ---
 
-The [CCP-AHC Town Hall 2026](./activities/town-hall-2026/index.md) will take place on Thursday, 17 September 2026 at UKRI STFC Rutherford Appleton Labs in Oxfordshire, with an optional training session on the afternoon of 16 September. Hybrid attendance at the part of the Town Hall will be facilitated.
+    Review and comment on the CCP-AHC roadmap. Community feedback is essential to ensuring it reflects real research needs and practices.
 
-### Past
+    [:octicons-arrow-right-24: Read the draft](https://zenodo.org/records/17099176)  
+    [:octicons-arrow-right-24: Comment via Hypothes.is](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf)
 
-- [CCP-AHC Engagement Event (London)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london-friday-14th-november-2025) on Friday, 14th November 2025, 12.30pm to 4pm, Central London
-- [CCP-AHC Engagement Event (Cardiff)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-cardiff-wednesday-29th-october-2025) on Wednesday, 29th October 2025, 12.30pm to 3.30pm at Wales Millenium Centre, Cardiff
-- [CCP-AHC Engagement Event (Edinburgh)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh-thursday-6th-november-2025) on Thursday, 6th November 2025, 1pm to 5 pm at University of Edinburgh, Edinburgh
+</div>
 
-CCP-AHC held a Town Hall meeting on Thursday, 22 May 2025 in Durham (UK). [Learn more about this event](./activities/town-hall-2025/index.md). 
+---
 
-## Community Forum meetings
+## Events & Community
 
-The [CCP-AHC Community Forum](./activities/community-forum.md) takes place online on the second Tuesday of each month, 12:30 p.m. to 1:30 p.m. (UK time) starting from Tuesday, 12 August 2025.  
+<div class="grid cards" markdown>
 
-These are informal, drop-in sessions open to all. Join these meetings to learn more about the project, to hear updates from the team, and to share your experiences accessing large-scale compute for arts, humanities, and culture research. [Sign up to recieve the meeting details](https://forms.office.com/e/BnW8PZwJA9).
+-   :material-calendar-star:{ .lg .middle } __CCP-AHC Town Hall 2026__
 
-## Details
+    ---
 
-CCP-AHC is the name for a two-year scoping and community-building exercise, funded by UKRI and STFC for 24 months from January 2025. Its goal is to support the sustainable and efficient development of software, pipelines, and workflows used by arts, humanities, and culture researchers who make use of UK-based digital research infrastructure (DRI). It will do so by disseminating and implementing the Collaborative Computational Project (CCP) model that has been successfully been used by [many other scientific software communities](https://www.ccp.ac.uk/about-ccps/) over the past several decades.
+    Join us on **17 September 2026** at STFC Rutherford Appleton Laboratory (Oxfordshire), with optional training on 16 September. Hybrid participation available.
 
-There is a special emphasis on ensuring that research software developed by this community makes the best of use of DRI supported by public funding. This includes existing and future high-performance computing (HPC) and advanced computing infrastructures supported by UKRI, as well as those run by UK-based HEIs and [other research organisations eligible for UKRI funding](https://www.ukri.org/publications/organisation-eligibility/research-organisations-eligible-for-ukri-funding/). The full title of the project is “Toward a new CCP for Arts, Humanities, and Culture research (CCP-AHC)”.
+    [:octicons-arrow-right-24: Event details](./activities/town-hall-2026/index.md)
 
-## Stay informed!
+-   :material-account-group:{ .lg .middle } __Community Forum (Monthly)__
 
-[Subscribe to the CCP-AHC-ANNOUNCE mailing list (JISC)](https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=CCP-AHC-ANNOUNCE&A=1){ .md-button .md-button--primary } 
+    ---
 
-[Subscribe to the CCP-AHC-DISCUSS mailing list (JISC)](https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=CCP-AHC-DISCUSS&A=1){ .md-button .md-button--primary }
+    Informal online sessions held on the **second Tuesday of each month (12:30–1:30pm UK time)**. Share experiences and learn about DRI access and workflows.
 
-## Links
+    [:octicons-arrow-right-24: Join the Community Forum](./activities/community-forum.md)
 
-- [GitHub community (CCP-AHC)](https://github.com/ccpahc)
-- [Zenodo organisation (CCP-AHC)](https://zenodo.org/communities/ccpahc/)
+</div>
 
-## Project Info
+---
+
+### Previous Events
+
+
+- [Regional Engagement Event (London, November 2025)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london-friday-14th-november-2025)  
+- [Regional Engagement Event (Edinburgh, November 2025)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh-thursday-6th-november-2025)  
+- [Regional Engagement Event (Cardiff, October 2025)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-cardiff-wednesday-29th-october-2025)  
+- [CCP-AHC Town Hall 2025 (Durham, September 2025)](./activities/town-hall-2025/index.md)
+
+---
+
+## About the Project
+
+<div class="grid cards" markdown>
+
+-   :material-cogs:{ .lg .middle } __What CCP-AHC Does__
+
+    ---
+
+    We support the development of **research software, workflows, and pipelines** for AH&C researchers using UK-based compute infrastructure.
+
+-   :material-sitemap:{ .lg .middle } __Why a CCP?__
+
+    ---
+
+    CCPs have successfully supported scientific software communities for decades. CCP-AHC explores how this model can be applied to AH&C research.
+
+    [:octicons-arrow-right-24: Learn about CCPs](https://www.cosec.ac.uk/communities/what-are-ccps/)
+
+-   :material-server:{ .lg .middle } __Focus on Infrastructure__
+
+    ---
+
+    We promote effective use of publicly funded infrastructure, including HPC and advanced computing systems across UKRI and HEIs.
+
+</div>
+
+---
+
+## Stay Informed
+
+<div class="grid cards" markdown>
+
+-   :material-email-newsletter:{ .lg .middle } __Announcements__
+
+    ---
+
+    Receive updates about events, publications, and project milestones.
+
+    [:octicons-arrow-right-24: Subscribe (JISC)](https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=CCP-AHC-ANNOUNCE&A=1)
+
+-   :material-forum:{ .lg .middle } __Discussion List__
+
+    ---
+
+    Join discussions with the community about tools, workflows, and infrastructure.
+
+    [:octicons-arrow-right-24: Subscribe (JISC)](https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?SUBED1=CCP-AHC-DISCUSS&A=1)
+
+</div>
+
+---
+
+## Resources & Links
+
+<div class="grid cards" markdown>
+
+-   :material-github:{ .lg .middle } __GitHub__
+
+    ---
+
+    Explore CCP-AHC repositories and projects.
+
+    [:octicons-arrow-right-24: Visit](https://github.com/ccpahc)
+
+-   :material-database:{ .lg .middle } __Zenodo__
+
+    ---
+
+    Access publications, datasets, and other outputs from CCP-AHC.
+
+    [:octicons-arrow-right-24: Visit](https://zenodo.org/communities/ccpahc/)
+
+</div>
+
+---
+
+## Project Team
 
 ### Contact
 
