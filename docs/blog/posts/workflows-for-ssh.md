@@ -14,12 +14,13 @@ authors:
 
 # Developing actionable workflows for the social sciences and humanities with Galaxy
 
-In this blog post, I explain what research workflows are, why they matter for social science and humanities research, and what I learned about turning them into something researchers can actually use—using the Galaxy Project’s workflow manager infrastructure as a concrete example.
+In this blog post, I explain what research workflows are, why they matter for social science and humanities research, and what I learned about turning them into something researchers can actually use—using the Galaxy Project’s workflow manager infrastructure as a concrete example. This report was first prepared for the [ATRIUM TNA blog](https://www.atrium-research.eu/blog/), and also appears online at [https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/](https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/). 
 
 <!-- more -->
 
-This blog post was supported by an [ATRIUM Transnational Access Scheme Grant](https://atrium-research.eu/travel-grants/), supporting a visit to the Austrian Centre for Digital Humanities (ACDH) in Vienna in February 2026. ATRIUM is funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. ATRIUM has received support from the EOSC EU Node. This report was first prepared for the [ATRIUM TNA blog](https://www.atrium-research.eu/blog/), and also appears online at [https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/](https://www.atrium-research.eu/blog/developing-actionable-workflows-for-the-social-sciences-and-humanities-with-galaxy-a-report-on-a-tna-visit-to-acdh-vienna/). 
+## Funding statement
 
+This blog post was supported by an [ATRIUM Transnational Access Scheme Grant](https://atrium-research.eu/travel-grants/), supporting a visit to the Austrian Centre for Digital Humanities (ACDH) in Vienna in February 2026. ATRIUM is funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. ATRIUM has received support from the EOSC EU Node. 
 ![Anita Witek, The Collector’s Room, 2025. Installation view, Museum moderner Kunst Stiftung Ludwig Wien (mumok), Vienna. Photograph by Eamonn Bell.](img/ssh_workflow_acdh_wien.jpg)
 
 *Anita Witek, The Collector’s Room, 2025. Installation view, Museum moderner Kunst Stiftung Ludwig Wien (mumok), Vienna. Photograph by Eamonn Bell.*
