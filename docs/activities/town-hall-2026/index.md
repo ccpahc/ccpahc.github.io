@@ -32,7 +32,7 @@ Attendees will also work collaboratively to refine the [the CCP-AHC Roadmap Open
 
 If you have reason to believe that your work has the potential to produce a compelling use case for large-scale compute and other related DRI or to be used by a broader set of researchers and innovators, please express your interest in joining us in Durham in May.
 
-[Express interest in attending CCP-AHC Town Hall 2026 (opening soon)](){ .md-button .md-button--primary } 
+[Express interest in attending CCP-AHC Town Hall 2026](https://forms.office.com/Pages/ResponsePage.aspx?id=i9hQcmhLKUW-RNWaLYpvlCbv8eBIKLpAoor8j0lAZ8hURFFZWVo2MjM2QUhUMTU0Mjc2VjRCVUFEWi4u){ .md-button .md-button--primary } 
 
 ## Cost
 
