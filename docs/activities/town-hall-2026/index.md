@@ -26,7 +26,7 @@ The purpose of the CCP-AHC Town Hall 2026 is to bring together representatives o
 
 Delegates will receive brief presentations on key topics, including updates from the project and presentations from community members.
 
-Attendees will also work collaboratively to refine the [the CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176), based on the experience of current community members, the evolving DRI landscape, and recent developments in research policy.
+Attendees will also work collaboratively to refine the [CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176), based on the experience of current community members, the evolving DRI landscape, and recent developments in research policy.
 
 ### Expression of Interest
 
