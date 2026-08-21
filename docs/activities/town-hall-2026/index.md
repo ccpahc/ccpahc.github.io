@@ -4,11 +4,18 @@
 
 Thursday, 17 September 2026, 9:30 a.m. to 4:00 p.m.
 
+[Agenda](./agenda.md){ .md-button .md-button--primary } 
+
 An optional training session will be held on the afternoon of Wednesday, 16 September 2026 in FAIR practices for research software in the arts, humanities and culture domain.
+
+## Registration
+
+[Attend CCP-AHC Town Hall 2026](https://forms.office.com/Pages/ResponsePage.aspx?id=i9hQcmhLKUW-RNWaLYpvlCbv8eBIKLpAoor8j0lAZ8hURFFZWVo2MjM2QUhUMTU0Mjc2VjRCVUFEWi4u){ .md-button .md-button--primary } 
+
 
 ## Location
 
-UKRI STFC Rutherford Appleton Labs, Oxfordshire
+UKRI STFC Rutherford Appleton Laboratory  
 
 Hybrid participation for at least part of the event will be facilitated.
 
@@ -24,18 +31,16 @@ The purpose of the CCP-AHC Town Hall 2026 is to bring together representatives o
 -	expertise in sustainable computationally intensive AHC research and the FAIR data, workflows, and software that support it;
 -	leaders in engaged and inclusive design principles for access to DRI.
 
-Delegates will receive brief presentations on key topics, including updates from the project and presentations from community members.
+Attendees will contribute to the [CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176), based on the experience of current community members, the evolving DRI landscape, and recent developments in research policy.
 
-Attendees will also work collaboratively to refine the [CCP-AHC Roadmap Open Draft](https://zenodo.org/records/17099176), based on the experience of current community members, the evolving DRI landscape, and recent developments in research policy.
+### Attend the CCP-AHC Town Hall 2026
 
-### Expression of Interest
+If you are interested in the the future of DRI for arts and humanities research in the UK, please join us in Oxfordshire in September
 
-If you have reason to believe that your work has the potential to produce a compelling use case for large-scale compute and other related DRI or to be used by a broader set of researchers and innovators, please express your interest in joining us in Durham in May.
-
-[Express interest in attending CCP-AHC Town Hall 2026](https://forms.office.com/Pages/ResponsePage.aspx?id=i9hQcmhLKUW-RNWaLYpvlCbv8eBIKLpAoor8j0lAZ8hURFFZWVo2MjM2QUhUMTU0Mjc2VjRCVUFEWi4u){ .md-button .md-button--primary } 
+[Attend CCP-AHC Town Hall 2026](https://forms.office.com/Pages/ResponsePage.aspx?id=i9hQcmhLKUW-RNWaLYpvlCbv8eBIKLpAoor8j0lAZ8hURFFZWVo2MjM2QUhUMTU0Mjc2VjRCVUFEWi4u){ .md-button .md-button--primary } 
 
 ## Cost
 
 There is no cost to attending the CCP-AHC Town Hall 2026. Travel and accommodation costs will, in general, not be covered by CCP-AHC. 
 
-Bursaries to facilitate participation in the FAIR software training are available.
+Bursaries to facilitate participation in the FAIR software training are available. 
