@@ -10,6 +10,30 @@ We are collaboratively developing a **multi-year roadmap** for a new research so
 
 ---
 
+## Events & Community
+
+<div class="grid cards" markdown>
+
+-   :material-calendar-star:{ .lg .middle } __CCP-AHC Town Hall 2026__
+
+    ---
+
+    Join us on **17 September 2026** at STFC Rutherford Appleton Laboratory (Oxfordshire), with optional training on 16 September. 
+
+    [:octicons-arrow-right-24: Event details](./activities/town-hall-2026/index.md)
+
+-   :material-account-group:{ .lg .middle } __Community Forum (Monthly)__
+
+    ---
+
+    Informal online sessions held on the **second Tuesday of each month (12:30–1:30pm UK time)**. Share experiences and learn about DRI access and workflows.
+
+    [:octicons-arrow-right-24: Join the Community Forum](./activities/community-forum.md)
+
+</div>
+
+---
+
 ## Get Involved
 
 <div class="grid cards" markdown>
@@ -33,34 +57,7 @@ We are collaboratively developing a **multi-year roadmap** for a new research so
 
 </div>
 
----
-
-## Events & Community
-
-<div class="grid cards" markdown>
-
--   :material-calendar-star:{ .lg .middle } __CCP-AHC Town Hall 2026__
-
-    ---
-
-    Join us on **17 September 2026** at STFC Rutherford Appleton Laboratory (Oxfordshire), with optional training on 16 September. Hybrid participation available.
-
-    [:octicons-arrow-right-24: Event details](./activities/town-hall-2026/index.md)
-
--   :material-account-group:{ .lg .middle } __Community Forum (Monthly)__
-
-    ---
-
-    Informal online sessions held on the **second Tuesday of each month (12:30–1:30pm UK time)**. Share experiences and learn about DRI access and workflows.
-
-    [:octicons-arrow-right-24: Join the Community Forum](./activities/community-forum.md)
-
-</div>
-
----
-
 ### Previous Events
-
 
 - [Regional Engagement Event (London, November 2025)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-london-friday-14th-november-2025)  
 - [Regional Engagement Event (Edinburgh, November 2025)](./activities/regional-engagement.md#ccp-ahc-regional-workshop-edinburgh-thursday-6th-november-2025)  
