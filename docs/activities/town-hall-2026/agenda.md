@@ -11,6 +11,11 @@ OX11 0QX
 
 [How to get to Rutherford Appleton Laboratory](https://www.ukri.org/who-we-are/stfc/facilities/rutherford-appleton-laboratory/how-to-get-to-rutherford-appleton-laboratory/#contents-list)
 
+## Registration
+
+[Attend CCP-AHC Town Hall 2026](https://forms.office.com/Pages/ResponsePage.aspx?id=i9hQcmhLKUW-RNWaLYpvlCbv8eBIKLpAoor8j0lAZ8hURFFZWVo2MjM2QUhUMTU0Mjc2VjRCVUFEWi4u){ .md-button .md-button--primary } 
+
+
 ## Wednesday, 16 September 2026
 
 The training sessions are in-person only and optional. 

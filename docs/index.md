@@ -166,6 +166,8 @@ We are collaboratively developing a **multi-year roadmap** for a new research so
 
 ### Funding
 
-This work is supported by the Science and Technology Facilities Council (STFC) [UKRI/ST/B000494/1]. Funding for 2025-2026 was awarded under the ["Collaborative Computational Communities: towards new CCPs” opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/) 
+This work is supported by the Science and Technology Facilities Council (STFC) [UKRI/ST/B000494/1] and The Computational Science Centre for Research Communities (CoSeC). Funding for 2025-2026 was awarded under the ["Collaborative Computational Communities: towards new CCPs” opportunity](https://www.ukri.org/opportunity/collaborative-computational-communities-towards-new-ccps/) 
 
 ![Logo of Science and Technology Facilities Council (STFC)](assets/stfc-logo.svg)
+
+![Logo of The Computational Science Centre for Research Communities (CoSeC)](assets/cosec-logo.png)
