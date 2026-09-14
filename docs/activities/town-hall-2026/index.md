@@ -4,6 +4,8 @@
 
 Thursday, 17 September 2026, 9:30 a.m. to 4:00 p.m.
 
+**Online attendance, 9:30 a.m. to 12:45 p.m.**
+
 [Agenda](./agenda.md){ .md-button .md-button--primary } 
 
 An optional training session will be held on the afternoon of Wednesday, 16 September 2026 in FAIR practices for research software in the arts, humanities and culture domain.
@@ -17,7 +19,7 @@ An optional training session will be held on the afternoon of Wednesday, 16 Sept
 
 UKRI STFC Rutherford Appleton Laboratory  
 
-Hybrid participation for at least part of the event will be facilitated.
+Hybrid participation from 9:30 a.m. to 12:45 p.m. on Thursday, 17 September 2026 will be facilitated.
 
 ## About the event
 
