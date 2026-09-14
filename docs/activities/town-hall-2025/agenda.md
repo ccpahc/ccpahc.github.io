@@ -1,6 +1,6 @@
 # CCP-AHC Town Hall 2025 – Agenda
 
-<a title="Roberto Strauss from Frankfurt am Main, Deutschland, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:City_of_Durham_(13270321503).jpg"><img width="512" alt="City of Durham (13270321503)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/City_of_Durham_%2813270321503%29.jpg/512px-City_of_Durham_%2813270321503%29.jpg?20140813084236"></a>
+<a title="Roberto Strauss from Frankfurt am Main, Deutschland, CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:City_of_Durham_(13270321503).jpg"><img width="330" alt="City of Durham (13270321503)" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/City_of_Durham_%2813270321503%29.jpg/330px-City_of_Durham_%2813270321503%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"></a>
 
 The most recent version of this agenda can be found online at [https://www.ccpahc.ac.uk/activities/town-hall-2025/agenda/](https://www.ccpahc.ac.uk/activities/town-hall-2025/agenda/) or at the QR code below:
 
