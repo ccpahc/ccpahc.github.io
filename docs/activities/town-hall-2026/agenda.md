@@ -1,5 +1,7 @@
 # CCP-AHC Town Hall 2026 – Agenda
 
+<a title="Science and Technology Facilities Council (UK), CC BY-SA 2.0 &lt;https://creativecommons.org/licenses/by-sa/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:RutherfordAppletonLaboratoryAerial.jpg"><img width="330" alt="Aerial view of Rutherford Appleton Laboratory, September 27, 2012" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/RutherfordAppletonLaboratoryAerial.jpg/330px-RutherfordAppletonLaboratoryAerial.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"></a>
+
 The most recent version of this agenda can be found online at [https://www.ccpahc.ac.uk/activities/town-hall-2026/agenda/](https://www.ccpahc.ac.uk/activities/town-hall-2026/agenda/).
 
 ## Location and Date
