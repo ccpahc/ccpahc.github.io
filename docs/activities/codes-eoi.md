@@ -30,7 +30,7 @@ produce research findings.
 
 ### Workflows
 
-A **worfklow** is a sequence of steps that describe how to perform a task within the 
+A **workflow** is a sequence of steps that describe how to perform a task within the 
 research data lifecycle.
 
 ## Notes
