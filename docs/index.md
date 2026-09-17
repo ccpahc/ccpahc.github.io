@@ -52,7 +52,7 @@ We are collaboratively developing a **multi-year roadmap** for a new research so
 
     Review and comment on the CCP-AHC roadmap. Community feedback is essential to ensuring it reflects real research needs and practices.
 
-    [:octicons-arrow-right-24: Read the draft](https://zenodo.org/records/17099176)  
+    [:octicons-arrow-right-24: Read the draft](https://doi.org/10.5281/zenodo.17099175)  
     [:octicons-arrow-right-24: Comment via Hypothes.is](https://via.hypothes.is/https://www.ccpahc.ac.uk/assets/OPEN%20DRAFT%202025-09-11%20-%20CCP-AHC%20Roadmap%20Open%20Draft.pdf)
 
 </div>
