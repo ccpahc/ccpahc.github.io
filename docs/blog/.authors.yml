@@ -1,7 +1,7 @@
 authors:
   eamonn:
     name: Eamonn Bell
-    description: Project Lead
+    description: CCP-AHC Project Lead
     avatar: https://avatars.githubusercontent.com/u/4513526
   sjmf:
     name: Samantha Finnigan
@@ -11,3 +11,11 @@ authors:
     name: Emily Wilkinson
     description: Advanced Research Computing, Durham University
     avatar: https://avatars.githubusercontent.com/u/39884613
+  rosiewood:
+    name: Rosie Wood
+    description: MapReader Team, Alan Turing Institute
+    avatar: https://avatars.githubusercontent.com/u/72076688
+  katherinemcdonough:
+    name: Katherine McDonough
+    description: MapReader Team, Carnegie Mellon University
+    avatar: https://avatars.githubusercontent.com/u/20363927
