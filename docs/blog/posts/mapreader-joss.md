@@ -1,6 +1,6 @@
 ---
-draft: true
-date: 2026-09-14
+draft: false
+date: 2026-10-06
 categories:
   - Case Studies
 tags:
