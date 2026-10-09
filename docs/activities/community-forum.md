@@ -2,6 +2,8 @@ The CCP-AHC Community Forum takes place online on the second Tuesday of each mon
 
 These are informal, drop-in sessions open to all. Join these meetings to learn more about the project, to hear updates from the team, and to share your experiences accessing large-scale compute for arts, humanities, and culture research. [Sign up to recieve the meeting details](https://forms.office.com/e/BnW8PZwJA9).
 
+From October 2026, these meetings will include a review of the current [community issue backlog](https://github.com/ccpahc/meta/issues). This is a great opportunity to identify opportunities for making use of the community resource in connection with your research software.
+
 ## Meetings
 
 ### Upcoming
