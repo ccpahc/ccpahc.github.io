@@ -4,6 +4,12 @@ These are informal, drop-in sessions open to all. Join these meetings to learn m
 
 ## Meetings
 
+### Upcoming
+
+- Tuesday, 13 October 2026
+- Tuesday, 10 November 2026
+- Tuesday, 8 December 2026
+
 ### Past
 
 - Tuesday, 14 July 2026
