@@ -60,7 +60,6 @@ extra:
 
 nav:
   - Home: index.md
-  - About: about.md
   - Activities:
       - activities/index.md
       - CCP-AHC Community Forum: activities/community-forum.md
@@ -74,8 +73,9 @@ nav:
             - activities/town-hall-2026/index.md
             - Agenda: activities/town-hall-2026/agenda.md
   - Blog: blog/index.md
+  - Access: resources/routes-to-access-compute.md
   - Resources:
       - Tools: resources/tools.md
       - Funding: resources/funding.md
-      - Routes to Access Compute: resources/routes-to-access-compute.md
       - UK HPC User Documentation Sites: resources/sites.md
+  - About: about.md
