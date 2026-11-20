@@ -1,0 +1,244 @@
+#gtr-search-app {
+  margin-top: 1.5rem;
+}
+
+#gtr-search-app form {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+}
+
+#gtr-search-app .gtr-search-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(10rem, 1fr);
+  gap: 1rem;
+}
+
+#gtr-search-app label,
+#gtr-search-app legend {
+  font-weight: 600;
+}
+
+#gtr-search-app input[type="search"],
+#gtr-search-app select {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.6rem;
+
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.15rem;
+
+  font: inherit;
+}
+
+#gtr-search-app fieldset {
+  margin: 1rem 0;
+  padding: 0;
+  border: 0;
+}
+
+#gtr-search-app .gtr-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  margin-top: 0.4rem;
+}
+
+#gtr-search-app .gtr-checks label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 400;
+}
+
+#gtr-search-app .gtr-checks input {
+  margin: 0;
+}
+
+#gtr-search-app .gtr-hint {
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+}
+
+#gtr-search-app .gtr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#gtr-search-app button {
+  padding: 0.45rem 0.75rem;
+
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.15rem;
+
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+
+  font: inherit;
+  cursor: pointer;
+}
+
+#gtr-search-app #gtr-search-button {
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  background: var(--md-primary-fg-color);
+}
+
+#gtr-search-app button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+#gtr-search-app #gtr-status {
+  min-height: 1.5rem;
+  color: var(--md-default-fg-color--light);
+}
+
+#gtr-search-app #gtr-status[data-error="true"],
+#gtr-search-app #gtr-type-error[data-error="true"] {
+  color: var(--md-typeset-color);
+  font-weight: 700;
+}
+
+#gtr-search-app #gtr-summary {
+  margin: 0.8rem 0;
+  font-weight: 600;
+}
+
+#gtr-search-app #gtr-sort-controls {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#gtr-search-app #gtr-sort-controls[hidden] {
+  display: none;
+}
+
+#gtr-search-app #gtr-sort-controls select {
+  width: auto;
+  min-width: 9rem;
+}
+
+#gtr-search-app .gtr-result {
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+#gtr-search-app .gtr-result:first-child {
+  border-top: 0;
+}
+
+#gtr-search-app .gtr-result h2 {
+  margin: 0 0 0.5rem;
+}
+
+#gtr-search-app .gtr-tags,
+#gtr-search-app .gtr-links,
+#gtr-search-app .gtr-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+#gtr-search-app .gtr-tag,
+#gtr-search-app .gtr-chip {
+  display: inline-block;
+
+  padding: 0.15rem 0.45rem;
+
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+#gtr-search-app .gtr-chip-priority {
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+}
+
+#gtr-search-app .gtr-result-meta {
+  display: grid;
+  gap: 0.15rem;
+
+  margin: 0.65rem 0;
+
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+}
+
+#gtr-search-app .gtr-description {
+  margin: 0.75rem 0;
+}
+
+#gtr-search-app .gtr-description p {
+  margin-bottom: 0.25rem;
+}
+
+#gtr-search-app .gtr-description-toggle {
+  padding: 0;
+  border: 0;
+
+  color: var(--md-accent-fg-color);
+  background: transparent;
+
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+#gtr-search-app .gtr-links {
+  margin-top: 0.75rem;
+}
+
+#gtr-search-app .gtr-other-links {
+  margin-top: 0.7rem;
+}
+
+#gtr-search-app .gtr-other-links summary {
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+}
+
+#gtr-search-app .gtr-card-actions {
+  margin-top: 0.8rem;
+}
+
+#gtr-search-app .gtr-card-link {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 44.984375em) {
+  #gtr-search-app .gtr-search-fields {
+    grid-template-columns: 1fr;
+  }
+
+  #gtr-search-app .gtr-checks {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  #gtr-search-app #gtr-sort-controls {
+    display: grid;
+  }
+
+  #gtr-search-app #gtr-sort-controls[hidden] {
+    display: none;
+  }
+
+  #gtr-search-app #gtr-sort-controls select {
+    width: 100%;
+  }
+}

@@ -47,11 +47,14 @@ plugins:
     - git-revision-date-localized:
         enable_creation_date: true
 
-
+extra_javascript: 
+  - assets/gtr-search.js
+  
 extra_css:
   - stylesheets/font.css
   - stylesheets/header.css
   - stylesheets/gcse.css
+  - stylesheets/gtr-search.css
 
 extra:
   analytics:
@@ -77,5 +80,6 @@ nav:
   - Resources:
       - Tools: resources/tools.md
       - Funding: resources/funding.md
+      - AHRC Research Software and Data: resources/ahrc-software-search.md
       - UK HPC User Documentation Sites: resources/sites.md
   - About: about.md
