@@ -10,21 +10,21 @@
 
   const PRIORITY_DOMAINS = [
     "github.com",
+    "gitlab.com",
     "zenodo.org",
     "figshare.com",
-    "figshare.org"
+    "figshare.org",
+    "osf.io",
+    "codeberg.org"
   ];
 
   function initialiseGtrSearch() {
     const root = document.querySelector("#gtr-search-app");
 
-    // This script is loaded site-wide, so do nothing on pages
-    // that don't contain the GtR application.
     if (!root) {
       return;
     }
 
-    // Avoid accidentally attaching handlers twice.
     if (root.dataset.initialised === "true") {
       return;
     }
@@ -81,10 +81,8 @@
         params.set("query", query);
       }
 
-      // This tool is intentionally restricted to AHRC outcomes.
       params.append("funder", "AHRC");
 
-      // Repeated outcometype parameters are ORed within the facet.
       for (const type of selectedTypes()) {
         params.append("outcometype", type);
       }
@@ -115,10 +113,8 @@
         Math.min(500, Number(limitInput.value) || 100)
       );
 
-      // GtR v3 permits up to 100 JSON records per page.
       const size = Math.min(100, limit);
       const baseParams = buildParams();
-
       const requests = [];
 
       for (
@@ -139,9 +135,7 @@
         );
       }
 
-      // Independent result pages can be fetched concurrently.
       const payloads = await Promise.all(requests);
-
       const first = payloads[0] || {};
 
       const total = Number(
@@ -210,8 +204,6 @@
               throw error;
             }
 
-            // A failed detail request shouldn't destroy the
-            // corresponding list result.
             detailMap.set(item.id, null);
           }
         }
@@ -245,17 +237,12 @@
         ) || [];
 
       for (let raw of matches) {
-        raw = raw.replace(
-          /[.,;:!?]+$/,
-          ""
-        );
+        raw = raw.replace(/[.,;:!?]+$/, "");
 
         try {
-          output.push(
-            new URL(raw).href
-          );
+          output.push(new URL(raw).href);
         } catch {
-          // Ignore malformed URLs embedded in text.
+          // Ignore malformed URLs in outcome text.
         }
       }
 
@@ -284,8 +271,6 @@
         common.impact
       ];
 
-      // Inspect textual outcome-type-specific fields without
-      // recursively harvesting arbitrary href/API fields.
       for (
         const [key, value]
         of Object.entries(outcome)
@@ -298,10 +283,7 @@
           continue;
         }
 
-        for (
-          const field
-          of Object.values(value)
-        ) {
+        for (const field of Object.values(value)) {
           if (typeof field === "string") {
             fields.push(field);
           }
@@ -309,6 +291,128 @@
       }
 
       return fields;
+    }
+
+    function normaliseResourceUrl(url) {
+      const normalised = new URL(url.href);
+
+      normalised.hash = "";
+
+      if (
+        normalised.pathname.length > 1 &&
+        normalised.pathname.endsWith("/")
+      ) {
+        normalised.pathname =
+          normalised.pathname.slice(0, -1);
+      }
+
+      return normalised.href;
+    }
+
+    function decodedPathParts(url) {
+      return url.pathname
+        .split("/")
+        .filter(Boolean)
+        .map(part => {
+          try {
+            return decodeURIComponent(part);
+          } catch {
+            return part;
+          }
+        });
+    }
+
+    function cleanLabelPart(value) {
+      return value
+        .replace(/[_-]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function resourceLabel(url, doi) {
+      const host = url.hostname
+        .toLowerCase()
+        .replace(/^www\./, "");
+
+      const parts = decodedPathParts(url);
+
+      if (host === "github.com") {
+        if (parts.length >= 2) {
+          return `GitHub · ${parts[0]}/${parts[1]}`;
+        }
+
+        return "GitHub";
+      }
+
+      if (host === "zenodo.org") {
+        const recordIndex = parts.findIndex(
+          part =>
+            part === "record" ||
+            part === "records"
+        );
+
+        if (
+          recordIndex >= 0 &&
+          parts[recordIndex + 1]
+        ) {
+          return `Zenodo · record ${parts[recordIndex + 1]}`;
+        }
+
+        if (parts.length) {
+          return `Zenodo · ${cleanLabelPart(parts[parts.length - 1])}`;
+        }
+
+        return "Zenodo";
+      }
+
+      if (
+        host === "figshare.com" ||
+        host === "figshare.org" ||
+        host.endsWith(".figshare.com") ||
+        host.endsWith(".figshare.org")
+      ) {
+        const articleIndex = parts.findIndex(
+          part => part === "articles"
+        );
+
+        if (
+          articleIndex >= 0 &&
+          parts[articleIndex + 1]
+        ) {
+          return `Figshare · ${cleanLabelPart(
+            parts[articleIndex + 1]
+          )}`;
+        }
+
+        if (parts.length) {
+          return `Figshare · ${cleanLabelPart(
+            parts[parts.length - 1]
+          )}`;
+        }
+
+        return "Figshare";
+      }
+
+      if (doi) {
+        const doiValue =
+          url.pathname.replace(/^\/+/, "");
+
+        return doiValue
+          ? `DOI · ${doiValue}`
+          : "DOI";
+      }
+
+      const finalPart = parts[parts.length - 1];
+
+      if (
+        finalPart &&
+        finalPart.length <= 40 &&
+        !/^[0-9a-f-]{30,}$/i.test(finalPart)
+      ) {
+        return `${host} · ${cleanLabelPart(finalPart)}`;
+      }
+
+      return host;
     }
 
     function extractLinks(item, detail) {
@@ -331,7 +435,6 @@
             continue;
           }
 
-          // Don't surface GtR API plumbing as a research resource.
           if (
             url.hostname === "gtr.ukri.org" &&
             url.pathname.startsWith("/api/")
@@ -339,11 +442,14 @@
             continue;
           }
 
-          if (seen.has(url.href)) {
+          const normalisedHref =
+            normaliseResourceUrl(url);
+
+          if (seen.has(normalisedHref)) {
             continue;
           }
 
-          seen.add(url.href);
+          seen.add(normalisedHref);
 
           const host =
             url.hostname
@@ -361,16 +467,11 @@
             host === "doi.org";
 
           output.push({
-            href: url.href,
+            href: normalisedHref,
             host,
             priority,
             doi,
-            label:
-              priority
-                ? host
-                : doi
-                  ? "DOI"
-                  : host
+            label: resourceLabel(url, doi)
           });
         }
       }
@@ -381,7 +482,7 @@
             Number(a.priority) ||
           Number(b.doi) -
             Number(a.doi) ||
-          a.host.localeCompare(b.host)
+          a.label.localeCompare(b.label)
       );
     }
 
@@ -426,8 +527,7 @@
         return;
       }
 
-      const words =
-        text.trim().split(/\s+/);
+      const words = text.trim().split(/\s+/);
 
       const section =
         document.createElement("div");
@@ -444,13 +544,9 @@
         paragraph.textContent = text;
       } else {
         const preview =
-          words
-            .slice(0, 50)
-            .join(" ") +
-          "…";
+          words.slice(0, 50).join(" ") + "…";
 
-        paragraph.textContent =
-          preview;
+        paragraph.textContent = preview;
 
         const button =
           document.createElement("button");
@@ -460,7 +556,7 @@
           "gtr-description-toggle";
 
         button.textContent =
-          "Show full description";
+          "Show more ↓";
 
         button.setAttribute(
           "aria-expanded",
@@ -482,8 +578,8 @@
 
             button.textContent =
               expanded
-                ? "Show full description"
-                : "Show less";
+                ? "Show more ↓"
+                : "Show less ↑";
 
             button.setAttribute(
               "aria-expanded",
@@ -498,50 +594,15 @@
       article.append(section);
     }
 
-    function appendMetadata(
-      article,
-      detail
-    ) {
+    function appendMetadata(article, detail) {
       const outcome =
-        detail?.outcomeDetails ||
-        {};
+        detail?.outcomeDetails || {};
 
       const common =
-        outcome.outcomeCommon ||
-        {};
+        outcome.outcomeCommon || {};
 
       const award =
-        detail?.award ||
-        {};
-
-      const values = [
-        [
-          "Funding grant",
-          award.projectTitle
-        ],
-        [
-          "Outcome date",
-          prettyDate(
-            common.outcomeDate
-          )
-        ],
-        [
-          "Grant start",
-          prettyDate(
-            award.startDate
-          )
-        ],
-        [
-          "Grant end",
-          prettyDate(
-            award.endDate
-          )
-        ],
-        [
-          "Grant reference",
-          award.grantRefNumber
-        ]
-      ];
+        detail?.award || {};
 
       const metadata =
         document.createElement("div");
@@ -549,29 +610,121 @@
       metadata.className =
         "gtr-result-meta";
 
-      for (
-        const [label, value]
-        of values
-      ) {
-        if (!value) {
-          continue;
-        }
-
-        const item =
+      if (award.projectTitle) {
+        const row =
           document.createElement("div");
 
         const strong =
           document.createElement("strong");
 
         strong.textContent =
-          `${label}: `;
+          "Funding grant: ";
 
-        item.append(
+        row.append(strong);
+
+        const projectUrl =
+          liveGtrUrl(award.uiPath);
+
+        if (projectUrl) {
+          const anchor =
+            document.createElement("a");
+
+          anchor.href = projectUrl;
+          anchor.target = "_blank";
+          anchor.rel =
+            "noopener noreferrer";
+
+          anchor.textContent =
+            `${award.projectTitle} ↗`;
+
+          row.append(anchor);
+        } else {
+          row.append(
+            document.createTextNode(
+              award.projectTitle
+            )
+          );
+        }
+
+        metadata.append(row);
+      }
+
+      const outcomeDate =
+        prettyDate(common.outcomeDate);
+
+      if (outcomeDate) {
+        const row =
+          document.createElement("div");
+
+        const strong =
+          document.createElement("strong");
+
+        strong.textContent =
+          "Outcome: ";
+
+        row.append(
           strong,
-          document.createTextNode(value)
+          document.createTextNode(outcomeDate)
         );
 
-        metadata.append(item);
+        metadata.append(row);
+      }
+
+      const grantStart =
+        prettyDate(award.startDate);
+
+      const grantEnd =
+        prettyDate(award.endDate);
+
+      if (grantStart || grantEnd) {
+        const row =
+          document.createElement("div");
+
+        const strong =
+          document.createElement("strong");
+
+        strong.textContent =
+          "Grant: ";
+
+        let grantPeriod;
+
+        if (grantStart && grantEnd) {
+          grantPeriod =
+            `${grantStart} – ${grantEnd}`;
+        } else if (grantStart) {
+          grantPeriod =
+            `from ${grantStart}`;
+        } else {
+          grantPeriod =
+            `until ${grantEnd}`;
+        }
+
+        row.append(
+          strong,
+          document.createTextNode(grantPeriod)
+        );
+
+        metadata.append(row);
+      }
+
+      if (award.grantRefNumber) {
+        const row =
+          document.createElement("div");
+
+        const strong =
+          document.createElement("strong");
+
+        strong.textContent =
+          "Reference: ";
+
+        row.append(
+          strong,
+          document.createTextNode(
+            award.grantRefNumber
+          )
+        );
+
+        metadata.append(row);
       }
 
       if (metadata.childNodes.length) {
@@ -581,16 +734,10 @@
 
     function render(item, detail) {
       const outcome =
-        detail?.outcomeDetails ||
-        {};
+        detail?.outcomeDetails || {};
 
       const listItem =
-        outcome.outcomeListItem ||
-        item;
-
-      const award =
-        detail?.award ||
-        {};
+        outcome.outcomeListItem || item;
 
       const article =
         document.createElement("article");
@@ -601,10 +748,33 @@
       const heading =
         document.createElement("h2");
 
-      heading.textContent =
+      const title =
         listItem?.title ||
         item.title ||
         "Untitled outcome";
+
+      const outcomeUrl =
+        liveGtrUrl(
+          listItem?.uiPath ||
+          item.uiPath
+        );
+
+      if (outcomeUrl) {
+        const anchor =
+          document.createElement("a");
+
+        anchor.href = outcomeUrl;
+        anchor.target = "_blank";
+        anchor.rel =
+          "noopener noreferrer";
+
+        anchor.textContent =
+          `${title} ↗`;
+
+        heading.append(anchor);
+      } else {
+        heading.textContent = title;
+      }
 
       article.append(heading);
 
@@ -620,33 +790,25 @@
 
       const tagValues = [
         TYPE_NAMES[type] || type,
-        "AHRC",
         item.publicationListItem
           ?.publicationType
       ].filter(Boolean);
 
-      for (
-        const value
-        of tagValues
-      ) {
+      for (const value of tagValues) {
         const tag =
           document.createElement("span");
 
-        tag.className =
-          "gtr-tag";
-
-        tag.textContent =
-          value;
+        tag.className = "gtr-tag";
+        tag.textContent = value;
 
         tags.append(tag);
       }
 
-      article.append(tags);
+      if (tags.childNodes.length) {
+        article.append(tags);
+      }
 
-      appendMetadata(
-        article,
-        detail
-      );
+      appendMetadata(article, detail);
 
       appendDescription(
         article,
@@ -655,36 +817,35 @@
       );
 
       const extracted =
-        extractLinks(
-          item,
-          detail
-        );
+        extractLinks(item, detail);
 
-      const featured =
-        extracted.filter(
-          link =>
-            link.priority ||
-            link.doi
-        );
-
-      const remainder =
-        extracted.filter(
-          link =>
-            !link.priority &&
-            !link.doi
-        );
-
-      if (featured.length) {
-        const links =
+      if (extracted.length) {
+        const resourceSection =
           document.createElement("div");
 
-        links.className =
+        resourceSection.className =
+          "gtr-resources";
+
+        const resourceHeading =
+          document.createElement("div");
+
+        resourceHeading.className =
+          "gtr-resources-heading";
+
+        resourceHeading.textContent =
+          "Resources and links";
+
+        resourceSection.append(
+          resourceHeading
+        );
+
+        const resourceLinks =
+          document.createElement("div");
+
+        resourceLinks.className =
           "gtr-links";
 
-        for (
-          const resource
-          of featured
-        ) {
+        for (const resource of extracted) {
           const anchor =
             document.createElement("a");
 
@@ -702,116 +863,24 @@
           anchor.rel =
             "noopener noreferrer";
 
+          anchor.title =
+            resource.href;
+
           anchor.textContent =
             resource.priority
               ? `★ ${resource.label}`
               : resource.label;
 
-          links.append(anchor);
+          resourceLinks.append(anchor);
         }
 
-        article.append(links);
-      }
-
-      if (remainder.length) {
-        const details =
-          document.createElement("details");
-
-        details.className =
-          "gtr-other-links";
-
-        const detailsSummary =
-          document.createElement("summary");
-
-        detailsSummary.textContent =
-          `Other extracted links (${remainder.length})`;
-
-        const list =
-          document.createElement("ul");
-
-        for (
-          const resource
-          of remainder
-        ) {
-          const itemElement =
-            document.createElement("li");
-
-          const anchor =
-            document.createElement("a");
-
-          anchor.href =
-            resource.href;
-
-          anchor.target =
-            "_blank";
-
-          anchor.rel =
-            "noopener noreferrer";
-
-          anchor.textContent =
-            resource.href;
-
-          itemElement.append(anchor);
-          list.append(itemElement);
-        }
-
-        details.append(
-          detailsSummary,
-          list
+        resourceSection.append(
+          resourceLinks
         );
 
-        article.append(details);
-      }
-
-      const actions =
-        document.createElement("div");
-
-      actions.className =
-        "gtr-card-actions";
-
-      const destinations = [
-        [
-          "View outcome on Gateway to Research",
-          liveGtrUrl(
-            listItem?.uiPath ||
-            item.uiPath
-          )
-        ],
-        [
-          "View funded project",
-          liveGtrUrl(
-            award.uiPath
-          )
-        ]
-      ];
-
-      for (
-        const [label, href]
-        of destinations
-      ) {
-        if (!href) {
-          continue;
-        }
-
-        const anchor =
-          document.createElement("a");
-
-        anchor.className =
-          "gtr-card-link";
-
-        anchor.href = href;
-        anchor.target = "_blank";
-        anchor.rel =
-          "noopener noreferrer";
-
-        anchor.textContent =
-          `${label} ↗`;
-
-        actions.append(anchor);
-      }
-
-      if (actions.childNodes.length) {
-        article.append(actions);
+        article.append(
+          resourceSection
+        );
       }
 
       return article;
@@ -862,7 +931,6 @@
             const second =
               timestamp(b, field);
 
-            // Missing dates always sort last.
             if (
               first == null &&
               second == null
@@ -966,9 +1034,7 @@
           renderRows();
         } else {
           const empty =
-            document.createElement(
-              "p"
-            );
+            document.createElement("p");
 
           empty.textContent =
             "No matching outcomes. Try broader search terms or select both outcome types.";
@@ -1001,7 +1067,6 @@
     function clear() {
       form.reset();
 
-      // Explicitly restore the defaults.
       softwareType.checked = true;
       databaseType.checked = true;
       limitInput.value = "100";
@@ -1052,7 +1117,6 @@
     );
   }
 
-  // Initial normal page load.
   initialiseGtrSearch();
 
   if (typeof document$ !== "undefined") {

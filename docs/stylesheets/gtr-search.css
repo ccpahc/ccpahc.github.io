@@ -128,6 +128,8 @@
   min-width: 9rem;
 }
 
+/* Individual search results */
+
 #gtr-search-app .gtr-result {
   padding: 1.2rem 0;
   border-top: 1px solid var(--md-default-fg-color--lightest);
@@ -141,18 +143,26 @@
   margin: 0 0 0.5rem;
 }
 
+#gtr-search-app .gtr-result h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#gtr-search-app .gtr-result h2 a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Outcome classification */
+
 #gtr-search-app .gtr-tags,
-#gtr-search-app .gtr-links,
-#gtr-search-app .gtr-card-actions {
+#gtr-search-app .gtr-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
 }
 
-#gtr-search-app .gtr-tag,
-#gtr-search-app .gtr-chip {
+#gtr-search-app .gtr-tag {
   display: inline-block;
-
   padding: 0.15rem 0.45rem;
 
   border: 1px solid var(--md-default-fg-color--lightest);
@@ -162,13 +172,9 @@
   background: var(--md-default-bg-color);
 
   font-size: 0.75rem;
-  text-decoration: none;
 }
 
-#gtr-search-app .gtr-chip-priority {
-  color: var(--md-accent-fg-color);
-  font-weight: 700;
-}
+/* Grant and outcome metadata */
 
 #gtr-search-app .gtr-result-meta {
   display: grid;
@@ -179,6 +185,18 @@
   color: var(--md-default-fg-color--light);
   font-size: 0.8rem;
 }
+
+#gtr-search-app .gtr-result-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#gtr-search-app .gtr-result-meta a:hover {
+  color: var(--md-accent-fg-color);
+  text-decoration: underline;
+}
+
+/* Description */
 
 #gtr-search-app .gtr-description {
   margin: 0.75rem 0;
@@ -196,29 +214,63 @@
   background: transparent;
 
   font-size: 0.8rem;
+  text-decoration: none;
+}
+
+#gtr-search-app .gtr-description-toggle:hover {
   text-decoration: underline;
 }
 
-#gtr-search-app .gtr-links {
-  margin-top: 0.75rem;
+/* Extracted resources */
+
+#gtr-search-app .gtr-resources {
+  margin-top: 0.9rem;
 }
 
-#gtr-search-app .gtr-other-links {
-  margin-top: 0.7rem;
-}
+#gtr-search-app .gtr-resources-heading {
+  margin-bottom: 0.35rem;
 
-#gtr-search-app .gtr-other-links summary {
-  cursor: pointer;
   color: var(--md-default-fg-color--light);
+
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
-#gtr-search-app .gtr-card-actions {
-  margin-top: 0.8rem;
+#gtr-search-app .gtr-links {
+  margin-top: 0;
 }
 
-#gtr-search-app .gtr-card-link {
-  font-size: 0.8rem;
+#gtr-search-app .gtr-chip {
+  display: inline-block;
+  max-width: 100%;
+
+  padding: 0.15rem 0.45rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+
+  font-size: 0.75rem;
+  text-decoration: none;
 }
+
+#gtr-search-app .gtr-chip:hover {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
+#gtr-search-app .gtr-chip-priority {
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+}
+
+/* Responsive layout */
 
 @media screen and (max-width: 44.984375em) {
   #gtr-search-app .gtr-search-fields {
