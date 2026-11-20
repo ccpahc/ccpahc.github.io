@@ -8,12 +8,12 @@ From October 2026, these meetings will include a review of the current [communit
 
 ### Upcoming
 
-- Tuesday, 13 October 2026
-- Tuesday, 10 November 2026
 - Tuesday, 8 December 2026
 
 ### Past
 
+- Tuesday, 10 November 2026
+- Tuesday, 13 October 2026
 - Tuesday, 14 July 2026
 - Tuesday, 9 June 2026
 - Tuesday, 12 May 2026
